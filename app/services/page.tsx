@@ -264,7 +264,7 @@ export default function ServicesPage() {
               href="tel:14057774156"
               className="border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
             >
-              Call (405) 777-4156
+              Call Us
             </a>
           </div>
         </div>

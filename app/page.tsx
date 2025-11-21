@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import DashboardCharts from '@/components/DashboardCharts';
 
 export default function Home() {
   return (
@@ -80,8 +81,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Your Work Orders—Live and In Detail */}
+      {/* HDS Console Platform Features */}
       <section className="py-16 px-4 bg-dark-card">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-6 text-center">
+            HDS Console: Global Portfolio Management
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+            Powering facility management across Europe, Central Asia, and the Americas with 
+            real-time visibility and control.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* All Sites, One View */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">🏢</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">All Sites, One View</h3>
+              <p className="text-gray-300 text-sm">
+                Multi-tenant, multi-brand portfolio management across all your locations
+              </p>
+            </div>
+
+            {/* Fast Dispatch */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">⚡</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Fast Dispatch</h3>
+              <p className="text-gray-300 text-sm">
+                Issue to vendor notification in seconds with automated routing
+              </p>
+            </div>
+
+            {/* Live Cost Tracking */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">💰</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Live Cost Tracking</h3>
+              <p className="text-gray-300 text-sm">
+                Real-time spend per site, region, and vendor with detailed analytics
+              </p>
+            </div>
+
+            {/* Energy Analytics */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">⚡</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Energy Analytics</h3>
+              <p className="text-gray-300 text-sm">
+                Track EUI (kWh/ft²) and energy cost per square foot across properties
+              </p>
+            </div>
+
+            {/* Maintenance per ft² */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">📐</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Maintenance per ft²</h3>
+              <p className="text-gray-300 text-sm">
+                Compare maintenance spend per square foot by site and region
+              </p>
+            </div>
+
+            {/* Smart Assets */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">🔧</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Smart Assets</h3>
+              <p className="text-gray-300 text-sm">
+                Auto maintenance triggers with no manual logs required
+              </p>
+            </div>
+
+            {/* Vendor Insights */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">💡</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Vendor Insights</h3>
+              <p className="text-gray-300 text-sm">
+                Performance metrics updated automatically for all contractors
+              </p>
+            </div>
+
+            {/* Predictive Data */}
+            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="text-3xl mb-3">📈</div>
+              <h3 className="text-xl font-bold text-neon-green mb-3">Predictive Data</h3>
+              <p className="text-gray-300 text-sm">
+                Spot energy & cost anomalies before they spiral out of control
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              href="/hds-console"
+              className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
+            >
+              Explore HDS Console Platform
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Your Work Orders—Live and In Detail */}
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
             Your Work Orders—Live and In Detail
@@ -105,15 +202,7 @@ export default function Home() {
                 Learn More About HDS Console
               </Link>
             </div>
-            <div className="bg-dark-bg border-2 border-neon-green rounded-lg p-8 min-h-[300px] flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <svg className="w-24 h-24 mx-auto mb-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-                <p className="text-sm">Dashboard Screenshot Placeholder</p>
-                <p className="text-xs mt-2">Add your HDS Console screenshot to /public/images/dashboard.png</p>
-              </div>
-            </div>
+            <DashboardCharts />
           </div>
         </div>
       </section>
@@ -143,7 +232,7 @@ export default function Home() {
                 href="tel:14057774156"
                 className="inline-block border-2 border-neon-green text-neon-green px-6 py-2 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
               >
-                Call (405) 777-4156
+                Call Us
               </a>
             </div>
 

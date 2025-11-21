@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="bg-neon-green text-dark-bg py-2 px-4 text-center text-sm font-semibold">
         <div className="max-w-7xl mx-auto flex justify-center gap-6">
           <a href="tel:14057774156" className="hover:underline">
-            📞 Call Live Agent: (405) 777-4156
+            📞 Call Live Agent
           </a>
           <a 
             href="https://app.jotform.com/251983870494168" 
@@ -33,10 +33,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/hds_logo_lime_shadow_vibrant.png"
+                src="/images/pagelogo.png"
                 alt="HDS Logo"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </Link>
@@ -166,7 +166,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </p>
               <p className="text-white">
                 <a href="tel:+14055462820" className="hover:text-neon-green">
-                  +1 (405)-546-2820
+                  Call Office
                 </a>
               </p>
             </div>
@@ -196,14 +196,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 </li>
                 <li>
-                  <a 
-                    href="https://cmms.hdsok.com" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-neon-green"
-                  >
-                    CMMS Portal
-                  </a>
+                  <Link href="/hds-console" className="text-white hover:text-neon-green">
+                    HDS Console
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -241,8 +236,40 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
 
-          <div className="border-t border-dark-border mt-8 pt-8 text-center text-white">
-            <p>All Rights Reserved © HDS - 2025</p>
+          {/* Payment Methods */}
+          <div className="border-t border-dark-border mt-8 pt-8">
+            <div className="text-center mb-6">
+              <p className="text-gray-400 mb-3">Accepting payments via Stripe. We accept:</p>
+              <div className="flex justify-center items-center gap-6 flex-wrap text-gray-400 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">💳</span>
+                  <span>VISA</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">💳</span>
+                  <span>Mastercard</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">💳</span>
+                  <span>AMEX</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">💳</span>
+                  <span>DISCOVER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-dark-border pt-6 text-center text-gray-400 text-sm">
+            <p className="mb-4">
+              © 2025 HDS Tech (Homeland Development Services LLC). All rights reserved.
+            </p>
+            <p className="max-w-4xl mx-auto text-xs leading-relaxed">
+              This platform, including its UI/UX, data model, and source code, is proprietary 
+              and protected by U.S. and international copyright and other intellectual property laws. 
+              Unauthorized reproduction, distribution, or reverse engineering is strictly prohibited.
+            </p>
           </div>
         </div>
       </footer>

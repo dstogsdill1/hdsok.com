@@ -89,7 +89,7 @@ export default function ContactPage() {
                   href="tel:14057774156" 
                   className="text-2xl font-bold text-white hover:text-neon-green transition-colors"
                 >
-                  (405) 777-4156
+                  Call Emergency Line
                 </a>
               </div>
 
@@ -136,7 +136,7 @@ export default function ContactPage() {
                       href="sms:14057774156"
                       className="text-gray-300 hover:text-neon-green"
                     >
-                      (405) 777-4156
+                      Text Us
                     </a>
                   </div>
                   <div>

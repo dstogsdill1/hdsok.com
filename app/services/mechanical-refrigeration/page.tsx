@@ -60,7 +60,7 @@ export default function MechanicalRefrigerationPage() {
                 href="tel:14057774156"
                 className="bg-dark-bg text-neon-green px-6 py-3 rounded-lg font-semibold hover:bg-grey-nav transition-colors"
               >
-                Call (405) 777-4156
+                Call Us
               </a>
               <Link 
                 href="/contact"

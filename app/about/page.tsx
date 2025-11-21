@@ -31,6 +31,12 @@ export default function AboutPage() {
               HDS has grown into a trusted partner for property managers and business owners who 
               need a single point of contact for all their facility needs.
             </p>
+            <p className="border-l-4 border-neon-green pl-4 bg-dark-card p-4 rounded">
+              <strong className="text-neon-green">Global Operations:</strong> Through our HDS Console 
+              platform, we power facility management operations across Europe, Central Asia, and the 
+              Americas—bringing enterprise-grade portfolio management, real-time analytics, and 
+              automated dispatch to properties worldwide.
+            </p>
           </div>
 
           <div className="border-4 border-neon-green rounded-lg p-8 bg-dark-card">
@@ -67,7 +73,8 @@ export default function AboutPage() {
                 <p>
                   Our HDS Console provides live visibility into every work order, from submission 
                   to completion. Track progress, communicate with technicians, and access history 
-                  all in one place.
+                  all in one place. The platform serves properties across Europe, Central Asia, 
+                  and the Americas with multi-language support and regional vendor networks.
                 </p>
               </div>
 
@@ -174,7 +181,7 @@ export default function AboutPage() {
               href="tel:14057774156"
               className="border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
             >
-              Call Us Now
+              Call Us
             </a>
           </div>
         </div>

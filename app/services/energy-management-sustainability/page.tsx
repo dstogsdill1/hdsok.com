@@ -127,7 +127,7 @@ export default function EnergyManagementPage() {
                 href="tel:14057774156"
                 className="border-2 border-dark-bg text-dark-bg px-6 py-3 rounded-lg font-semibold hover:bg-dark-bg hover:text-neon-green transition-colors"
               >
-                Call (405) 777-4156
+                Call Us
               </a>
             </div>
           </div>
