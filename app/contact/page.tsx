@@ -142,12 +142,12 @@ export default function ContactPage() {
               Fill out the form below to request maintenance service. Our team will respond within 24 hours.
             </p>
             
-            {/* Responsive iframe wrapper */}
-            <div className="relative w-full bg-dark-card rounded-lg shadow-lg overflow-hidden service-request-iframe-wrapper">
+            {/* Responsive iframe wrapper with dark theme */}
+            <div className="relative w-full rounded-xl overflow-hidden shadow-2xl service-request-container">
               {/* Loading spinner */}
               {iframeLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 border-4 border-gray-600 border-t-neon-green rounded-full animate-spin"></div>
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="border-gray-700 border-t-neon-green rounded-full animate-spin service-request-spinner"></div>
                 </div>
               )}
               
@@ -156,7 +156,7 @@ export default function ContactPage() {
                 id="serviceRequestIframe"
                 src="https://www.hds.live/embed/service-request"
                 title="Service Request Form"
-                className="w-full h-full border-0"
+                className="w-full border-0 block service-request-iframe-wrapper bg-transparent"
                 allow="geolocation; camera; microphone"
                 sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
                 loading="lazy"
