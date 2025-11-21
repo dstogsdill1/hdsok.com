@@ -21,12 +21,14 @@ body {
 
 /* Service Request Iframe Embed Styles */
 .service-request-iframe-wrapper {
-  height: 800px;
+  height: 1200px;
+  min-height: 1200px;
 }
 
 @media (max-width: 768px) {
   .service-request-iframe-wrapper {
-    height: 600px;
+    height: 1400px;
+    min-height: 1400px;
   }
 }
 
