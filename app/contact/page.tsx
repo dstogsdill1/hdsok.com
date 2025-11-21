@@ -154,7 +154,7 @@ export default function ContactPage() {
               {/* Embedded service request form */}
               <iframe
                 id="serviceRequestIframe"
-                src="https://www.hds.live/service-request"
+                src="https://www.hds.live/embed/service-request"
                 title="Service Request Form"
                 className="w-full h-full border-0"
                 allow="geolocation; camera; microphone"
