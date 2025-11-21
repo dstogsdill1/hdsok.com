@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [contactFormData, setContactFormData] = useState({
     name: '',
     email: '',
     phone: '',
@@ -11,65 +11,42 @@ export default function ContactPage() {
     propertyType: '',
     message: '',
   });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [iframeLoading, setIframeLoading] = useState(true);
-  const [notification, setNotification] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  
+  const [serviceFormData, setServiceFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    propertyType: '',
+    serviceType: '',
+    priority: 'normal',
+    location: '',
+    description: '',
+  });
+  
+  const [contactStatus, setContactStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [serviceStatus, setServiceStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [contactErrorMessage, setContactErrorMessage] = useState('');
+  const [serviceErrorMessage, setServiceErrorMessage] = useState('');
 
-  // Listen for messages from embedded service request form
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      // Verify the message is from HDS Console
-      if (event.origin !== 'https://www.hds.live') {
-        return;
-      }
-
-      // Handle different message types
-      switch (event.data.type) {
-        case 'formSubmitted':
-          console.log('Service request submitted successfully!');
-          setNotification({
-            type: 'success',
-            message: 'Your service request has been submitted successfully!'
-          });
-          // Auto-hide notification after 5 seconds
-          setTimeout(() => setNotification(null), 5000);
-          break;
-          
-        case 'formError':
-          console.error('Form submission error:', event.data.error);
-          setNotification({
-            type: 'error',
-            message: 'There was an error submitting your request. Please try again.'
-          });
-          setTimeout(() => setNotification(null), 5000);
-          break;
-          
-        case 'resizeFrame':
-          // Dynamically resize iframe if needed
-          const iframe = document.getElementById('serviceRequestIframe') as HTMLIFrameElement;
-          if (iframe && event.data.height) {
-            iframe.style.height = event.data.height + 'px';
-          }
-          break;
-      }
-    };
-
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
+  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setContactFormData({
+      ...contactFormData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleServiceChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setServiceFormData({
+      ...serviceFormData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('loading');
-    setErrorMessage('');
+    setContactStatus('loading');
+    setContactErrorMessage('');
 
     try {
       const response = await fetch('/api/contact', {
@@ -77,12 +54,12 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(contactFormData),
       });
 
       if (response.ok) {
-        setStatus('success');
-        setFormData({
+        setContactStatus('success');
+        setContactFormData({
           name: '',
           email: '',
           phone: '',
@@ -92,33 +69,55 @@ export default function ContactPage() {
         });
       } else {
         const data = await response.json();
-        setStatus('error');
-        setErrorMessage(data.error || 'Something went wrong. Please try again.');
+        setContactStatus('error');
+        setContactErrorMessage(data.error || 'Something went wrong. Please try again.');
       }
     } catch (error) {
-      setStatus('error');
-      setErrorMessage('Failed to send message. Please try again later.');
+      setContactStatus('error');
+      setContactErrorMessage('Failed to send message. Please try again later.');
+    }
+  };
+
+  const handleServiceSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setServiceStatus('loading');
+    setServiceErrorMessage('');
+
+    try {
+      const response = await fetch('/api/service-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(serviceFormData),
+      });
+
+      if (response.ok) {
+        setServiceStatus('success');
+        setServiceFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          propertyType: '',
+          serviceType: '',
+          priority: 'normal',
+          location: '',
+          description: '',
+        });
+      } else {
+        const data = await response.json();
+        setServiceStatus('error');
+        setServiceErrorMessage(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setServiceStatus('error');
+      setServiceErrorMessage('Failed to submit service request. Please try again later.');
     }
   };
 
   return (
     <div>
-      {/* Notification Toast */}
-      {notification && (
-        <div
-          className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg animate-slide-in ${
-            notification.type === 'success'
-              ? 'bg-neon-green text-dark-bg'
-              : 'bg-red-600 text-white'
-          }`}
-        >
-          <p className="font-semibold">
-            {notification.type === 'success' ? '✓ Success!' : '✗ Error'}
-          </p>
-          <p>{notification.message}</p>
-        </div>
-      )}
-
       {/* Hero Section */}
       <section className="bg-dark-bg py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -132,39 +131,208 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Information & Form */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Service Request Embed */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
-            <p className="text-gray-300 mb-6 text-center max-w-2xl mx-auto">
-              Fill out the form below to request maintenance service. Our team will respond within 24 hours.
-            </p>
-            
-            {/* Responsive iframe wrapper with dark theme */}
-            <div className="relative w-full rounded-xl overflow-hidden shadow-2xl service-request-container">
-              {/* Loading spinner */}
-              {iframeLoading && (
-                <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <div className="border-gray-700 border-t-neon-green rounded-full animate-spin service-request-spinner"></div>
+      {/* Service Request Form Section */}
+      <section className="py-16 px-4 bg-dark-bg">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
+          <p className="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
+            Fill out the form below to request maintenance service. Our team will respond within 24 hours.
+          </p>
+          
+          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
+            <form onSubmit={handleServiceSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="service-name" className="block text-white font-semibold mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="service-name"
+                    name="name"
+                    value={serviceFormData.name}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service-email" className="block text-white font-semibold mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="service-email"
+                    name="email"
+                    value={serviceFormData.email}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="service-phone" className="block text-white font-semibold mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="service-phone"
+                    name="phone"
+                    value={serviceFormData.phone}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service-company" className="block text-white font-semibold mb-2">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    id="service-company"
+                    name="company"
+                    value={serviceFormData.company}
+                    onChange={handleServiceChange}
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="service-propertyType" className="block text-white font-semibold mb-2">
+                    Property Type *
+                  </label>
+                  <select
+                    id="service-propertyType"
+                    name="propertyType"
+                    value={serviceFormData.propertyType}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  >
+                    <option value="">Select property type</option>
+                    <option value="grocery">Grocery Store</option>
+                    <option value="retail">Retail Center</option>
+                    <option value="multi-unit">Multi-Unit Property</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="office">Office Building</option>
+                    <option value="fitness">Fitness Center</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="service-type" className="block text-white font-semibold mb-2">
+                    Service Type *
+                  </label>
+                  <select
+                    id="service-type"
+                    name="serviceType"
+                    value={serviceFormData.serviceType}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  >
+                    <option value="">Select service type</option>
+                    <option value="hvac">HVAC</option>
+                    <option value="refrigeration">Refrigeration</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="general-maintenance">General Maintenance</option>
+                    <option value="construction">Construction</option>
+                    <option value="emergency">Emergency Repair</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="service-priority" className="block text-white font-semibold mb-2">
+                    Priority Level *
+                  </label>
+                  <select
+                    id="service-priority"
+                    name="priority"
+                    value={serviceFormData.priority}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  >
+                    <option value="normal">Normal</option>
+                    <option value="urgent">Urgent</option>
+                    <option value="emergency">Emergency</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="service-location" className="block text-white font-semibold mb-2">
+                    Location/Address *
+                  </label>
+                  <input
+                    type="text"
+                    id="service-location"
+                    name="location"
+                    value={serviceFormData.location}
+                    onChange={handleServiceChange}
+                    required
+                    className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="service-description" className="block text-white font-semibold mb-2">
+                  Service Description *
+                </label>
+                <textarea
+                  id="service-description"
+                  name="description"
+                  value={serviceFormData.description}
+                  onChange={handleServiceChange}
+                  required
+                  rows={6}
+                  placeholder="Please describe the issue or service needed in detail..."
+                  className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green resize-none"
+                />
+              </div>
+
+              {serviceStatus === 'success' && (
+                <div className="bg-neon-green text-dark-bg p-4 rounded-lg">
+                  <p className="font-semibold">✓ Service Request Submitted!</p>
+                  <p>Our team will contact you within 24 hours.</p>
                 </div>
               )}
-              
-              {/* Embedded service request form */}
-              <iframe
-                id="serviceRequestIframe"
-                src="https://www.hds.live/embed/service-request"
-                title="Service Request Form"
-                className="w-full border-0 block service-request-iframe-wrapper bg-transparent"
-                allow="geolocation; camera; microphone"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-                loading="lazy"
-                onLoad={() => setIframeLoading(false)}
-              />
-            </div>
-          </div>
 
+              {serviceStatus === 'error' && (
+                <div className="bg-red-600 text-white p-4 rounded-lg">
+                  <p className="font-semibold">Error</p>
+                  <p>{serviceErrorMessage}</p>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={serviceStatus === 'loading'}
+                className="w-full bg-neon-green text-dark-bg py-4 rounded-lg font-bold text-lg hover:bg-neon-green-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-neon-green/50"
+              >
+                {serviceStatus === 'loading' ? 'Submitting...' : 'Submit Service Request'}
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information & General Contact Form */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             
             {/* Contact Information */}
@@ -257,7 +425,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
               <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-white font-semibold mb-2">
                       Name *
@@ -266,8 +434,8 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
+                      value={contactFormData.name}
+                      onChange={handleContactChange}
                       required
                       className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
                     />
@@ -281,8 +449,8 @@ export default function ContactPage() {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      value={contactFormData.email}
+                      onChange={handleContactChange}
                       required
                       className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
                     />
@@ -296,8 +464,8 @@ export default function ContactPage() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
+                      value={contactFormData.phone}
+                      onChange={handleContactChange}
                       className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
                     />
                   </div>
@@ -310,8 +478,8 @@ export default function ContactPage() {
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.company}
-                      onChange={handleChange}
+                      value={contactFormData.company}
+                      onChange={handleContactChange}
                       className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
                     />
                   </div>
@@ -323,8 +491,8 @@ export default function ContactPage() {
                     <select
                       id="propertyType"
                       name="propertyType"
-                      value={formData.propertyType}
-                      onChange={handleChange}
+                      value={contactFormData.propertyType}
+                      onChange={handleContactChange}
                       className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
                     >
                       <option value="">Select a property type</option>
@@ -345,34 +513,34 @@ export default function ContactPage() {
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleChange}
+                      value={contactFormData.message}
+                      onChange={handleContactChange}
                       required
                       rows={6}
                       className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green resize-none"
                     />
                   </div>
 
-                  {status === 'success' && (
+                  {contactStatus === 'success' && (
                     <div className="bg-neon-green text-dark-bg p-4 rounded-lg">
                       <p className="font-semibold">Thank you for your message!</p>
                       <p>We&apos;ll get back to you as soon as possible.</p>
                     </div>
                   )}
 
-                  {status === 'error' && (
+                  {contactStatus === 'error' && (
                     <div className="bg-red-600 text-white p-4 rounded-lg">
                       <p className="font-semibold">Error</p>
-                      <p>{errorMessage}</p>
+                      <p>{contactErrorMessage}</p>
                     </div>
                   )}
 
                   <button
                     type="submit"
-                    disabled={status === 'loading'}
+                    disabled={contactStatus === 'loading'}
                     className="w-full bg-neon-green text-dark-bg py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {status === 'loading' ? 'Sending...' : 'Send Message'}
+                    {contactStatus === 'loading' ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
