@@ -74,6 +74,19 @@ export default function ContactPage() {
       {/* Contact Information & Form */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Embedded Service Request Form */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Submit a Service Request</h2>
+            <div className="border-2 border-neon-green rounded-lg overflow-hidden bg-dark-card">
+              <iframe 
+                src="https://www.hds.live/service-request"
+                className="w-full h-[800px] border-0"
+                title="Service Request Form"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12">
             
             {/* Contact Information */}
