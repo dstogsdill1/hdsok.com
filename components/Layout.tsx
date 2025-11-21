@@ -135,10 +135,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 HDS Console
               </Link>
               <a 
-                href="https://cmms.hdsok.com/global/login" 
+                href="https://www.hds.live/global/login" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neon-green hover:text-white transition-colors font-semibold"
+                className="bg-neon-green text-dark-bg px-4 py-2 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
               >
                 Customer Login
               </a>
