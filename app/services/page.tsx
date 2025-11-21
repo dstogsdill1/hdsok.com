@@ -1,4 +1,26 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Commercial Maintenance Services - HVAC, Refrigeration & Facility Management",
+  description: "Complete commercial maintenance services including HVAC, refrigeration, facility maintenance, construction projects, energy management, and design-build consulting for retail and commercial properties.",
+  keywords: [
+    "commercial maintenance services",
+    "HVAC services",
+    "refrigeration services",
+    "facility maintenance",
+    "construction projects",
+    "energy management",
+    "preventive maintenance",
+    "emergency repairs",
+    "commercial property services"
+  ],
+  openGraph: {
+    title: "HDS Service Suite - Complete Commercial Maintenance Solutions",
+    description: "From HVAC and refrigeration to facility maintenance and construction projects. Full-service commercial property maintenance.",
+    url: "https://www.hdsok.com/services",
+  },
+};
 
 export default function ServicesPage() {
   return (

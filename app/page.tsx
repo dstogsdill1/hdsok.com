@@ -1,6 +1,37 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import DashboardCharts from '@/components/DashboardCharts';
+
+export const metadata: Metadata = {
+  title: "Vendor Coordination & Facility Maintenance for Commercial Properties",
+  description: "Homeland Development Services provides comprehensive vendor coordination, facility maintenance, HVAC, refrigeration, and CMMS dashboard solutions for grocery stores, retail centers, and multi-unit properties. 24/7 emergency service available.",
+  keywords: [
+    "vendor coordination",
+    "facility maintenance",
+    "commercial property maintenance",
+    "CMMS dashboard",
+    "grocery store maintenance",
+    "retail maintenance",
+    "HVAC services",
+    "refrigeration services",
+    "building maintenance Oklahoma",
+    "property management services"
+  ],
+  openGraph: {
+    title: "Homeland Development Services - Vendor Coordination & Facility Maintenance",
+    description: "Complete maintenance solutions for commercial properties. Expert vendor coordination, facility management, and CMMS dashboard.",
+    url: "https://www.hdsok.com",
+    images: [
+      {
+        url: "https://www.hdsok.com/images/HDS_Logo_Inverted_HighRes.png",
+        width: 1200,
+        height: 630,
+        alt: "HDS - Commercial Property Maintenance Solutions",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (

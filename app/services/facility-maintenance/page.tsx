@@ -1,4 +1,28 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Facility Maintenance Services - Comprehensive Building Management",
+  description: "Complete facility maintenance solutions for commercial properties including preventive maintenance, reactive repairs, 24-hour dispatch, groundskeeping, janitorial services, and parking lot maintenance.",
+  keywords: [
+    "facility maintenance",
+    "building maintenance",
+    "commercial property maintenance",
+    "preventive maintenance",
+    "reactive maintenance",
+    "24-hour dispatch",
+    "groundskeeping",
+    "janitorial services",
+    "parking lot maintenance",
+    "snow removal",
+    "property upkeep"
+  ],
+  openGraph: {
+    title: "Facility Maintenance Services - Keep Your Properties in Top Condition",
+    description: "Comprehensive facility maintenance for grocery stores, retail centers, and commercial properties. 24-hour dispatch and preventive maintenance programs.",
+    url: "https://www.hdsok.com/services/facility-maintenance",
+  },
+};
 
 export default function FacilityMaintenancePage() {
   return (

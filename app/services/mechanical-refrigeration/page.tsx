@@ -1,4 +1,28 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "HVAC & Refrigeration Services - 24/7 Emergency Repairs",
+  description: "Expert HVAC and commercial refrigeration services including 24/7 emergency repairs, preventive maintenance, rack systems, RTUs, chillers, walk-in coolers, leak detection, and EMS optimization.",
+  keywords: [
+    "HVAC services",
+    "commercial refrigeration",
+    "refrigeration repair",
+    "emergency HVAC repair",
+    "rack systems",
+    "RTU repair",
+    "chiller maintenance",
+    "walk-in cooler repair",
+    "leak detection",
+    "EMS optimization",
+    "preventive maintenance HVAC"
+  ],
+  openGraph: {
+    title: "Mechanical & Refrigeration Services - 24/7 Emergency Support",
+    description: "Keep your HVAC and refrigeration systems running at peak efficiency with our 24/7 emergency repair and preventive maintenance services.",
+    url: "https://www.hdsok.com/services/mechanical-refrigeration",
+  },
+};
 
 export default function MechanicalRefrigerationPage() {
   return (

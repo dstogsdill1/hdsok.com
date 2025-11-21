@@ -1,4 +1,26 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Design-Build & Consulting Services - Integrated Project Solutions",
+  description: "Streamlined design-build and consulting services for commercial properties including concept development, value engineering, project management, and post-construction support.",
+  keywords: [
+    "design-build services",
+    "construction consulting",
+    "project management",
+    "value engineering",
+    "feasibility studies",
+    "commercial design",
+    "integrated project delivery",
+    "construction consulting services",
+    "design-build contractor"
+  ],
+  openGraph: {
+    title: "Design-Build & Consulting - Streamlined Project Delivery",
+    description: "Integrated design-build and consulting services for commercial properties. From concept to completion.",
+    url: "https://www.hdsok.com/services/design-build-consulting",
+  },
+};
 
 export default function DesignBuildPage() {
   return (

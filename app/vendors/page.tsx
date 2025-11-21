@@ -1,3 +1,24 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Join HDS Vendor Network - Partner with Commercial Property Maintenance Leader",
+  description: "Join the HDS Vendor Network and access consistent work opportunities, streamlined processes, and reliable payment terms. Partner with a leading commercial property maintenance company.",
+  keywords: [
+    "vendor network",
+    "commercial maintenance vendors",
+    "HVAC contractors",
+    "facility maintenance contractors",
+    "vendor partnership",
+    "subcontractor opportunities",
+    "commercial property contractors"
+  ],
+  openGraph: {
+    title: "Join the HDS Vendor Network - Consistent Work & Reliable Payments",
+    description: "Partner with HDS for consistent commercial maintenance work opportunities. Streamlined processes and reliable payment terms.",
+    url: "https://www.hdsok.com/vendors",
+  },
+};
+
 export default function VendorsPage() {
   return (
     <div>

@@ -1,3 +1,23 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About HDS - Commercial Property Maintenance Experts Since [Year]",
+  description: "Learn about Homeland Development Services - your trusted partner for commercial property maintenance, vendor coordination, and facility management. Serving grocery stores, retail centers, and multi-unit properties.",
+  keywords: [
+    "about HDS",
+    "commercial property maintenance company",
+    "facility management company",
+    "vendor coordination services",
+    "Oklahoma facility maintenance",
+    "commercial maintenance experts"
+  ],
+  openGraph: {
+    title: "About Homeland Development Services - Commercial Maintenance Experts",
+    description: "Trusted commercial property maintenance and facility management services for retail and multi-unit properties.",
+    url: "https://www.hdsok.com/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <div>

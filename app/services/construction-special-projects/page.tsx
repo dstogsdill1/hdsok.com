@@ -1,4 +1,26 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Construction & Special Projects - Tenant Build-Outs & Renovations",
+  description: "Professional construction services including tenant build-outs, store remodels, equipment installations, code compliance upgrades, and emergency restoration for commercial properties.",
+  keywords: [
+    "commercial construction",
+    "tenant build-out",
+    "store remodel",
+    "equipment installation",
+    "code compliance",
+    "emergency restoration",
+    "construction project management",
+    "commercial renovations",
+    "retail construction"
+  ],
+  openGraph: {
+    title: "Construction & Special Projects - Professional Build-Outs & Renovations",
+    description: "Expert construction services for commercial properties including tenant build-outs, remodels, and code compliance upgrades.",
+    url: "https://www.hdsok.com/services/construction-special-projects",
+  },
+};
 
 export default function ConstructionPage() {
   return (

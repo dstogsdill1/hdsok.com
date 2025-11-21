@@ -1,4 +1,27 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Energy Management & Sustainability Solutions - Reduce Operating Costs",
+  description: "Energy management and sustainability solutions including energy audits, HVAC optimization, LED lighting retrofits, building automation, and renewable energy integration to reduce operating costs.",
+  keywords: [
+    "energy management",
+    "sustainability solutions",
+    "energy audit",
+    "HVAC optimization",
+    "LED lighting retrofit",
+    "building automation",
+    "renewable energy",
+    "energy efficiency",
+    "utility cost reduction",
+    "green building solutions"
+  ],
+  openGraph: {
+    title: "Energy Management & Sustainability - Reduce Your Operating Costs",
+    description: "Comprehensive energy management solutions to reduce operating costs and improve sustainability for commercial properties.",
+    url: "https://www.hdsok.com/services/energy-management-sustainability",
+  },
+};
 
 export default function EnergyManagementPage() {
   return (
