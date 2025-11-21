@@ -18,3 +18,30 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Service Request Iframe Embed Styles */
+.service-request-iframe-wrapper {
+  height: 800px;
+}
+
+@media (max-width: 768px) {
+  .service-request-iframe-wrapper {
+    height: 600px;
+  }
+}
+
+/* Notification Toast Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}

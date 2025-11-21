@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,6 +13,51 @@ export default function ContactPage() {
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [iframeLoading, setIframeLoading] = useState(true);
+  const [notification, setNotification] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+  // Listen for messages from embedded service request form
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      // Verify the message is from HDS Console
+      if (event.origin !== 'https://www.hds.live') {
+        return;
+      }
+
+      // Handle different message types
+      switch (event.data.type) {
+        case 'formSubmitted':
+          console.log('Service request submitted successfully!');
+          setNotification({
+            type: 'success',
+            message: 'Your service request has been submitted successfully!'
+          });
+          // Auto-hide notification after 5 seconds
+          setTimeout(() => setNotification(null), 5000);
+          break;
+          
+        case 'formError':
+          console.error('Form submission error:', event.data.error);
+          setNotification({
+            type: 'error',
+            message: 'There was an error submitting your request. Please try again.'
+          });
+          setTimeout(() => setNotification(null), 5000);
+          break;
+          
+        case 'resizeFrame':
+          // Dynamically resize iframe if needed
+          const iframe = document.getElementById('serviceRequestIframe') as HTMLIFrameElement;
+          if (iframe && event.data.height) {
+            iframe.style.height = event.data.height + 'px';
+          }
+          break;
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -58,6 +103,22 @@ export default function ContactPage() {
 
   return (
     <div>
+      {/* Notification Toast */}
+      {notification && (
+        <div
+          className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg animate-slide-in ${
+            notification.type === 'success'
+              ? 'bg-neon-green text-dark-bg'
+              : 'bg-red-600 text-white'
+          }`}
+        >
+          <p className="font-semibold">
+            {notification.type === 'success' ? '✓ Success!' : '✗ Error'}
+          </p>
+          <p>{notification.message}</p>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="bg-dark-bg py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -74,20 +135,34 @@ export default function ContactPage() {
       {/* Contact Information & Form */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Service Request CTA */}
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Submit a Service Request</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Use our online service request form to submit maintenance requests, track work orders, and manage your facilities.
+          {/* Service Request Embed */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
+            <p className="text-gray-300 mb-6 text-center max-w-2xl mx-auto">
+              Fill out the form below to request maintenance service. Our team will respond within 24 hours.
             </p>
-            <a 
-              href="https://www.hds.live/service-request"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-neon-green text-dark-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green-dark transition-colors shadow-lg hover:shadow-neon-green/50"
-            >
-              Open Service Request Form →
-            </a>
+            
+            {/* Responsive iframe wrapper */}
+            <div className="relative w-full bg-dark-card rounded-lg shadow-lg overflow-hidden service-request-iframe-wrapper">
+              {/* Loading spinner */}
+              {iframeLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-12 h-12 border-4 border-gray-600 border-t-neon-green rounded-full animate-spin"></div>
+                </div>
+              )}
+              
+              {/* Embedded service request form */}
+              <iframe
+                id="serviceRequestIframe"
+                src="https://www.hds.live/service-request"
+                title="Service Request Form"
+                className="w-full h-full border-0"
+                allow="geolocation; camera; microphone"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+                loading="lazy"
+                onLoad={() => setIframeLoading(false)}
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
