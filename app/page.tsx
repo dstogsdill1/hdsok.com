@@ -276,7 +276,7 @@ export default function Home() {
                 is created automatically, assigned to the right vendor and updated in real time.
               </p>
               <a 
-                href="https://app.jotform.com/251983870494168"
+                href="https://www.hds.live/service-request"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block border-2 border-neon-green text-neon-green px-6 py-2 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"

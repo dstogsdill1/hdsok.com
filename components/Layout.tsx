@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             📞 Call Live Agent
           </a>
           <a 
-            href="https://app.jotform.com/251983870494168" 
+            href="https://www.hds.live/service-request" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:underline"
