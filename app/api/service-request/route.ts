@@ -14,11 +14,20 @@ export async function POST(request: Request) {
       );
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address' },
+        { status: 400 }
+      );
+    }
+
     // Create email transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtpro.zoho.com',
       port: parseInt(process.env.SMTP_PORT || '465'),
-      secure: process.env.SMTP_SECURE === 'true',
+      secure: process.env.SMTP_SECURE === 'true' || true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,

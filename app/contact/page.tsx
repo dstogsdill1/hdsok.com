@@ -48,6 +48,14 @@ export default function ContactPage() {
     setContactStatus('loading');
     setContactErrorMessage('');
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(contactFormData.email)) {
+      setContactStatus('error');
+      setContactErrorMessage('Please enter a valid email address');
+      return;
+    }
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -67,6 +75,8 @@ export default function ContactPage() {
           propertyType: '',
           message: '',
         });
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => setContactStatus('idle'), 5000);
       } else {
         const data = await response.json();
         setContactStatus('error');
@@ -82,6 +92,22 @@ export default function ContactPage() {
     e.preventDefault();
     setServiceStatus('loading');
     setServiceErrorMessage('');
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(serviceFormData.email)) {
+      setServiceStatus('error');
+      setServiceErrorMessage('Please enter a valid email address');
+      return;
+    }
+
+    // Validate phone format (basic)
+    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+    if (!phoneRegex.test(serviceFormData.phone)) {
+      setServiceStatus('error');
+      setServiceErrorMessage('Please enter a valid phone number');
+      return;
+    }
 
     try {
       const response = await fetch('/api/service-request', {
@@ -105,6 +131,8 @@ export default function ContactPage() {
           location: '',
           description: '',
         });
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => setServiceStatus('idle'), 5000);
       } else {
         const data = await response.json();
         setServiceStatus('error');
