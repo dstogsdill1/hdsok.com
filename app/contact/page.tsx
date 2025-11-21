@@ -74,17 +74,20 @@ export default function ContactPage() {
       {/* Contact Information & Form */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Embedded Service Request Form */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">Submit a Service Request</h2>
-            <div className="border-2 border-neon-green rounded-lg overflow-hidden bg-dark-card">
-              <iframe 
-                src="https://www.hds.live/service-request"
-                className="w-full h-[800px] border-0"
-                title="Service Request Form"
-                loading="lazy"
-              />
-            </div>
+          {/* Service Request CTA */}
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Submit a Service Request</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Use our online service request form to submit maintenance requests, track work orders, and manage your facilities.
+            </p>
+            <a 
+              href="https://www.hds.live/service-request"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-neon-green text-dark-bg px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green-dark transition-colors shadow-lg hover:shadow-neon-green/50"
+            >
+              Open Service Request Form →
+            </a>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
