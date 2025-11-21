@@ -21,8 +21,8 @@ body {
 
 /* Service Request Iframe Embed Styles */
 .service-request-iframe-wrapper {
-  height: 1400px;
-  min-height: 1400px;
+  height: 700px;
+  min-height: 700px;
 }
 
 .service-request-container {
@@ -37,8 +37,8 @@ body {
 
 @media (max-width: 768px) {
   .service-request-iframe-wrapper {
-    height: 1600px;
-    min-height: 1600px;
+    height: 800px;
+    min-height: 800px;
   }
 }
 
