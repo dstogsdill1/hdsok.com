@@ -311,9 +311,17 @@ export default function HDSConsolePage() {
             Join property managers who trust HDS Console to streamline their facility management operations.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
+            <a 
+              href="https://www.hds.live/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
+            >
+              Explore HDS Console
+            </a>
             <Link 
               href="/contact"
-              className="bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
+              className="border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
             >
               Request a Demo
             </Link>
