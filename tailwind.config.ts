@@ -14,7 +14,7 @@ const config: Config = {
         'neon-green': '#00ff41',
         'neon-green-dark': '#00cc33',
         'dark-bg': '#0a0a0a',
-        'dark-card': 'rgba(10, 10, 10, 0.4)',
+        'dark-card': '#0a0a0a',
         'dark-border': '#2a2a2a',
         'grey-nav': '#0a0a0a',
       },
