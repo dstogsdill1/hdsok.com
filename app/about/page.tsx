@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* What sets us apart */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950 border-y border-dark-border">
+      <section className="py-16 px-4 bg-dark-bg border-y border-dark-border">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 text-center max-w-3xl mx-auto">

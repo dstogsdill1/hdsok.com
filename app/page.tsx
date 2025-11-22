@@ -91,7 +91,7 @@ export default function Home() {
       <WorkflowTimeline />
 
       {/* HDS Console Platform Features */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
+      <section className="py-16 px-4 bg-dark-bg">
         <div className="max-w-6xl mx-auto">
           <Reveal>
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
@@ -341,7 +341,7 @@ export default function Home() {
       </section>
 
       {/* HDS Service Suite */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
+      <section className="py-16 px-4 bg-dark-bg">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
             HDS Service Suite

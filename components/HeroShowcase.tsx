@@ -20,7 +20,7 @@ const item: Variants = {
 
 export function HeroShowcase() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-black via-slate-950 to-slate-950 px-4 pb-24 pt-24">
+    <section className="relative overflow-hidden bg-dark-bg px-4 pb-24 pt-24">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-32 top-[-10%] h-64 w-64 rounded-full bg-emerald-500/20 blur-3xl" />
         <div className="absolute right-[-10%] top-1/3 h-72 w-72 rounded-full bg-emerald-400/10 blur-3xl" />

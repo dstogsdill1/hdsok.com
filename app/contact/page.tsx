@@ -171,7 +171,7 @@ export default function ContactPage() {
       </section>
 
       {/* Service Request Form Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
+      <section className="py-16 px-4 bg-dark-bg">
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
@@ -375,7 +375,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information & General Contact Form */}
-      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
+      <section className="py-16 px-4 bg-dark-bg">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             
