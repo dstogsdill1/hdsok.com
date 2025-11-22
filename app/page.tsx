@@ -2,6 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import DashboardCharts from '@/components/DashboardCharts';
+import { HeroShowcase } from '@/components/HeroShowcase';
+import { Reveal } from '@/components/Reveal';
+import { WorkflowTimeline } from '@/components/WorkflowTimeline';
 
 export const metadata: Metadata = {
   title: "Vendor Coordination & Facility Maintenance for Commercial Properties",
@@ -36,40 +39,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-dark-bg py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Homeland Development Services, LLC
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Keeping grocery stores, retail and multi‑unit properties running so you can
-            focus on tenants and customers. HDS handles dispatch, vendor management and
-            maintenance across your entire portfolio.
-          </p>
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-            Complete Maintenance & Project Solutions for Commercial Properties
-          </p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            <Link 
-              href="/contact"
-              className="bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
-            >
-              Schedule a Call
-            </Link>
-            <Link 
-              href="/services"
-              className="border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
-            >
-              View Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroShowcase />
 
       {/* Your Small Business Facility Partner */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+          <Reveal>
           <div className="border-4 border-neon-green rounded-lg p-8 bg-dark-card">
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Small Business Facility Partner
@@ -109,12 +84,16 @@ export default function Home() {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
+
+      <WorkflowTimeline />
 
       {/* HDS Console Platform Features */}
       <section className="py-16 px-4 bg-dark-card">
         <div className="max-w-6xl mx-auto">
+          <Reveal>
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
             HDS Console: Global Portfolio Management
           </h2>
@@ -122,76 +101,113 @@ export default function Home() {
             Powering facility management across Europe, Central Asia, and the Americas with 
             real-time visibility and control.
           </p>
+          </Reveal>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* All Sites, One View */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">🏢</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">All Sites, One View</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[float_6s_ease-in-out_infinite]">🏢</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">All Sites, One View</h3>
+              <p className="relative text-gray-300 text-sm">
                 Multi-tenant, multi-brand portfolio management across all your locations
               </p>
             </div>
+            </Reveal>
 
             {/* Fast Dispatch */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Fast Dispatch</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal delay={0.05}>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[pulse-glow_2.4s_ease-in-out_infinite]">⚡</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Fast Dispatch</h3>
+              <p className="relative text-gray-300 text-sm">
                 Issue to vendor notification in seconds with automated routing
               </p>
             </div>
+            </Reveal>
 
             {/* Live Cost Tracking */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">💰</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Live Cost Tracking</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal delay={0.1}>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[float_7s_ease-in-out_infinite]">💰</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Live Cost Tracking</h3>
+              <p className="relative text-gray-300 text-sm">
                 Real-time spend per site, region, and vendor with detailed analytics
               </p>
             </div>
+            </Reveal>
 
             {/* Energy Analytics */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Energy Analytics</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal delay={0.15}>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[pulse-glow_3s_ease-in-out_infinite]">⚡</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Energy Analytics</h3>
+              <p className="relative text-gray-300 text-sm">
                 Track EUI (kWh/ft²) and energy cost per square foot across properties
               </p>
             </div>
+            </Reveal>
 
             {/* Maintenance per ft² */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">📐</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Maintenance per ft²</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal delay={0.2}>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[float_5.5s_ease-in-out_infinite]">📐</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Maintenance per ft²</h3>
+              <p className="relative text-gray-300 text-sm">
                 Compare maintenance spend per square foot by site and region
               </p>
             </div>
+            </Reveal>
 
             {/* Smart Assets */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">🔧</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Smart Assets</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal delay={0.25}>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[float_6.4s_ease-in-out_infinite]">🔧</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Smart Assets</h3>
+              <p className="relative text-gray-300 text-sm">
                 Auto maintenance triggers with no manual logs required
               </p>
             </div>
+            </Reveal>
 
             {/* Vendor Insights */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">💡</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Vendor Insights</h3>
-              <p className="text-gray-300 text-sm">
+            <Reveal delay={0.3}>
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
+              <div className="relative text-3xl mb-3">
+                <span className="inline-block animate-[pulse-glow_2.8s_ease-in-out_infinite]">💡</span>
+              </div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Vendor Insights</h3>
+              <p className="relative text-gray-300 text-sm">
                 Performance metrics updated automatically for all contractors
               </p>
             </div>
+            </Reveal>
 
             {/* Predictive Data */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg hover:shadow-lg hover:shadow-neon-green/20 transition-all">
-              <div className="text-3xl mb-3">📈</div>
-              <h3 className="text-xl font-bold text-neon-green mb-3">Predictive Data</h3>
-              <p className="text-gray-300 text-sm">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative text-3xl mb-3">📈</div>
+              <h3 className="relative text-xl font-bold text-white mb-3">Predictive Data</h3>
+              <p className="relative text-gray-300 text-sm">
                 Spot energy & cost anomalies before they spiral out of control
               </p>
             </div>
@@ -211,10 +227,13 @@ export default function Home() {
       {/* Your Work Orders—Live and In Detail */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+          <Reveal>
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
             Your Work Orders—Live and In Detail
           </h2>
+          </Reveal>
           <div className="grid md:grid-cols-2 gap-8 items-center">
+            <Reveal>
             <div className="text-gray-300 space-y-4">
               <p>
                 Centralize every maintenance request from submission to completion. Property
@@ -233,7 +252,10 @@ export default function Home() {
                 Learn More About HDS Console
               </Link>
             </div>
+            </Reveal>
+            <Reveal delay={0.1}>
             <DashboardCharts />
+            </Reveal>
           </div>
         </div>
       </section>

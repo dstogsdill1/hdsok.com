@@ -1,49 +1,27 @@
 import Link from 'next/link';
 import DashboardCharts from '@/components/DashboardCharts';
+import { HeroShowcase } from '@/components/HeroShowcase';
+import { Reveal } from '@/components/Reveal';
 
 export default function HDSConsolePage() {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-dark-bg py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            HDS Console
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Complete Portfolio Management Platform for Commercial Properties
-          </p>
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-            Multi-tenant facility management with real-time visibility, predictive analytics, 
-            and automated dispatch across all your properties.
-          </p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            <a 
-              href="https://www.hds.live/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
-            >
-              Access HDS Console
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
-            >
-              Request Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroShowcase />
 
       {/* Platform Overview */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="border-4 border-neon-green rounded-lg p-8 bg-dark-card mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">
+      <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-30">
+          <div className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-[-8rem] bottom-0 h-[28rem] w-[28rem] rounded-full bg-emerald-400/10 blur-3xl" />
+        </div>
+        <div className="relative max-w-6xl mx-auto">
+          <Reveal>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 backdrop-blur-md p-8 mb-12 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+            <h2 className="relative text-4xl font-bold text-white mb-6">
               One Platform. Global Operations.
             </h2>
-            <div className="text-gray-300 text-lg space-y-4">
+            <div className="relative text-gray-300 text-lg space-y-4">
               <p>
                 HDS Console is the comprehensive facility management platform built for property managers, 
                 facility directors, and operations teams managing grocery stores, retail centers, 
@@ -56,45 +34,59 @@ export default function HDSConsolePage() {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Live Dashboard Preview */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-30">
+          <div className="absolute left-1/4 top-20 h-80 w-80 rounded-full bg-neon-green/15 blur-3xl" />
+          <div className="absolute right-1/4 bottom-20 h-96 w-96 rounded-full bg-emerald-400/10 blur-3xl" />
+        </div>
+        <div className="relative max-w-7xl mx-auto">
+          <Reveal>
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Real-Time Dashboard Preview
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See your portfolio data come to life with interactive charts, real-time metrics, 
               and predictive analytics—all in one unified dashboard.
             </p>
           </div>
+          </Reveal>
           
-          <div className="bg-white rounded-xl shadow-2xl p-8 border-4 border-neon-green">
+          <Reveal>
+          <div className="bg-dark-bg rounded-xl shadow-2xl p-8">
             <DashboardCharts />
           </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Core Features */}
-      <section className="py-16 px-4 bg-dark-card">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-30">
+          <div className="absolute -left-40 top-1/4 h-[32rem] w-[32rem] rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-[-8rem] bottom-1/4 h-96 w-96 rounded-full bg-emerald-400/10 blur-3xl" />
+        </div>
+        <div className="relative max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">
             Platform Features
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* All Sites, One View */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">🏢</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">All Sites, One View</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative text-4xl mb-4 animate-[float_6s_ease-in-out_infinite]">🏢</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">All Sites, One View</h3>
+              <p className="relative text-gray-300 mb-4">
                 Multi-tenant, multi-brand portfolio management in a single dashboard. Monitor 
                 all your properties from one unified interface with real-time updates.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Consolidated portfolio view</li>
                 <li>• Custom branding per tenant</li>
                 <li>• Region and market segmentation</li>
@@ -103,14 +95,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Fast Dispatch */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Fast Dispatch</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-4xl mb-4 animate-[pulse-glow_2.4s_ease-in-out_infinite]">⚡</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Fast Dispatch</h3>
+              <p className="relative text-gray-300 mb-4">
                 Issue to vendor notification in seconds. Automated routing sends work orders 
                 to the right contractor based on location, trade, and availability.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Instant vendor notifications</li>
                 <li>• Smart routing rules</li>
                 <li>• 24/7 dispatch center integration</li>
@@ -119,14 +112,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Live Cost Tracking */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Live Cost Tracking</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-4xl mb-4 animate-[float_5.5s_ease-in-out_infinite]">💰</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Live Cost Tracking</h3>
+              <p className="relative text-gray-300 mb-4">
                 Real-time spend per site, region, and vendor. Budget tracking, variance 
                 alerts, and comprehensive financial reporting across your entire portfolio.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Real-time spend visibility</li>
                 <li>• Budget vs. actual tracking</li>
                 <li>• Cost allocation by category</li>
@@ -135,14 +129,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Energy Analytics */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Energy Analytics</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
+              <div className="relative text-4xl mb-4 animate-[pulse-glow_3s_ease-in-out_infinite]">⚡</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Energy Analytics</h3>
+              <p className="relative text-gray-300 mb-4">
                 Track EUI (kWh/ft²) and energy cost per square foot. Identify high-consumption 
                 sites and opportunities for efficiency improvements.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Energy usage intensity (EUI)</li>
                 <li>• Cost per square foot analysis</li>
                 <li>• Year-over-year comparisons</li>
@@ -151,14 +146,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Maintenance per ft² */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">📐</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Maintenance per ft²</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-4xl mb-4 animate-[float_6.5s_ease-in-out_infinite]">📐</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Maintenance per ft²</h3>
+              <p className="relative text-gray-300 mb-4">
                 Compare maintenance spend per square foot by site, region, and property type. 
                 Benchmark performance and identify outliers.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Per-square-foot metrics</li>
                 <li>• Site-to-site comparisons</li>
                 <li>• Regional benchmarking</li>
@@ -167,14 +163,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Smart Assets */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Smart Assets</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
+              <div className="relative text-4xl mb-4 animate-[pulse-glow_2.8s_ease-in-out_infinite]">🔧</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Smart Assets</h3>
+              <p className="relative text-gray-300 mb-4">
                 Auto maintenance triggers based on equipment runtime, manufacturer schedules, 
                 and historical data. No manual logs required.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Automated PM scheduling</li>
                 <li>• Equipment lifecycle tracking</li>
                 <li>• Warranty management</li>
@@ -183,14 +180,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Vendor Insights */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">💡</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Vendor Insights</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
+              <div className="relative text-4xl mb-4 animate-[float_5s_ease-in-out_infinite]">💡</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Vendor Insights</h3>
+              <p className="relative text-gray-300 mb-4">
                 Performance metrics updated automatically for all contractors. Response times, 
                 completion rates, customer satisfaction, and spend analysis.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Response time tracking</li>
                 <li>• Completion rate metrics</li>
                 <li>• Quality scoring</li>
@@ -199,14 +197,15 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Predictive Data */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Predictive Data</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative text-4xl mb-4 animate-[pulse-glow_3.2s_ease-in-out_infinite]">📈</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Predictive Data</h3>
+              <p className="relative text-gray-300 mb-4">
                 Spot energy and cost anomalies before they spiral. Machine learning identifies 
                 unusual patterns and alerts you to potential issues.
               </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Anomaly detection</li>
                 <li>• Predictive maintenance alerts</li>
                 <li>• Cost forecasting</li>
@@ -215,10 +214,11 @@ export default function HDSConsolePage() {
             </div>
 
             {/* Mobile Access */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Mobile Access</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
+              <div className="relative text-4xl mb-4 animate-[float_6s_ease-in-out_infinite]">📱</div>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Mobile Access</h3>
+              <p className="relative text-gray-300 mb-4">
                 Full platform functionality on iOS and Android. Submit requests, approve 
                 invoices, communicate with vendors, and monitor properties from anywhere.
               </p>
@@ -234,16 +234,21 @@ export default function HDSConsolePage() {
       </section>
 
       {/* Integration & Security */}
-      <section className="py-16 px-4 bg-dark-card">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-30">
+          <div className="absolute left-[-6rem] top-10 h-96 w-96 rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-10 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+        </div>
+        <div className="relative max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">
             Enterprise-Grade Platform
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-bg">
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Integrations</h3>
-              <ul className="text-gray-300 space-y-3">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 backdrop-blur-md p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <h3 className="relative text-2xl font-bold text-white mb-4">Integrations</h3>
+              <ul className="relative text-gray-300 space-y-3">
                 <li>✓ Accounting system integration (QuickBooks, Xero, SAP)</li>
                 <li>✓ Property management software (Yardi, MRI, AppFolio)</li>
                 <li>✓ Energy management systems (EMS/BMS)</li>
@@ -252,9 +257,10 @@ export default function HDSConsolePage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-bg">
-              <h3 className="text-2xl font-bold text-neon-green mb-4">Security & Compliance</h3>
-              <ul className="text-gray-300 space-y-3">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 backdrop-blur-md p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
+              <h3 className="relative text-2xl font-bold text-white mb-4">Security & Compliance</h3>
+              <ul className="relative text-gray-300 space-y-3">
                 <li>✓ Enterprise-grade encryption (AES-256)</li>
                 <li>✓ SOC 2 Type II certified infrastructure</li>
                 <li>✓ GDPR and international privacy compliance</li>
@@ -292,8 +298,12 @@ export default function HDSConsolePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-dark-card">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-30">
+          <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-1/4 bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Operations?
           </h2>

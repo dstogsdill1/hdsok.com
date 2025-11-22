@@ -25,14 +25,26 @@ export const metadata: Metadata = {
 export default function DesignBuildPage() {
   return (
     <div>
-      <section className="bg-dark-bg py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Design-Build & Consulting
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Expert guidance from concept to completion.
-          </p>
+      {/* Sub-hero */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-dark-bg via-grey-nav to-dark-bg py-20 px-4">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-purple-400/20 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-neon-green/10 blur-3xl" />
+          <div className="absolute inset-x-10 top-32 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent" />
+        </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          <div>
+            <p className="inline-flex items-center rounded-full border border-neon-green/40 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neon-green mb-4">
+              <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_1.8s_ease-in-out_infinite]"></span>
+              Design-Build &amp; Consulting
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Expert guidance from concept to completion.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Streamlined design-build and consulting services for comprehensive commercial project delivery.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -47,9 +59,15 @@ export default function DesignBuildPage() {
           </div>
 
           <div className="space-y-8 mb-12">
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Design-Build Services</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-500/15 text-purple-300 text-xl animate-[pulse-glow_2.4s_ease-in-out_infinite]">
+                  📝
+                </span>
+                <h2 className="text-2xl font-bold text-white">Design-Build Services</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Concept development and planning</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Architectural coordination</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Engineering design services</li>
@@ -59,9 +77,15 @@ export default function DesignBuildPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Consulting Services</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-xl animate-[float_6s_ease-in-out_infinite]">
+                  📊
+                </span>
+                <h2 className="text-2xl font-bold text-white">Consulting Services</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Feasibility studies</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Value engineering</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Cost estimating</li>
@@ -71,9 +95,15 @@ export default function DesignBuildPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Code & Compliance</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500/15 text-sky-300 text-xl animate-[pulse-glow_3s_ease-in-out_infinite]">
+                  ✔️
+                </span>
+                <h2 className="text-2xl font-bold text-white">Code & Compliance</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Building code analysis</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Energy code compliance</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Permit acquisition and management</li>
@@ -83,9 +113,15 @@ export default function DesignBuildPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Technical Expertise</h2>
-              <div className="grid md:grid-cols-2 gap-4 text-gray-300">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-4">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-400/15 text-amber-300 text-xl animate-[float_5.5s_ease-in-out_infinite]">
+                  🔧
+                </span>
+                <h2 className="text-2xl font-bold text-white">Technical Expertise</h2>
+              </div>
+              <div className="relative grid md:grid-cols-2 gap-4 text-gray-300">
                 <div>
                   <h3 className="font-semibold text-white mb-2">Mechanical Systems</h3>
                   <ul className="space-y-1 text-sm">

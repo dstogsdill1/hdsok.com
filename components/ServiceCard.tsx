@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { ServiceFields } from '@/types/contentful';
 import { getImageUrl, getImageAlt } from '@/types/contentful';
+import { MotionCard } from '@/components/MotionCard';
 
 interface ServiceCardProps {
   service: {
@@ -15,7 +16,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   const iconAlt = getImageAlt(icon, title);
 
   return (
-    <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card hover:shadow-lg hover:shadow-neon-green/20 transition-all">
+    <MotionCard className="group border-2 border-neon-green bg-dark-card p-8">
       {iconUrl && (
         <div className="mb-4">
           <Image
@@ -61,6 +62,6 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       >
         {ctaText}
       </Link>
-    </div>
+    </MotionCard>
   );
 }

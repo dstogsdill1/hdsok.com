@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Layout from "@/components/Layout";
 import Script from "next/script";
+import { SmoothScroller } from "@/components/SmoothScroller";
+import { PageTransition } from "@/components/PageTransition";
 
 const siteUrl = "https://www.hdsok.com";
 
@@ -128,7 +130,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Layout>{children}</Layout>
+        <SmoothScroller>
+          <Layout>
+            <PageTransition>{children}</PageTransition>
+          </Layout>
+        </SmoothScroller>
       </body>
     </html>
   );

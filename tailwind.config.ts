@@ -14,9 +14,9 @@ const config: Config = {
         'neon-green': '#00ff41',
         'neon-green-dark': '#00cc33',
         'dark-bg': '#0a0a0a',
-        'dark-card': '#1a1a1a',
+        'dark-card': 'rgba(10, 10, 10, 0.4)',
         'dark-border': '#2a2a2a',
-        'grey-nav': '#1f1f1f',
+        'grey-nav': '#0a0a0a',
       },
       borderColor: {
         'neon': '#00ff41',

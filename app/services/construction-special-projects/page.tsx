@@ -25,14 +25,26 @@ export const metadata: Metadata = {
 export default function ConstructionPage() {
   return (
     <div>
-      <section className="bg-dark-bg py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Construction & Special Projects
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Turnkey construction services from concept to completion.
-          </p>
+      {/* Sub-hero */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-dark-bg via-grey-nav to-dark-bg py-20 px-4">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-teal-400/10 blur-3xl" />
+          <div className="absolute inset-x-10 top-32 h-px bg-gradient-to-r from-transparent via-neon-green/40 to-transparent" />
+        </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          <div>
+            <p className="inline-flex items-center rounded-full border border-neon-green/40 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neon-green mb-4">
+              <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_1.8s_ease-in-out_infinite]"></span>
+              Construction &amp; Special Projects
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Turnkey construction services from concept to completion.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional construction services for tenant build-outs, store remodels, equipment installations, and more.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -47,9 +59,15 @@ export default function ConstructionPage() {
           </div>
 
           <div className="space-y-8 mb-12">
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">New Construction</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-xl animate-[pulse-glow_2.4s_ease-in-out_infinite]">
+                  🏗️
+                </span>
+                <h2 className="text-2xl font-bold text-white">New Construction</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Ground-up commercial construction</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Multi-unit development</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Retail build-outs</li>
@@ -58,9 +76,15 @@ export default function ConstructionPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Remodeling & Renovations</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/15 text-teal-300 text-xl animate-[float_6s_ease-in-out_infinite]">
+                  🔨
+                </span>
+                <h2 className="text-2xl font-bold text-white">Remodeling & Renovations</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Store remodels and refreshes</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Multi-location roll-outs</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Tenant improvements</li>
@@ -69,9 +93,15 @@ export default function ConstructionPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Equipment & Systems</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500/15 text-sky-300 text-xl animate-[pulse-glow_3s_ease-in-out_infinite]">
+                  ⚙️
+                </span>
+                <h2 className="text-2xl font-bold text-white">Equipment & Systems</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> HVAC system installation</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Refrigeration equipment upgrades</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Electrical system upgrades</li>
@@ -80,9 +110,15 @@ export default function ConstructionPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Special Projects</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-500/15 text-purple-300 text-xl animate-[float_5.5s_ease-in-out_infinite]">
+                  🛠️
+                </span>
+                <h2 className="text-2xl font-bold text-white">Special Projects</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> ADA compliance upgrades</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Code compliance retrofits</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Emergency restoration</li>

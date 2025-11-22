@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { Reveal } from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: "Commercial Maintenance Services - HVAC, Refrigeration & Facility Management",
@@ -26,16 +27,27 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-dark-bg py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            HDS Service Suite
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From blitz repairs to turnkey build‑outs, HDS keeps your refrigeration, HVAC and
-            facilities running—so you stay focused on tenants and customers rather than
-            contractors.
-          </p>
+      <section className="relative overflow-hidden bg-gradient-to-b from-dark-bg via-grey-nav to-dark-bg py-20 px-4">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+          <div className="absolute inset-x-10 top-32 h-px bg-gradient-to-r from-transparent via-neon-green/40 to-transparent" />
+        </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          <Reveal>
+            <p className="inline-flex items-center rounded-full border border-neon-green/40 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neon-green mb-4">
+              Services
+              <span className="ml-2 inline-flex h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_2.4s_ease-in-out_infinite]" />
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              HDS Service Suite
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              From blitz repairs to turnkey build‑outs, HDS keeps your refrigeration, HVAC and
+              facilities running—so you stay focused on tenants and customers rather than
+              contractors.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -44,15 +56,19 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto space-y-12">
           
           {/* Mechanical & Refrigeration */}
-          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-            <h2 className="text-3xl font-bold text-neon-green mb-4">
-              Mechanical & Refrigeration
-            </h2>
-            <p className="text-gray-300 mb-6">
-              Keep your HVAC and refrigeration systems running at peak efficiency with our 24/7 
-              mechanical services. Our certified technicians handle everything from routine 
-              maintenance to emergency repairs across racks, RTUs, chillers, and walk-in coolers.
-            </p>
+          <Reveal>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+            <div className="relative">
+              <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
+                <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">❄️</span>
+                Mechanical & Refrigeration
+              </h2>
+              <p className="text-gray-300 mb-6">
+                Keep your HVAC and refrigeration systems running at peak efficiency with our 24/7 
+                mechanical services. Our certified technicians handle everything from routine 
+                maintenance to emergency repairs across racks, RTUs, chillers, and walk-in coolers.
+              </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
@@ -82,13 +98,19 @@ export default function ServicesPage() {
             >
               Request Service
             </Link>
+            </div>
           </div>
+          </Reveal>
 
           {/* Facility Maintenance */}
-          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-            <h2 className="text-3xl font-bold text-neon-green mb-4">
-              Facility Maintenance
-            </h2>
+          <Reveal delay={0.05}>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
+            <div className="relative">
+              <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
+                <span className="animate-[float_6s_ease-in-out_infinite]">🏢</span>
+                Facility Maintenance
+              </h2>
             <p className="text-gray-300 mb-6">
               Comprehensive facility maintenance solutions that keep your properties in top condition. 
               From daily upkeep to specialized services, we handle all aspects of building maintenance 
@@ -126,13 +148,19 @@ export default function ServicesPage() {
             >
               Request Service
             </Link>
+            </div>
           </div>
+          </Reveal>
 
           {/* Construction & Special Projects */}
-          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-            <h2 className="text-3xl font-bold text-neon-green mb-4">
-              Construction & Special Projects
-            </h2>
+          <Reveal delay={0.1}>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
+            <div className="relative">
+              <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
+                <span className="animate-[pulse-glow_2.6s_ease-in-out_infinite]">🏗️</span>
+                Construction & Special Projects
+              </h2>
             <p className="text-gray-300 mb-6">
               From ground-up construction to major renovations, our project management team delivers 
               turnkey solutions for your commercial property needs. We handle every phase from planning 
@@ -171,13 +199,19 @@ export default function ServicesPage() {
             >
               Discuss Your Project
             </Link>
+            </div>
           </div>
+          </Reveal>
 
           {/* Design-Build & Consulting */}
-          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-            <h2 className="text-3xl font-bold text-neon-green mb-4">
-              Design‑Build & Consulting
-            </h2>
+          <Reveal delay={0.15}>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/15 via-transparent to-neon-green/5" />
+            <div className="relative">
+              <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
+                <span className="animate-[float_5.5s_ease-in-out_infinite]">📐</span>
+                Design‑Build & Consulting
+              </h2>
             <p className="text-gray-300 mb-6">
               Expert consulting and design-build services that take your project from initial concept 
               to grand opening. Our team provides comprehensive guidance on design, engineering, 
@@ -216,13 +250,19 @@ export default function ServicesPage() {
             >
               Schedule Consultation
             </Link>
+            </div>
           </div>
+          </Reveal>
 
           {/* Energy Management & Sustainability */}
-          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-            <h2 className="text-3xl font-bold text-neon-green mb-4">
-              Energy Management & Sustainability
-            </h2>
+          <Reveal delay={0.2}>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/15 via-transparent to-neon-green/10" />
+            <div className="relative">
+              <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
+                <span className="animate-[pulse-glow_2.8s_ease-in-out_infinite]">⚡</span>
+                Energy Management & Sustainability
+              </h2>
             <p className="text-gray-300 mb-6">
               Reduce operating costs and environmental impact with our comprehensive energy management 
               and sustainability services. We help you optimize systems, access utility incentives, 
@@ -261,7 +301,9 @@ export default function ServicesPage() {
             >
               Start Saving Energy
             </Link>
+            </div>
           </div>
+          </Reveal>
 
         </div>
       </section>
@@ -269,12 +311,14 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-dark-card">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Experience the HDS Difference?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let&apos;s discuss how our comprehensive service suite can support your business.
-          </p>
+          <Reveal>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Experience the HDS Difference?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let&apos;s discuss how our comprehensive service suite can support your business.
+            </p>
+          </Reveal>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link 
               href="/contact"

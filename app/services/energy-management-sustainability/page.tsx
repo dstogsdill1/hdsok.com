@@ -26,14 +26,26 @@ export const metadata: Metadata = {
 export default function EnergyManagementPage() {
   return (
     <div>
-      <section className="bg-dark-bg py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Energy Management & Sustainability
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Reduce costs and environmental impact with smart energy solutions.
-          </p>
+      {/* Sub-hero */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-dark-bg via-grey-nav to-dark-bg py-20 px-4">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-amber-400/20 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-neon-green/10 blur-3xl" />
+          <div className="absolute inset-x-10 top-32 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
+        </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          <div>
+            <p className="inline-flex items-center rounded-full border border-neon-green/40 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neon-green mb-4">
+              <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_1.8s_ease-in-out_infinite]"></span>
+              Energy Management &amp; Sustainability
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              Reduce costs and environmental impact with smart energy solutions.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive energy management and sustainability programs to maximize your return on investment.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -48,9 +60,15 @@ export default function EnergyManagementPage() {
           </div>
 
           <div className="space-y-8 mb-12">
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Energy Optimization</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-400/15 text-amber-300 text-xl animate-[pulse-glow_2.4s_ease-in-out_infinite]">
+                  ⚡
+                </span>
+                <h2 className="text-2xl font-bold text-white">Energy Optimization</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Energy audits and assessments</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Building system optimization</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Retro-commissioning services</li>
@@ -60,9 +78,15 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Utility Incentive Programs</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-xl animate-[float_6s_ease-in-out_infinite]">
+                  💵
+                </span>
+                <h2 className="text-2xl font-bold text-white">Utility Incentive Programs</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Incentive program identification</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Application preparation and submission</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Project documentation</li>
@@ -71,9 +95,15 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Lighting Solutions</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500/15 text-sky-300 text-xl animate-[pulse-glow_3s_ease-in-out_infinite]">
+                  💡
+                </span>
+                <h2 className="text-2xl font-bold text-white">Lighting Solutions</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> LED retrofit projects</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Lighting controls and sensors</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Daylight harvesting</li>
@@ -83,9 +113,15 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Water Conservation</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/15 text-teal-300 text-xl animate-[float_5.5s_ease-in-out_infinite]">
+                  💧
+                </span>
+                <h2 className="text-2xl font-bold text-white">Water Conservation</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Water usage analysis</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Fixture upgrades and retrofits</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Leak detection and repair</li>
@@ -94,9 +130,15 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Renewable Energy</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-orange-400/15 text-orange-300 text-xl animate-[pulse-glow_2.8s_ease-in-out_infinite]">
+                  ☀️
+                </span>
+                <h2 className="text-2xl font-bold text-white">Renewable Energy</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Solar energy feasibility studies</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Solar panel installation</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Solar thermal systems</li>
@@ -105,9 +147,15 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-              <h2 className="text-2xl font-bold text-neon-green mb-4">Sustainability Planning</h2>
-              <ul className="text-gray-300 space-y-2">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
+              <div className="relative flex items-center gap-3 mb-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 text-xl animate-[float_6.5s_ease-in-out_infinite]">
+                  🌱
+                </span>
+                <h2 className="text-2xl font-bold text-white">Sustainability Planning</h2>
+              </div>
+              <ul className="relative text-gray-300 space-y-2">
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Carbon footprint assessment</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Sustainability goal development</li>
                 <li className="flex items-start"><span className="text-neon-green mr-2">•</span> Portfolio-wide energy tracking</li>

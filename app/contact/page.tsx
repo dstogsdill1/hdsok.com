@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Reveal } from '@/components/Reveal';
 
 export default function ContactPage() {
   const [contactFormData, setContactFormData] = useState({
@@ -147,28 +148,42 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-dark-bg py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Get in touch with HDS to discuss your facility management needs. We&apos;re here to help 
-            24/7.
-          </p>
+      <section className="relative overflow-hidden bg-gradient-to-b from-dark-bg via-grey-nav to-dark-bg py-20 px-4">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-neon-green/20 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+          <div className="absolute inset-x-10 top-32 h-px bg-gradient-to-r from-transparent via-neon-green/40 to-transparent" />
+        </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          <Reveal>
+            <p className="inline-flex items-center rounded-full border border-neon-green/40 bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neon-green mb-4">
+              Contact HDS
+              <span className="ml-2 inline-flex h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_2.4s_ease-in-out_infinite]" />
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Get in touch with HDS
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to discuss your facility management needs? We&apos;re here to help 24/7. Submit a service request or reach out for a consultation.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* Service Request Form Section */}
       <section className="py-16 px-4 bg-dark-bg">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
-          <p className="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
-            Fill out the form below to request maintenance service. Our team will respond within 24 hours.
-          </p>
+          <Reveal>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
+            <p className="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
+              Fill out the form below to request maintenance service. Our team will respond within 24 hours.
+            </p>
+          </Reveal>
           
-          <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-            <form onSubmit={handleServiceSubmit} className="space-y-6">
+          <Reveal>
+          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+            <form onSubmit={handleServiceSubmit} className="relative space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="service-name" className="block text-white font-semibold mb-2">
@@ -355,6 +370,7 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -364,73 +380,85 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-12">
             
             {/* Contact Information */}
+            <Reveal>
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
               
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-                <h3 className="text-xl font-bold text-neon-green mb-4">24/7 Emergency Line</h3>
-                <p className="text-gray-300 mb-3">
-                  For urgent issues requiring immediate attention:
-                </p>
-                <a 
-                  href="tel:14057774156" 
-                  className="text-2xl font-bold text-white hover:text-neon-green transition-colors"
-                >
-                  Call Emergency Line
-                </a>
+              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+                <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+                <div className="relative">
+                  <h3 className="text-xl font-bold text-neon-green mb-4 flex items-center gap-2">
+                    <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">📞</span>
+                    24/7 Emergency Line
+                  </h3>
+                  <p className="text-gray-300 mb-3">
+                    For urgent issues requiring immediate attention:
+                  </p>
+                  <a 
+                    href="tel:14057774156" 
+                    className="text-2xl font-bold text-white hover:text-neon-green transition-colors"
+                  >
+                    Call Emergency Line
+                  </a>
+                </div>
               </div>
 
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-                <h3 className="text-xl font-bold text-neon-green mb-4">Office Contact</h3>
-                <div className="space-y-3 text-gray-300">
-                  <div>
-                    <p className="font-semibold text-white">Phone:</p>
-                    <a href="tel:+14055462820" className="hover:text-neon-green">
-                      +1 (405) 546-2820
-                    </a>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Email:</p>
-                    <a href="mailto:info@hdsok.com" className="hover:text-neon-green">
-                      info@hdsok.com
-                    </a>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Mailing Address:</p>
-                    <p>P.O. Box 890325</p>
-                    <p>Oklahoma City, OK 73189</p>
+              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+                <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
+                <div className="relative">
+                  <h3 className="text-xl font-bold text-neon-green mb-4">Office Contact</h3>
+                  <div className="space-y-3 text-gray-300">
+                    <div>
+                      <p className="font-semibold text-white">Phone:</p>
+                      <a href="tel:+14055462820" className="hover:text-neon-green">
+                        +1 (405) 546-2820
+                      </a>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white">Email:</p>
+                      <a href="mailto:info@hdsok.com" className="hover:text-neon-green">
+                        info@hdsok.com
+                      </a>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white">Mailing Address:</p>
+                      <p>P.O. Box 890325</p>
+                      <p>Oklahoma City, OK 73189</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
-                <h3 className="text-xl font-bold text-neon-green mb-4">Service Request Options</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="font-semibold text-white mb-2">Online Form:</p>
-                    <a 
-                      href="https://www.hds.live/service-request"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block border-2 border-neon-green text-neon-green px-4 py-2 rounded-lg text-sm hover:bg-neon-green hover:text-dark-bg transition-colors"
-                    >
-                      Submit Service Request
-                    </a>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white mb-2">Text Message:</p>
-                    <a 
-                      href="sms:14057774156"
-                      className="text-gray-300 hover:text-neon-green"
-                    >
-                      Text Us
-                    </a>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white mb-2">HDS Console:</p>
-                    <a 
-                      href="https://myconsole.hds.live/"
-                      target="_blank"
+              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+                <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
+                <div className="relative">
+                  <h3 className="text-xl font-bold text-neon-green mb-4">Service Request Options</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="font-semibold text-white mb-2">Online Form:</p>
+                      <a 
+                        href="https://www.hds.live/service-request"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block border-2 border-neon-green text-neon-green px-4 py-2 rounded-lg text-sm hover:bg-neon-green hover:text-dark-bg transition-colors"
+                      >
+                        Submit Service Request
+                      </a>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white mb-2">Text Message:</p>
+                      <a 
+                        href="sms:14057774156"
+                        className="text-gray-300 hover:text-neon-green"
+                      >
+                        Text Us
+                      </a>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white mb-2">HDS Console:</p>
+                      <a 
+                        href="https://myconsole.hds.live/"
+                        target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-neon-green"
                     >
@@ -439,8 +467,11 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card">
+            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
+              <div className="relative">
                 <h3 className="text-xl font-bold text-neon-green mb-4">Business Hours</h3>
                 <div className="text-gray-300 space-y-2">
                   <p><span className="font-semibold text-white">Emergency Service:</span> 24/7/365</p>
@@ -448,28 +479,32 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            </div>
+            </Reveal>
 
             {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
-              <div className="border-2 border-neon-green rounded-lg p-8 bg-dark-card">
-                <form onSubmit={handleContactSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-white font-semibold mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={contactFormData.name}
-                      onChange={handleContactChange}
-                      required
-                      className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
-                    />
-                  </div>
+            <Reveal delay={0.05}>
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+                  <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
+                  <form onSubmit={handleContactSubmit} className="relative space-y-6">
+                    <div>
+                      <label htmlFor="name" className="block text-white font-semibold mb-2">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={contactFormData.name}
+                        onChange={handleContactChange}
+                        required
+                        className="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white rounded-lg focus:outline-none focus:border-neon-green"
+                      />
+                    </div>
 
-                  <div>
+                    <div>
                     <label htmlFor="email" className="block text-white font-semibold mb-2">
                       Email *
                     </label>
@@ -563,16 +598,17 @@ export default function ContactPage() {
                     </div>
                   )}
 
-                  <button
+                    <button
                     type="submit"
                     disabled={contactStatus === 'loading'}
                     className="w-full bg-neon-green text-dark-bg py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {contactStatus === 'loading' ? 'Sending...' : 'Send Message'}
                   </button>
-                </form>
+                  </form>
+                </div>
               </div>
-            </div>
+            </Reveal>
 
           </div>
         </div>
