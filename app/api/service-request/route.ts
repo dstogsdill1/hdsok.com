@@ -32,15 +32,21 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create email transporter
+    // Create email transporter with proper Zoho configuration
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtpro.zoho.com',
       port: parseInt(process.env.SMTP_PORT || '465'),
-      secure: process.env.SMTP_SECURE === 'true' || true,
+      secure: true, // Always true for port 465
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: true,
+        minVersion: 'TLSv1.2'
+      },
+      debug: true, // Enable debug output
+      logger: true // Enable logging
     });
 
     // Priority badge styling
@@ -145,6 +151,15 @@ export async function POST(request: Request) {
       to: process.env.CONTACT_FORM_EMAIL || process.env.SMTP_USER,
     });
     
+    // Verify transporter configuration
+    try {
+      await transporter.verify();
+      console.log('SMTP connection verified successfully');
+    } catch (verifyError) {
+      console.error('SMTP verification failed:', verifyError);
+      throw new Error('Email server connection failed');
+    }
+    
     await transporter.sendMail(mailOptions);
 
     console.log('Service request email sent successfully');
@@ -152,6 +167,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
     console.error('Service request submission error:', error);
+    
+    // More detailed error logging
+    if (error instanceof Error) {
+      console.error('Error name:', error.name);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
+    
     return NextResponse.json(
       { error: 'Failed to submit service request. Please try again or call us directly.' },
       { status: 500 }
