@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,16 +22,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter using SMTP configuration
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    // Check if Postmark token is configured
+    if (!process.env.POSTMARK_SERVER_TOKEN) {
+      console.error('Postmark token not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured.' },
+        { status: 500 }
+      );
+    }
 
     // Email content
     const emailHtml = `
@@ -100,14 +97,21 @@ export async function POST(request: NextRequest) {
     `;
 
     // Send email
-    await transporter.sendMail({
-      from: `"HDS Website" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
-      replyTo: email,
-      subject: `New Contact Form: ${name} - ${propertyType || 'General Inquiry'}`,
-      html: emailHtml,
-      text: `
-New Contact Form Submission
+    // Send email via Postmark API
+    const postmarkResponse = await fetch('https://api.postmarkapp.com/email', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN,
+      },
+      body: JSON.stringify({
+        From: 'no-reply@hdsok.com',
+        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com',
+        ReplyTo: email,
+        Subject: `New Contact Form: ${name} - ${propertyType || 'General Inquiry'}`,
+        HtmlBody: emailHtml,
+        TextBody: `New Contact Form Submission
 
 Name: ${name}
 Email: ${email}
@@ -120,16 +124,19 @@ ${message}
 
 ---
 This message was sent from the contact form at www.hdsok.com
-Reply to this email to respond directly to ${name}.
-      `,
+Reply to this email to respond directly to ${name}.`,
+        MessageStream: 'outbound',
+      }),
     });
 
-    console.log('Contact form email sent successfully:', {
-      to: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
-      from: name,
-      email,
-      timestamp: new Date().toISOString(),
-    });
+    if (!postmarkResponse.ok) {
+      const errorData = await postmarkResponse.json();
+      console.error('Postmark API error:', errorData);
+      throw new Error(`Postmark API error: ${errorData.Message || 'Unknown error'}`);
+    }
+
+    const result = await postmarkResponse.json();
+    console.log('Contact form email sent successfully via Postmark:', result);
 
     return NextResponse.json(
       { success: true, message: 'Thank you for your message! We will get back to you as soon as possible.' },
@@ -138,7 +145,7 @@ Reply to this email to respond directly to ${name}.
   } catch (error) {
     console.error('Error sending contact form email:', error);
     return NextResponse.json(
-      { error: `Failed to send your message. Please try calling us or email ${process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live'} directly.` },
+      { error: `Failed to send your message. Please try calling us or email ${process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com'} directly.` },
       { status: 500 }
     );
   }

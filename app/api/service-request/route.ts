@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
@@ -23,31 +22,14 @@ export async function POST(request: Request) {
       );
     }
 
-    // Check if SMTP credentials are configured
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.error('SMTP credentials not configured');
+    // Check if Postmark token is configured
+    if (!process.env.POSTMARK_SERVER_TOKEN) {
+      console.error('Postmark token not configured');
       return NextResponse.json(
-        { error: 'Email service not configured. Please call us at (405) 777-4156 or email info@hdsok.com' },
+        { error: 'Email service not configured. Please call us at (405) 777-4156' },
         { status: 500 }
       );
     }
-
-    // Create email transporter with proper Zoho configuration
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtpro.zoho.com',
-      port: parseInt(process.env.SMTP_PORT || '465'),
-      secure: true, // Always true for port 465
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-      tls: {
-        rejectUnauthorized: true,
-        minVersion: 'TLSv1.2'
-      },
-      debug: true, // Enable debug output
-      logger: true // Enable logging
-    });
 
     // Priority badge styling
     const priorityColors = {
@@ -58,111 +40,134 @@ export async function POST(request: Request) {
 
     const priorityColor = priorityColors[priority as keyof typeof priorityColors] || '#10b981';
 
-    // Email content
-    const mailOptions = {
-      from: process.env.SMTP_USER,
-      to: process.env.CONTACT_FORM_EMAIL || process.env.SMTP_USER,
-      subject: `🔧 Service Request - ${priority.toUpperCase()} - ${serviceType}`,
-      html: `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #b8ff00; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
-            .header h1 { margin: 0; font-size: 28px; }
-            .priority-badge { display: inline-block; padding: 8px 16px; background: ${priorityColor}; color: white; border-radius: 20px; font-weight: bold; margin-top: 10px; }
-            .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
-            .field { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #dee2e6; }
-            .field-label { font-weight: bold; color: #495057; margin-bottom: 5px; }
-            .field-value { color: #212529; }
-            .service-type { background: #b8ff00; color: #0a0a0a; padding: 10px 15px; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 5px; }
-            .description-box { background: white; padding: 15px; border-left: 4px solid #b8ff00; border-radius: 4px; margin-top: 10px; }
-            .footer { text-align: center; margin-top: 20px; color: #6c757d; font-size: 12px; }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <h1>🔧 New Service Request</h1>
-              <div class="priority-badge">${priority.toUpperCase()} PRIORITY</div>
-            </div>
-            
-            <div class="content">
-              <div class="field">
-                <div class="field-label">Service Type</div>
-                <div class="service-type">${serviceType.toUpperCase()}</div>
-              </div>
-
-              <div class="field">
-                <div class="field-label">Contact Name</div>
-                <div class="field-value">${name}</div>
-              </div>
-
-              <div class="field">
-                <div class="field-label">Email</div>
-                <div class="field-value"><a href="mailto:${email}">${email}</a></div>
-              </div>
-
-              <div class="field">
-                <div class="field-label">Phone</div>
-                <div class="field-value"><a href="tel:${phone}">${phone}</a></div>
-              </div>
-
-              ${company ? `
-              <div class="field">
-                <div class="field-label">Company</div>
-                <div class="field-value">${company}</div>
-              </div>
-              ` : ''}
-
-              <div class="field">
-                <div class="field-label">Property Type</div>
-                <div class="field-value">${propertyType}</div>
-              </div>
-
-              <div class="field">
-                <div class="field-label">Location</div>
-                <div class="field-value">${location}</div>
-              </div>
-
-              <div class="field">
-                <div class="field-label">Service Description</div>
-                <div class="description-box">${description.replace(/\n/g, '<br>')}</div>
-              </div>
+    // Email HTML content
+    const htmlBody = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #b8ff00; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+          .header h1 { margin: 0; font-size: 28px; }
+          .priority-badge { display: inline-block; padding: 8px 16px; background: ${priorityColor}; color: white; border-radius: 20px; font-weight: bold; margin-top: 10px; }
+          .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
+          .field { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #dee2e6; }
+          .field-label { font-weight: bold; color: #495057; margin-bottom: 5px; }
+          .field-value { color: #212529; }
+          .service-type { background: #b8ff00; color: #0a0a0a; padding: 10px 15px; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 5px; }
+          .description-box { background: white; padding: 15px; border-left: 4px solid #b8ff00; border-radius: 4px; margin-top: 10px; }
+          .footer { text-align: center; margin-top: 20px; color: #6c757d; font-size: 12px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>🔧 New Service Request</h1>
+            <div class="priority-badge">${priority.toUpperCase()} PRIORITY</div>
+          </div>
+          
+          <div class="content">
+            <div class="field">
+              <div class="field-label">Service Type</div>
+              <div class="service-type">${serviceType.toUpperCase()}</div>
             </div>
 
-            <div class="footer">
-              <p>This service request was submitted from www.hdsok.com</p>
-              <p>Please respond to the customer within 24 hours</p>
+            <div class="field">
+              <div class="field-label">Contact Name</div>
+              <div class="field-value">${name}</div>
+            </div>
+
+            <div class="field">
+              <div class="field-label">Email</div>
+              <div class="field-value"><a href="mailto:${email}">${email}</a></div>
+            </div>
+
+            <div class="field">
+              <div class="field-label">Phone</div>
+              <div class="field-value"><a href="tel:${phone}">${phone}</a></div>
+            </div>
+
+            ${company ? `
+            <div class="field">
+              <div class="field-label">Company</div>
+              <div class="field-value">${company}</div>
+            </div>
+            ` : ''}
+
+            <div class="field">
+              <div class="field-label">Property Type</div>
+              <div class="field-value">${propertyType}</div>
+            </div>
+
+            <div class="field">
+              <div class="field-label">Location</div>
+              <div class="field-value">${location}</div>
+            </div>
+
+            <div class="field">
+              <div class="field-label">Service Description</div>
+              <div class="description-box">${description.replace(/\n/g, '<br>')}</div>
             </div>
           </div>
-        </body>
-        </html>
-      `,
-    };
 
-    // Send email
-    console.log('Sending service request email with config:', {
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      user: process.env.SMTP_USER,
-      to: process.env.CONTACT_FORM_EMAIL || process.env.SMTP_USER,
+          <div class="footer">
+            <p>This service request was submitted from www.hdsok.com</p>
+            <p>Please respond to the customer within 24 hours</p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    // Send email via Postmark API
+    console.log('Sending service request email via Postmark');
+    
+    const postmarkResponse = await fetch('https://api.postmarkapp.com/email', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN,
+      },
+      body: JSON.stringify({
+        From: 'no-reply@hdsok.com',
+        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com',
+        Subject: `🔧 Service Request - ${priority.toUpperCase()} - ${serviceType}`,
+        HtmlBody: htmlBody,
+        TextBody: `New Service Request
+
+Service Type: ${serviceType}
+Priority: ${priority.toUpperCase()}
+
+Contact Information:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+${company ? `Company: ${company}` : ''}
+
+Property Type: ${propertyType}
+Location: ${location}
+
+Service Description:
+${description}
+
+---
+This service request was submitted from www.hdsok.com
+Please respond to the customer within 24 hours.`,
+        ReplyTo: email,
+        MessageStream: 'outbound',
+      }),
     });
-    
-    // Verify transporter configuration
-    try {
-      await transporter.verify();
-      console.log('SMTP connection verified successfully');
-    } catch (verifyError) {
-      console.error('SMTP verification failed:', verifyError);
-      throw new Error('Email server connection failed');
-    }
-    
-    await transporter.sendMail(mailOptions);
 
-    console.log('Service request email sent successfully');
+    if (!postmarkResponse.ok) {
+      const errorData = await postmarkResponse.json();
+      console.error('Postmark API error:', errorData);
+      throw new Error(`Postmark API error: ${errorData.Message || 'Unknown error'}`);
+    }
+
+    const result = await postmarkResponse.json();
+    console.log('Service request email sent successfully via Postmark:', result);
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
