@@ -122,6 +122,9 @@ export async function POST(request: Request) {
 
     // Send email via Postmark API
     console.log('Sending service request email via Postmark');
+    console.log('Postmark token available:', !!process.env.POSTMARK_SERVER_TOKEN);
+    console.log('From:', 'no-reply@hdsok.com');
+    console.log('To:', process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com');
     
     const postmarkResponse = await fetch('https://api.postmarkapp.com/email', {
       method: 'POST',
@@ -163,7 +166,12 @@ Please respond to the customer within 24 hours.`,
     if (!postmarkResponse.ok) {
       const errorData = await postmarkResponse.json();
       console.error('Postmark API error:', errorData);
-      throw new Error(`Postmark API error: ${errorData.Message || 'Unknown error'}`);
+      console.error('Postmark response status:', postmarkResponse.status);
+      console.error('Postmark response headers:', Object.fromEntries(postmarkResponse.headers.entries()));
+      return NextResponse.json(
+        { error: `Email service error: ${errorData.Message || 'Unknown error'}. Please call us at (405) 777-4156.` },
+        { status: 500 }
+      );
     }
 
     const result = await postmarkResponse.json();
@@ -181,7 +189,7 @@ Please respond to the customer within 24 hours.`,
     }
     
     return NextResponse.json(
-      { error: 'Failed to submit service request. Please try again or call us directly.' },
+      { error: 'Failed to submit service request. Please try again or call us at (405) 777-4156.' },
       { status: 500 }
     );
   }
