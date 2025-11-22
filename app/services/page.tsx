@@ -57,7 +57,7 @@ export default function ServicesPage() {
           
           {/* Mechanical & Refrigeration */}
           <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 transition-all">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -104,7 +104,7 @@ export default function ServicesPage() {
 
           {/* Facility Maintenance */}
           <Reveal delay={0.05}>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 transition-all">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -154,7 +154,7 @@ export default function ServicesPage() {
 
           {/* Construction & Special Projects */}
           <Reveal delay={0.1}>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 transition-all">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -205,7 +205,7 @@ export default function ServicesPage() {
 
           {/* Design-Build & Consulting */}
           <Reveal delay={0.15}>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 transition-all">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/15 via-transparent to-neon-green/5" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -256,7 +256,7 @@ export default function ServicesPage() {
 
           {/* Energy Management & Sustainability */}
           <Reveal delay={0.2}>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 transition-all">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/15 via-transparent to-neon-green/10" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -309,7 +309,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-dark-card">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <h2 className="text-4xl font-bold text-white mb-6">

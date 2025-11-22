@@ -51,7 +51,7 @@ export default function EnergyManagementPage() {
 
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="border-4 border-neon-green rounded-lg p-8 bg-dark-card mb-12">
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 mb-12">
             <p className="text-gray-300 text-lg leading-relaxed">
               HDS helps commercial property owners reduce operating costs and environmental impact through 
               comprehensive energy management and sustainability programs. Our team identifies opportunities, 
@@ -60,7 +60,7 @@ export default function EnergyManagementPage() {
           </div>
 
           <div className="space-y-8 mb-12">
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
               <div className="relative flex items-center gap-3 mb-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-400/15 text-amber-300 text-xl animate-[pulse-glow_2.4s_ease-in-out_infinite]">
@@ -78,7 +78,7 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
               <div className="relative flex items-center gap-3 mb-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-xl animate-[float_6s_ease-in-out_infinite]">
@@ -95,7 +95,7 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
               <div className="relative flex items-center gap-3 mb-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500/15 text-sky-300 text-xl animate-[pulse-glow_3s_ease-in-out_infinite]">
@@ -113,7 +113,7 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
               <div className="relative flex items-center gap-3 mb-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-500/15 text-teal-300 text-xl animate-[float_5.5s_ease-in-out_infinite]">
@@ -130,7 +130,7 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
               <div className="relative flex items-center gap-3 mb-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-orange-400/15 text-orange-300 text-xl animate-[pulse-glow_2.8s_ease-in-out_infinite]">
@@ -147,7 +147,7 @@ export default function EnergyManagementPage() {
               </ul>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
               <div className="relative flex items-center gap-3 mb-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 text-xl animate-[float_6.5s_ease-in-out_infinite]">
@@ -166,7 +166,7 @@ export default function EnergyManagementPage() {
             </div>
           </div>
 
-          <div className="border-4 border-neon-green rounded-lg p-8 bg-dark-card mb-12">
+          <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Benefits of Energy Management</h2>
             <div className="grid md:grid-cols-2 gap-6 text-gray-300">
               <ul className="space-y-3">

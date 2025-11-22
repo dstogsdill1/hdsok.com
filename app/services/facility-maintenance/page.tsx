@@ -76,7 +76,7 @@ export default function FacilityMaintenancePage() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 space-y-4">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 space-y-4">
               <h3 className="text-xl font-semibold text-white mb-1">Where this matters most</h3>
               <p className="text-sm text-gray-300">
                 High-traffic environments where cleanliness, safety, and uptime directly impact sales and
@@ -102,7 +102,7 @@ export default function FacilityMaintenancePage() {
       </section>
 
       {/* Coordinated service areas */}
-      <section className="py-16 px-4 bg-dark-card/60 border-y border-dark-border">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950 border-y border-dark-border">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 text-center max-w-3xl mx-auto">
@@ -118,7 +118,7 @@ export default function FacilityMaintenancePage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
                 <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-400/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-xl animate-[float_6s_ease-in-out_infinite]">
@@ -135,7 +135,7 @@ export default function FacilityMaintenancePage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
                 <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 text-xl animate-[pulse-glow_2.8s_ease-in-out_infinite]">
@@ -154,7 +154,7 @@ export default function FacilityMaintenancePage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
                 <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500/15 text-sky-200 text-xl">
@@ -171,7 +171,7 @@ export default function FacilityMaintenancePage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 transition-all">
                 <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-500/15 text-purple-200 text-xl">
@@ -191,7 +191,7 @@ export default function FacilityMaintenancePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-dark-card/80 border-t border-dark-border">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950 border-t border-dark-border">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

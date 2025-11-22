@@ -48,7 +48,7 @@ export default function VendorsPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-6xl mx-auto space-y-12">
           
           <Reveal>
@@ -65,7 +65,7 @@ export default function VendorsPage() {
           {/* Benefits Grid */}
           <div className="grid md:grid-cols-2 gap-6">
             <Reveal>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
               <div className="relative">
                 <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -81,7 +81,7 @@ export default function VendorsPage() {
             </Reveal>
 
             <Reveal delay={0.05}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
               <div className="relative">
                 <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -97,7 +97,7 @@ export default function VendorsPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
               <div className="relative">
                 <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -113,7 +113,7 @@ export default function VendorsPage() {
             </Reveal>
 
             <Reveal delay={0.15}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-purple-500/15 via-transparent to-neon-green/5" />
               <div className="relative">
                 <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -129,7 +129,7 @@ export default function VendorsPage() {
             </Reveal>
 
             <Reveal delay={0.2}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-amber-400/15 via-transparent to-neon-green/10" />
               <div className="relative">
                 <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -143,7 +143,7 @@ export default function VendorsPage() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
               <div className="relative">
                 <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -161,7 +161,7 @@ export default function VendorsPage() {
 
           {/* Requirements Section */}
           <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-white mb-6">Vendor Requirements</h2>
@@ -219,7 +219,7 @@ export default function VendorsPage() {
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               <Reveal>
-              <div className="bg-dark-card border border-neon-green rounded-lg p-4">
+              <div className="bg-gradient-to-b from-slate-900/80 to-black/90 border border-white/10 rounded-2xl p-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <h4 className="font-bold text-neon-green mb-2">HVAC & Refrigeration</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Commercial HVAC</li>
@@ -230,7 +230,7 @@ export default function VendorsPage() {
               </div>
               </Reveal>
               <Reveal delay={0.05}>
-              <div className="bg-dark-card border border-neon-green rounded-lg p-4">
+              <div className="bg-gradient-to-b from-slate-900/80 to-black/90 border border-white/10 rounded-2xl p-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <h4 className="font-bold text-neon-green mb-2">Electrical</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Licensed electricians</li>
@@ -241,7 +241,7 @@ export default function VendorsPage() {
               </div>
               </Reveal>
               <Reveal delay={0.1}>
-              <div className="bg-dark-card border border-neon-green rounded-lg p-4">
+              <div className="bg-gradient-to-b from-slate-900/80 to-black/90 border border-white/10 rounded-2xl p-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <h4 className="font-bold text-neon-green mb-2">Plumbing</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Commercial plumbing</li>
@@ -252,7 +252,7 @@ export default function VendorsPage() {
               </div>
               </Reveal>
               <Reveal delay={0.15}>
-              <div className="bg-dark-card border border-neon-green rounded-lg p-4">
+              <div className="bg-gradient-to-b from-slate-900/80 to-black/90 border border-white/10 rounded-2xl p-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <h4 className="font-bold text-neon-green mb-2">General Contractors</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Remodeling</li>
@@ -263,7 +263,7 @@ export default function VendorsPage() {
               </div>
               </Reveal>
               <Reveal delay={0.2}>
-              <div className="bg-dark-card border border-neon-green rounded-lg p-4">
+              <div className="bg-gradient-to-b from-slate-900/80 to-black/90 border border-white/10 rounded-2xl p-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <h4 className="font-bold text-neon-green mb-2">Specialty Services</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Roofing</li>
@@ -272,7 +272,7 @@ export default function VendorsPage() {
                   <li>• Glass & glazing</li>
                 </ul>
               </div>
-              <div className="bg-dark-card border border-neon-green rounded-lg p-4">
+              <div className="bg-gradient-to-b from-slate-900/80 to-black/90 border border-white/10 rounded-2xl p-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                 <h4 className="font-bold text-neon-green mb-2">Facility Services</h4>
                 <ul className="text-sm space-y-1">
                   <li>• Janitorial</li>
@@ -329,7 +329,7 @@ export default function VendorsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-dark-card">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <h2 className="text-4xl font-bold text-white mb-6">

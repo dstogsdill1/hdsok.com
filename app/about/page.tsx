@@ -63,7 +63,7 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="relative rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+            <div className="relative rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-xs font-semibold tracking-wide text-gray-400">HDS at a glance</p>
                 <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-1 text-xs text-emerald-300">
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 Console, and keep your stakeholders informed. The result: consistent service quality and a
                 single source of truth for every work order.
               </p>
-              <p className="border-l-4 border-neon-green pl-4 bg-dark-card/70 p-4 rounded">
+              <p className="border-l-4 border-neon-green/50 pl-4 bg-black/30 p-4 rounded">
                 <span className="block text-sm uppercase tracking-wide text-neon-green mb-1">Global operations</span>
                 Through the HDS Console, we support portfolios across Europe, Central Asia, and the Americas—
                 adapting to local regulations, languages, and vendor ecosystems while maintaining a unified
@@ -131,7 +131,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 space-y-4">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 space-y-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
               <h3 className="text-xl font-semibold text-white mb-2">Our mission</h3>
               <p className="text-gray-300 text-sm">
                 Give facility teams, operators, and finance leaders a calm, predictable way to run critical
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* What sets us apart */}
-      <section className="py-16 px-4 bg-dark-card/60 border-y border-dark-border">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950 border-y border-dark-border">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 text-center max-w-3xl mx-auto">
@@ -171,7 +171,7 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
                 <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-lg animate-[float_6s_ease-in-out_infinite]">
@@ -187,7 +187,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
                 <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 text-lg animate-[pulse-glow_2.6s_ease-in-out_infinite]">
@@ -203,7 +203,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
                 <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/15 text-sky-300 text-lg">
@@ -219,7 +219,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
                 <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-purple-500/15 via-transparent to-neon-green/5" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/15 text-purple-200 text-lg">
@@ -235,7 +235,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
                 <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-amber-400/15 via-transparent to-neon-green/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/15 text-amber-200 text-lg">
@@ -251,7 +251,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-bg/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
                 <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
                 <div className="relative flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-400/15 text-sky-100 text-lg">
@@ -293,7 +293,7 @@ export default function AboutPage() {
               'Medical &amp; professional suites',
             ].map((label, index) => (
               <Reveal key={label} delay={index * 0.04}>
-                <div className="relative overflow-hidden rounded-2xl border border-neon-green/30 bg-dark-card/80 px-4 py-5 hover:shadow-[0_18px_45px_rgba(0,0,0,0.7)] transition-all flex items-center gap-3">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 px-4 py-5 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.7)] transition-all flex items-center gap-3">
                   <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-base animate-[float_6s_ease-in-out_infinite]">
                     •
                   </span>

@@ -45,7 +45,7 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-          <div className="border-4 border-neon-green rounded-lg p-8 bg-dark-card">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Small Business Facility Partner
             </h2>
@@ -91,7 +91,7 @@ export default function Home() {
       <WorkflowTimeline />
 
       {/* HDS Console Platform Features */}
-      <section className="py-16 px-4 bg-dark-card">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-6xl mx-auto">
           <Reveal>
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* All Sites, One View */}
             <Reveal>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[float_6s_ease-in-out_infinite]">🏢</span>
@@ -120,7 +120,7 @@ export default function Home() {
 
             {/* Fast Dispatch */}
             <Reveal delay={0.05}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[pulse-glow_2.4s_ease-in-out_infinite]">⚡</span>
@@ -134,7 +134,7 @@ export default function Home() {
 
             {/* Live Cost Tracking */}
             <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[float_7s_ease-in-out_infinite]">💰</span>
@@ -148,7 +148,7 @@ export default function Home() {
 
             {/* Energy Analytics */}
             <Reveal delay={0.15}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[pulse-glow_3s_ease-in-out_infinite]">⚡</span>
@@ -162,7 +162,7 @@ export default function Home() {
 
             {/* Maintenance per ft² */}
             <Reveal delay={0.2}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[float_5.5s_ease-in-out_infinite]">📐</span>
@@ -176,7 +176,7 @@ export default function Home() {
 
             {/* Smart Assets */}
             <Reveal delay={0.25}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[float_6.4s_ease-in-out_infinite]">🔧</span>
@@ -190,7 +190,7 @@ export default function Home() {
 
             {/* Vendor Insights */}
             <Reveal delay={0.3}>
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
               <div className="relative text-3xl mb-3">
                 <span className="inline-block animate-[pulse-glow_2.8s_ease-in-out_infinite]">💡</span>
@@ -203,7 +203,7 @@ export default function Home() {
             </Reveal>
 
             {/* Predictive Data */}
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/90 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
               <div className="relative text-3xl mb-3">📈</div>
               <h3 className="relative text-xl font-bold text-white mb-3">Predictive Data</h3>
@@ -274,7 +274,7 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {/* Call Live Agent */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card hover:bg-dark-bg transition-colors">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <h3 className="text-2xl font-bold text-neon-green mb-4">📞 Call Live Agent</h3>
               <p className="text-gray-300 mb-4">
                 For urgent issues, call our 24/7 dispatch line. Provide the property name, 
@@ -290,7 +290,7 @@ export default function Home() {
             </div>
 
             {/* Service Request */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card hover:bg-dark-bg transition-colors">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <h3 className="text-2xl font-bold text-neon-green mb-4">📋 Service Request</h3>
               <p className="text-gray-300 mb-4">
                 For routine or planned work, use our online form or your branded app. Enter the
@@ -308,7 +308,7 @@ export default function Home() {
             </div>
 
             {/* Text HDS Team */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card hover:bg-dark-bg transition-colors">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <h3 className="text-2xl font-bold text-neon-green mb-4">💬 Text HDS Team</h3>
               <p className="text-gray-300 mb-4">
                 Use texting for urgent escalations or follow‑ups after a work order has been 
@@ -323,7 +323,7 @@ export default function Home() {
             </div>
 
             {/* Chat or Use Our App */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-card hover:bg-dark-bg transition-colors">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
               <h3 className="text-2xl font-bold text-neon-green mb-4">💻 Chat or Use Our App</h3>
               <p className="text-gray-300 mb-4">
                 Use our app or chat for urgent escalations or follow‑ups after a work order 
@@ -341,7 +341,7 @@ export default function Home() {
       </section>
 
       {/* HDS Service Suite */}
-      <section className="py-16 px-4 bg-dark-card">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-6 text-center">
             HDS Service Suite
@@ -355,11 +355,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Mechanical & Refrigeration */}
             <Link href="/services/mechanical-refrigeration" className="group">
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg h-full hover:bg-neon-green hover:text-dark-bg transition-all">
-                <h3 className="text-2xl font-bold text-neon-green group-hover:text-dark-bg mb-4">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+                <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Mechanical & Refrigeration
                 </h3>
-                <ul className="text-gray-300 group-hover:text-dark-bg space-y-2">
+                <ul className="text-gray-300 space-y-2">
                   <li>• 24/7 racks, RTUs & chillers</li>
                   <li>• HVAC & refrigeration repairs</li>
                   <li>• Energy‑management projects</li>
@@ -370,11 +370,11 @@ export default function Home() {
 
             {/* Facility Maintenance */}
             <Link href="/services/facility-maintenance" className="group">
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg h-full hover:bg-neon-green hover:text-dark-bg transition-all">
-                <h3 className="text-2xl font-bold text-neon-green group-hover:text-dark-bg mb-4">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+                <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Facility Maintenance
                 </h3>
-                <ul className="text-gray-300 group-hover:text-dark-bg space-y-2">
+                <ul className="text-gray-300 space-y-2">
                   <li>• Full‑store upkeep</li>
                   <li>• Preventive & reactive maintenance</li>
                   <li>• 24‑hour dispatch</li>
@@ -385,11 +385,11 @@ export default function Home() {
 
             {/* Construction & Special Projects */}
             <Link href="/services/construction-special-projects" className="group">
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg h-full hover:bg-neon-green hover:text-dark-bg transition-all">
-                <h3 className="text-2xl font-bold text-neon-green group-hover:text-dark-bg mb-4">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+                <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Construction & Special Projects
                 </h3>
-                <ul className="text-gray-300 group-hover:text-dark-bg space-y-2">
+                <ul className="text-gray-300 space-y-2">
                   <li>• Ground‑up builds, remodels and roll‑outs</li>
                   <li>• Equipment upgrades</li>
                   <li>• Tenant improvements</li>
@@ -400,11 +400,11 @@ export default function Home() {
 
             {/* Design-Build & Consulting */}
             <Link href="/services/design-build-consulting" className="group">
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg h-full hover:bg-neon-green hover:text-dark-bg transition-all">
-                <h3 className="text-2xl font-bold text-neon-green group-hover:text-dark-bg mb-4">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+                <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Design‑Build & Consulting
                 </h3>
-                <ul className="text-gray-300 group-hover:text-dark-bg space-y-2">
+                <ul className="text-gray-300 space-y-2">
                   <li>• Concept‑to‑ribbon‑cutting</li>
                   <li>• Energy and code expertise</li>
                   <li>• Project feasibility & engineering</li>
@@ -415,11 +415,11 @@ export default function Home() {
 
             {/* Energy Management & Sustainability */}
             <Link href="/services/energy-management-sustainability" className="group">
-              <div className="border-2 border-neon-green rounded-lg p-6 bg-dark-bg h-full hover:bg-neon-green hover:text-dark-bg transition-all">
-                <h3 className="text-2xl font-bold text-neon-green group-hover:text-dark-bg mb-4">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+                <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Energy Management & Sustainability
                 </h3>
-                <ul className="text-gray-300 group-hover:text-dark-bg space-y-2">
+                <ul className="text-gray-300 space-y-2">
                   <li>• Optimization & retro‑commissioning</li>
                   <li>• Utility incentives</li>
                   <li>• Lighting upgrades</li>
@@ -430,16 +430,16 @@ export default function Home() {
             </Link>
 
             {/* Call to Action Card */}
-            <div className="border-2 border-neon-green rounded-lg p-6 bg-neon-green text-dark-bg flex flex-col justify-center items-center text-center">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="rounded-2xl border border-neon-green/50 bg-gradient-to-b from-neon-green/10 to-emerald-500/5 p-6 flex flex-col justify-center items-center text-center shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
+              <h3 className="text-2xl font-bold mb-4 text-neon-green">
                 Ready to Get Started?
               </h3>
-              <p className="mb-6">
+              <p className="mb-6 text-gray-300">
                 Schedule a 30-minute consultation to discuss your facility needs.
               </p>
               <Link 
                 href="/contact"
-                className="bg-dark-bg text-neon-green px-6 py-3 rounded-lg font-semibold hover:bg-grey-nav transition-colors"
+                className="bg-neon-green text-dark-bg px-6 py-3 rounded-lg font-semibold hover:bg-neon-green/80 transition-colors"
               >
                 Book A Call
               </Link>

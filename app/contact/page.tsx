@@ -171,7 +171,7 @@ export default function ContactPage() {
       </section>
 
       {/* Service Request Form Section */}
-      <section className="py-16 px-4 bg-dark-bg">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <h2 className="text-3xl font-bold text-white mb-4 text-center">Submit a Service Request</h2>
@@ -181,7 +181,7 @@ export default function ContactPage() {
           </Reveal>
           
           <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
             <form onSubmit={handleServiceSubmit} className="relative space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -375,7 +375,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information & General Contact Form */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-slate-950">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             
@@ -384,7 +384,7 @@ export default function ContactPage() {
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
               
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.8)] transition-all">
                 <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
                 <div className="relative">
                   <h3 className="text-xl font-bold text-neon-green mb-4 flex items-center gap-2">
@@ -403,7 +403,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.8)] transition-all">
                 <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
                 <div className="relative">
                   <h3 className="text-xl font-bold text-neon-green mb-4">Office Contact</h3>
@@ -429,7 +429,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.8)] transition-all">
                 <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
                 <div className="relative">
                   <h3 className="text-xl font-bold text-neon-green mb-4">Service Request Options</h3>
@@ -469,7 +469,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-6 hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.8)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
               <div className="relative">
                 <h3 className="text-xl font-bold text-neon-green mb-4">Business Hours</h3>
@@ -486,7 +486,7 @@ export default function ContactPage() {
             <Reveal delay={0.05}>
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
-                <div className="relative overflow-hidden rounded-2xl border border-neon-green/40 bg-dark-card/80 p-8 shadow-[0_18px_45px_rgba(0,0,0,0.7)]">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
                   <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
                   <form onSubmit={handleContactSubmit} className="relative space-y-6">
                     <div>
