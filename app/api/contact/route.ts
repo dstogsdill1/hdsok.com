@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
+  const fallbackRecipient = process.env.CONTACT_FORM_EMAIL || process.env.ONBOARDING_NOTIFICATION_EMAIL || 'info@hdsok.com';
+
   try {
     const body = await request.json();
     const { name, email, phone, company, propertyType, message } = body;
@@ -167,7 +169,7 @@ Reply to this email to respond directly to ${name}.`,
   } catch (error) {
     console.error('Error sending contact form email:', error);
     return NextResponse.json(
-      { error: `Failed to send your message. Please try calling us or email ${recipientEmails[0] || 'info@hdsok.com'} directly.` },
+      { error: `Failed to send your message. Please try calling us or email ${fallbackRecipient} directly.` },
       { status: 500 }
     );
   }
