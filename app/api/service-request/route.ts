@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     // Email content
     const mailOptions = {
       from: process.env.SMTP_USER,
-      to: 'no-reply@hds.live',
+      to: process.env.CONTACT_FORM_EMAIL || process.env.SMTP_USER,
       subject: `🔧 Service Request - ${priority.toUpperCase()} - ${serviceType}`,
       html: `
         <!DOCTYPE html>
@@ -138,7 +138,16 @@ export async function POST(request: Request) {
     };
 
     // Send email
+    console.log('Sending service request email with config:', {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      to: process.env.CONTACT_FORM_EMAIL || process.env.SMTP_USER,
+    });
+    
     await transporter.sendMail(mailOptions);
+
+    console.log('Service request email sent successfully');
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
