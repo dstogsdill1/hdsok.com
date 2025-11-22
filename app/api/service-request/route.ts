@@ -31,6 +31,21 @@ export async function POST(request: Request) {
       );
     }
 
+    // Resolve sender and recipient configuration
+    const fromEmail = process.env.POSTMARK_FROM_EMAIL || 'no-reply@hds.live';
+    const recipientEmails = [
+      process.env.CONTACT_FORM_EMAIL,
+      process.env.ONBOARDING_NOTIFICATION_EMAIL
+    ].filter((value, index, self) => value && self.indexOf(value) === index);
+
+    if (recipientEmails.length === 0) {
+      console.error('No recipient email configured for service requests');
+      return NextResponse.json(
+        { error: 'Email routing is not configured. Please call us at (405) 777-4156.' },
+        { status: 500 }
+      );
+    }
+
     // Priority badge styling
     const priorityColors = {
       emergency: '#ef4444',
@@ -123,8 +138,8 @@ export async function POST(request: Request) {
     // Send email via Postmark API
     console.log('Sending service request email via Postmark');
     console.log('Postmark token available:', !!process.env.POSTMARK_SERVER_TOKEN);
-    console.log('From:', 'no-reply@hds.live');
-    console.log('To:', process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live');
+    console.log('From:', fromEmail);
+    console.log('To:', recipientEmails);
     
     const postmarkResponse = await fetch('https://api.postmarkapp.com/email', {
       method: 'POST',
@@ -134,8 +149,8 @@ export async function POST(request: Request) {
         'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN,
       },
       body: JSON.stringify({
-        From: 'no-reply@hds.live',
-        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
+        From: fromEmail,
+        To: recipientEmails.join(','),
         Subject: `🔧 Service Request - ${priority.toUpperCase()} - ${serviceType}`,
         HtmlBody: htmlBody,
         TextBody: `New Service Request
@@ -168,6 +183,14 @@ Please respond to the customer within 24 hours.`,
       console.error('Postmark API error:', errorData);
       console.error('Postmark response status:', postmarkResponse.status);
       console.error('Postmark response headers:', Object.fromEntries(postmarkResponse.headers.entries()));
+
+      if (errorData?.ErrorCode === 406 || /inactive/i.test(errorData?.Message || '')) {
+        return NextResponse.json(
+          { error: 'The recipient mailbox is currently disabled or suppressed. Please call us at (405) 777-4156 while we resolve the issue.' },
+          { status: 500 }
+        );
+      }
+
       return NextResponse.json(
         { error: `Email service error: ${errorData.Message || 'Unknown error'}. Please call us at (405) 777-4156.` },
         { status: 500 }

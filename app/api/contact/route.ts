@@ -31,6 +31,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const fromEmail = process.env.POSTMARK_FROM_EMAIL || 'no-reply@hds.live';
+    const recipientEmails = [
+      process.env.CONTACT_FORM_EMAIL,
+      process.env.ONBOARDING_NOTIFICATION_EMAIL
+    ].filter((value, index, self) => value && self.indexOf(value) === index);
+
+    if (recipientEmails.length === 0) {
+      console.error('No recipient email configured for contact form');
+      return NextResponse.json(
+        { error: 'Email routing is not configured. Please call us at (405) 777-4156.' },
+        { status: 500 }
+      );
+    }
+
     // Email content
     const emailHtml = `
       <!DOCTYPE html>
@@ -106,8 +120,8 @@ export async function POST(request: NextRequest) {
         'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN,
       },
       body: JSON.stringify({
-        From: 'no-reply@hds.live',
-        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
+        From: fromEmail,
+        To: recipientEmails.join(','),
         ReplyTo: email,
         Subject: `New Contact Form: ${name} - ${propertyType || 'General Inquiry'}`,
         HtmlBody: emailHtml,
@@ -132,6 +146,14 @@ Reply to this email to respond directly to ${name}.`,
     if (!postmarkResponse.ok) {
       const errorData = await postmarkResponse.json();
       console.error('Postmark API error:', errorData);
+
+      if (errorData?.ErrorCode === 406 || /inactive/i.test(errorData?.Message || '')) {
+        return NextResponse.json(
+          { error: 'The recipient mailbox is currently disabled or suppressed. Please call us at (405) 777-4156 while we resolve the issue.' },
+          { status: 500 }
+        );
+      }
+
       throw new Error(`Postmark API error: ${errorData.Message || 'Unknown error'}`);
     }
 
@@ -145,7 +167,7 @@ Reply to this email to respond directly to ${name}.`,
   } catch (error) {
     console.error('Error sending contact form email:', error);
     return NextResponse.json(
-      { error: `Failed to send your message. Please try calling us or email ${process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com'} directly.` },
+      { error: `Failed to send your message. Please try calling us or email ${recipientEmails[0] || 'info@hdsok.com'} directly.` },
       { status: 500 }
     );
   }
