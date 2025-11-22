@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
     // Send email
     await transporter.sendMail({
       from: `"HDS Website" <${process.env.SMTP_USER}>`,
-      to: 'no-reply@hds.live',
+      to: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
       replyTo: email,
       subject: `New Contact Form: ${name} - ${propertyType || 'General Inquiry'}`,
       html: emailHtml,
@@ -125,7 +125,7 @@ Reply to this email to respond directly to ${name}.
     });
 
     console.log('Contact form email sent successfully:', {
-      to: 'no-reply@hds.live',
+      to: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
       from: name,
       email,
       timestamp: new Date().toISOString(),
@@ -138,7 +138,7 @@ Reply to this email to respond directly to ${name}.
   } catch (error) {
     console.error('Error sending contact form email:', error);
     return NextResponse.json(
-      { error: 'Failed to send your message. Please try calling us at (405) 777-4156 or email no-reply@hds.live directly.' },
+      { error: `Failed to send your message. Please try calling us or email ${process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live'} directly.` },
       { status: 500 }
     );
   }

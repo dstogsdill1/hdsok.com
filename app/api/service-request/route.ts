@@ -23,6 +23,15 @@ export async function POST(request: Request) {
       );
     }
 
+    // Check if SMTP credentials are configured
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error('SMTP credentials not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured. Please call us at (405) 777-4156 or email info@hdsok.com' },
+        { status: 500 }
+      );
+    }
+
     // Create email transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtpro.zoho.com',

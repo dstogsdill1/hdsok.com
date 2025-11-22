@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             📞 Call Live Agent
           </a>
           <a 
-            href="https://www.hds.live/service-request" 
+            href="https://app.jotform.com/251983870494168" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:underline"
@@ -135,10 +135,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 HDS Console
               </Link>
               <a 
-                href="https://www.hds.live/global/login" 
+                href="https://cmms.hdsok.com/global/login" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-neon-green text-dark-bg px-4 py-2 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
+                className="text-neon-green hover:text-white transition-colors font-semibold"
               >
                 Customer Login
               </a>
