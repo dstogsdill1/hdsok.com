@@ -106,8 +106,8 @@ export async function POST(request: NextRequest) {
         'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN,
       },
       body: JSON.stringify({
-        From: 'no-reply@hdsok.com',
-        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com',
+        From: 'no-reply@hds.live',
+        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
         ReplyTo: email,
         Subject: `New Contact Form: ${name} - ${propertyType || 'General Inquiry'}`,
         HtmlBody: emailHtml,

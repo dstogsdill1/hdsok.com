@@ -123,8 +123,8 @@ export async function POST(request: Request) {
     // Send email via Postmark API
     console.log('Sending service request email via Postmark');
     console.log('Postmark token available:', !!process.env.POSTMARK_SERVER_TOKEN);
-    console.log('From:', 'no-reply@hdsok.com');
-    console.log('To:', process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com');
+    console.log('From:', 'no-reply@hds.live');
+    console.log('To:', process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live');
     
     const postmarkResponse = await fetch('https://api.postmarkapp.com/email', {
       method: 'POST',
@@ -134,8 +134,8 @@ export async function POST(request: Request) {
         'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN,
       },
       body: JSON.stringify({
-        From: 'no-reply@hdsok.com',
-        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hdsok.com',
+        From: 'no-reply@hds.live',
+        To: process.env.CONTACT_FORM_EMAIL || 'no-reply@hds.live',
         Subject: `🔧 Service Request - ${priority.toUpperCase()} - ${serviceType}`,
         HtmlBody: htmlBody,
         TextBody: `New Service Request
