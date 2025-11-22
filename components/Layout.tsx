@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   return (
     <>
@@ -67,8 +68,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {/* Services Dropdown */}
               <div 
                 className="relative"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseEnter={() => {
+                  if (closeTimeoutRef.current) {
+                    clearTimeout(closeTimeoutRef.current);
+                    closeTimeoutRef.current = null;
+                  }
+                  setServicesOpen(true);
+                }}
+                onMouseLeave={() => {
+                  closeTimeoutRef.current = setTimeout(() => {
+                    setServicesOpen(false);
+                  }, 300);
+                }}
               >
                 <button className="text-white hover:text-neon-green transition-colors flex items-center gap-1">
                   Services
