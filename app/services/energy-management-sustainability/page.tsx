@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import EnergyShowcase from '@/components/EnergyShowcase';
 
 export const metadata: Metadata = {
   title: "Energy Management & Sustainability Solutions - Reduce Operating Costs",
@@ -48,6 +49,9 @@ export default function EnergyManagementPage() {
           </div>
         </div>
       </section>
+
+      {/* Energy Analytics Showcase */}
+      <EnergyShowcase />
 
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
