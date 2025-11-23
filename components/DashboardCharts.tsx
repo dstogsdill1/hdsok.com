@@ -12,13 +12,13 @@ const monthlyData = [
 ];
 
 const energyData = [
-  { month: 'Jan', kwh: 145 },
-  { month: 'Feb', kwh: 138 },
-  { month: 'Mar', kwh: 142 },
-  { month: 'Apr', kwh: 125 },
-  { month: 'May', kwh: 132 },
-  { month: 'Jun', kwh: 118 },
-  { month: 'Jul', kwh: 120 },
+  { month: 'Jan', kwh: 145, cost: 18200, co2: 89 },
+  { month: 'Feb', kwh: 138, cost: 17400, co2: 85 },
+  { month: 'Mar', kwh: 142, cost: 17900, co2: 87 },
+  { month: 'Apr', kwh: 125, cost: 15800, co2: 76 },
+  { month: 'May', kwh: 132, cost: 16600, co2: 81 },
+  { month: 'Jun', kwh: 118, cost: 14900, co2: 72 },
+  { month: 'Jul', kwh: 120, cost: 15200, co2: 74 },
 ];
 
 export default function DashboardCharts() {
@@ -94,10 +94,24 @@ export default function DashboardCharts() {
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
           <div className="relative mb-4">
-            <h3 className="text-sm font-bold text-white uppercase tracking-wide">Energy Usage Trend</h3>
-            <p className="text-xs text-gray-400 mt-1">kWh per square foot across portfolio</p>
+            <h3 className="text-sm font-bold text-white uppercase tracking-wide">Energy & Cost Analytics</h3>
+            <p className="text-xs text-gray-400 mt-1">Multi-metric portfolio performance tracking</p>
+            <div className="flex gap-4 mt-2 text-xs">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-neon-green"></div>
+                <span className="text-gray-400">kWh/ft²</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-blue-400"></div>
+                <span className="text-gray-400">Cost ($)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-orange-400"></div>
+                <span className="text-gray-400">CO2 (tons)</span>
+              </div>
+            </div>
           </div>
-          <ResponsiveContainer width="100%" height={180}>
+          <ResponsiveContainer width="100%" height={200}>
             <LineChart data={energyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" opacity={0.3} />
               <XAxis 
@@ -106,9 +120,15 @@ export default function DashboardCharts() {
                 style={{ fontSize: '12px' }}
               />
               <YAxis 
+                yAxisId="left"
                 stroke="#64748b" 
                 style={{ fontSize: '12px' }}
-                tickFormatter={(value) => `${value}`}
+              />
+              <YAxis 
+                yAxisId="right"
+                orientation="right"
+                stroke="#64748b" 
+                style={{ fontSize: '12px' }}
               />
               <Tooltip 
                 contentStyle={{ 
@@ -120,16 +140,40 @@ export default function DashboardCharts() {
                   boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
                 }}
                 labelStyle={{ color: '#c6ff00', fontWeight: 'bold' }}
-                formatter={(value: number) => [`${value} kWh/ft²`, 'Usage']}
               />
               <Line 
+                yAxisId="left"
                 type="monotone" 
                 dataKey="kwh" 
                 stroke="#c6ff00" 
                 strokeWidth={3}
+                name="Energy Usage"
                 dot={{ fill: '#c6ff00', r: 4 }}
                 activeDot={{ r: 6, fill: '#c6ff00', stroke: '#fff', strokeWidth: 2 }}
                 animationDuration={1000}
+              />
+              <Line 
+                yAxisId="right"
+                type="monotone" 
+                dataKey="cost" 
+                stroke="#60a5fa" 
+                strokeWidth={2}
+                name="Energy Cost"
+                dot={{ fill: '#60a5fa', r: 3 }}
+                activeDot={{ r: 5, fill: '#60a5fa', stroke: '#fff', strokeWidth: 2 }}
+                animationDuration={1200}
+                strokeDasharray="5 5"
+              />
+              <Line 
+                yAxisId="left"
+                type="monotone" 
+                dataKey="co2" 
+                stroke="#fb923c" 
+                strokeWidth={2}
+                name="CO2 Emissions"
+                dot={{ fill: '#fb923c', r: 3 }}
+                activeDot={{ r: 5, fill: '#fb923c', stroke: '#fff', strokeWidth: 2 }}
+                animationDuration={1400}
               />
             </LineChart>
           </ResponsiveContainer>

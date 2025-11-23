@@ -2,6 +2,11 @@ import Link from 'next/link';
 import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
 import { Reveal } from '@/components/Reveal';
+import StatsCounter from '@/components/StatsCounter';
+import InteractiveFeatureGrid from '@/components/InteractiveFeatureGrid';
+import BeforeAfterComparison from '@/components/BeforeAfterComparison';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import ProductShowcase from '@/components/ProductShowcase';
 
 export default function HDSConsolePage() {
   return (
@@ -64,6 +69,18 @@ export default function HDSConsolePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Stats Counter */}
+      <StatsCounter />
+
+      {/* Before/After Comparison */}
+      <BeforeAfterComparison />
+
+      {/* Interactive Feature Grid */}
+      <InteractiveFeatureGrid />
+
+      {/* Product Showcase */}
+      <ProductShowcase />
 
       {/* Core Features */}
       <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
@@ -296,6 +313,9 @@ export default function HDSConsolePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialCarousel />
 
       {/* CTA Section */}
       <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">

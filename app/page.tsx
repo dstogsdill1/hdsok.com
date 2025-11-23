@@ -5,6 +5,8 @@ import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
 import { Reveal } from '@/components/Reveal';
 import { WorkflowTimeline } from '@/components/WorkflowTimeline';
+import StatsCounter from '@/components/StatsCounter';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export const metadata: Metadata = {
   title: "Vendor Coordination & Facility Maintenance for Commercial Properties",
@@ -260,6 +262,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats Counter */}
+      <StatsCounter />
+
       {/* Need Service? Get Help Your Way */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -447,6 +452,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialCarousel />
     </div>
   );
 }
