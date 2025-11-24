@@ -189,16 +189,87 @@ export default function ProductShowcase() {
                     <DashboardCharts />
                   </div>
                 ) : activeTab === 'mobile' ? (
-                  <div className="relative aspect-[9/16] max-w-sm mx-auto bg-gradient-to-br from-slate-800 to-slate-900 rounded-[2.5rem] p-4 flex items-center justify-center border-8 border-slate-700">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">{currentTab.icon}</div>
-                      <div className="text-gray-400 text-sm">
-                        {currentTab.title}
+                  <div className="relative aspect-[9/16] max-w-sm mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[2.5rem] p-2 border-8 border-slate-700 shadow-2xl">
+                    {/* Phone notch */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-3xl"></div>
+                    
+                    {/* Screen content */}
+                    <div className="relative h-full bg-base rounded-[1.75rem] p-4 overflow-hidden">
+                      {/* Status bar */}
+                      <div className="flex justify-between items-center text-xs text-gray-400 mb-4">
+                        <span>9:41</span>
+                        <div className="flex gap-1">
+                          <span>📶</span>
+                          <span>🔋</span>
+                        </div>
                       </div>
-                      <div className="mt-4 space-y-2">
-                        <div className="h-2 bg-neon-green/30 rounded-full w-3/4 mx-auto"></div>
-                        <div className="h-2 bg-neon-green/20 rounded-full w-1/2 mx-auto"></div>
-                        <div className="h-2 bg-neon-green/10 rounded-full w-2/3 mx-auto"></div>
+
+                      {/* App header */}
+                      <div className="mb-4">
+                        <div className="text-xs text-gray-400 mb-1">HDS LIVE</div>
+                        <h3 className="text-white font-bold text-lg">My Portfolio</h3>
+                      </div>
+
+                      {/* Interactive mini cards */}
+                      <div className="space-y-3">
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          className="bg-surface/80 backdrop-blur-sm border border-neon-green/30 rounded-lg p-3"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="text-xs text-neon-green font-semibold">📊 View Live Data</div>
+                              <div className="text-xs text-gray-400 mt-1">247 sites • 89% uptime</div>
+                            </div>
+                            <div className="text-xl">→</div>
+                          </div>
+                        </motion.div>
+
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-lg p-3"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="text-xs text-white font-semibold">🔧 Work Orders</div>
+                              <div className="text-xs text-gray-400 mt-1">12 active • 3 urgent</div>
+                            </div>
+                            <div className="text-xl">→</div>
+                          </div>
+                        </motion.div>
+
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-lg p-3"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="text-xs text-white font-semibold">💰 Budget Status</div>
+                              <div className="text-xs text-gray-400 mt-1">73% used this month</div>
+                            </div>
+                            <div className="text-xl">→</div>
+                          </div>
+                        </motion.div>
+
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-lg p-3"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="text-xs text-white font-semibold">⚡ Energy Alerts</div>
+                              <div className="text-xs text-gray-400 mt-1">2 anomalies detected</div>
+                            </div>
+                            <div className="text-xl">→</div>
+                          </div>
+                        </motion.div>
+                      </div>
+
+                      {/* Bottom quick actions */}
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="bg-neon-green/10 border border-neon-green/30 rounded-lg p-3 text-center">
+                          <div className="text-xs text-neon-green font-semibold">+ Submit New Request</div>
+                        </div>
                       </div>
                     </div>
                   </div>

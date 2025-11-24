@@ -62,10 +62,15 @@ interface StatsCounterProps {
 }
 
 export default function StatsCounter({ stats }: StatsCounterProps) {
-  const defaultStats = [
-    { value: 15, suffix: '+', label: 'Years of Excellence' },
+  const defaultStats: Array<{
+    value: number;
+    suffix?: string;
+    prefix?: string;
+    label: string;
+  }> = [
+    { value: 500, suffix: '+', label: 'Properties Managed' },
     { value: 50000, suffix: '+', label: 'Work Orders Completed' },
-    { value: 98, suffix: '%', label: 'On-Time Response Rate' },
+    { value: 99, suffix: '%', label: 'Client Satisfaction' },
     { value: 24, suffix: '/7', label: 'Emergency Support' },
   ];
 
@@ -85,8 +90,8 @@ export default function StatsCounter({ stats }: StatsCounterProps) {
             <StatItem
               key={index}
               value={stat.value}
-              suffix={'suffix' in stat ? stat.suffix : ''}
-              prefix={'prefix' in stat ? stat.prefix : ''}
+              suffix={stat.suffix || ''}
+              prefix={stat.prefix || ''}
               label={stat.label}
               duration={2 + index * 0.1}
             />

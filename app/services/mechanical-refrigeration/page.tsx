@@ -96,7 +96,7 @@ export default function MechanicalRefrigerationPage() {
       </section>
 
       {/* Coordinated services & equipment */}
-      <section className="py-16 px-4 bg-dark-bg border-y border-dark-border">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 text-center max-w-3xl mx-auto">
@@ -185,7 +185,7 @@ export default function MechanicalRefrigerationPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-dark-bg border-t border-dark-border">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

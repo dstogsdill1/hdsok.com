@@ -309,7 +309,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-dark-bg">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <h2 className="text-4xl font-bold text-white mb-6">

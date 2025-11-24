@@ -38,24 +38,23 @@ const steps = [
 
 export function WorkflowTimeline() {
   return (
-    <section className="relative overflow-hidden bg-black px-4 py-20">
+    <section className="relative overflow-hidden px-4 py-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent" />
-        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-emerald-500/40 via-emerald-500/10 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon-green/40 to-transparent" />
+        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-neon-green/40 via-neon-green/10 to-transparent" />
       </div>
 
       <div className="relative mx-auto flex max-w-5xl flex-col gap-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-neon-green">
               How HDS runs a call
             </p>
-            <h2 className="mt-3 text-balance text-3xl font-semibold text-white sm:text-4xl">
-              From first call to closed work order—on one rail.
+            <h2 className="mt-3 text-balance text-3xl font-semibold text-white sm:text-4xl leading-tight">
+              From first call to closed work order—on one rail
             </h2>
-            <p className="mt-4 text-sm text-gray-300 sm:text-base">
-              A clean, predictable workflow for every maintenance request, so your team and your
-              vendors always know what happens next.
+            <p className="mt-4 text-base text-gray-300 sm:text-lg leading-relaxed">
+              A clean, predictable workflow for every maintenance request
             </p>
           </div>
         </Reveal>
@@ -64,13 +63,13 @@ export function WorkflowTimeline() {
           {steps.map((step, index) => (
             <Reveal key={step.label} delay={index * 0.05}>
               <motion.div
-                className="group relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/70 to-black/90 p-4 text-left shadow-[0_18px_45px_rgba(0,0,0,0.55)]"
+                className="group relative flex h-full flex-col justify-between rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-4 text-left shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30"
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
               >
                 <div className="mb-4 flex items-center justify-between gap-2 text-[10px] uppercase tracking-[0.2em] text-gray-500">
                   <span>{step.label}</span>
-                  <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[9px] font-medium text-emerald-300">
+                  <span className="rounded-full bg-neon-green/10 px-2 py-0.5 text-[9px] font-medium text-neon-green">
                     Step
                   </span>
                 </div>
@@ -78,9 +77,8 @@ export function WorkflowTimeline() {
                   <h3 className="mb-2 text-sm font-semibold text-white sm:text-base">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-gray-300 sm:text-sm">{step.description}</p>
+                  <p className="text-xs text-gray-300 sm:text-sm leading-relaxed">{step.description}</p>
                 </div>
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-emerald-500/15 via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </motion.div>
             </Reveal>
           ))}

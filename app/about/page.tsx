@@ -25,10 +25,10 @@ export default function AboutPage() {
   return (
     <div>
       {/* Sub-hero aligned with home aesthetic */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-dark-bg via-grey-nav to-dark-bg py-20 px-4">
+      <section className="relative overflow-hidden py-20 px-4">
         <div className="pointer-events-none absolute inset-0 opacity-40">
           <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-neon-green/20 blur-3xl" />
-          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-neon-green/10 blur-3xl" />
           <div className="absolute inset-x-10 top-32 h-px bg-gradient-to-r from-transparent via-neon-green/40 to-transparent" />
         </div>
         <div className="relative max-w-6xl mx-auto grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
@@ -47,15 +47,15 @@ export default function AboutPage() {
                 to run grocery, retail, and multi-unit properties with confidence.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-xl">
-                <div className="rounded-xl border border-neon-green/40 bg-black/40 px-4 py-3">
+                <div className="rounded-xl border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-4 py-3">
                   <p className="text-xs text-gray-400 mb-1">Portfolio Reach</p>
                   <p className="text-lg font-semibold text-neon-green">EU • Central Asia • Americas</p>
                 </div>
-                <div className="rounded-xl border border-neon-green/40 bg-black/40 px-4 py-3">
+                <div className="rounded-xl border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-4 py-3">
                   <p className="text-xs text-gray-400 mb-1">Dispatch Coverage</p>
                   <p className="text-lg font-semibold text-white">24/7/365</p>
                 </div>
-                <div className="rounded-xl border border-neon-green/40 bg-black/40 px-4 py-3">
+                <div className="rounded-xl border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-4 py-3">
                   <p className="text-xs text-gray-400 mb-1">Work Orders Managed</p>
                   <p className="text-lg font-semibold text-white">From issue to invoice</p>
                 </div>
@@ -63,10 +63,10 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="relative rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
+            <div className="relative rounded-2xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-xl">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-xs font-semibold tracking-wide text-gray-400">HDS at a glance</p>
-                <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-1 text-xs text-emerald-300">
+                <span className="inline-flex items-center rounded-full bg-neon-green/10 px-2 py-1 text-xs text-neon-green">
                   Powered by HDS Console
                 </span>
               </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 space-y-4 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
+            <div className="rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 space-y-4 shadow-lg hover:shadow-neon-green/10">
               <h3 className="text-xl font-semibold text-white mb-2">Our mission</h3>
               <p className="text-gray-300 text-sm">
                 Give facility teams, operators, and finance leaders a calm, predictable way to run critical
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* What sets us apart */}
-      <section className="py-16 px-4 bg-dark-bg border-y border-dark-border">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="mb-10 text-center max-w-3xl mx-auto">
@@ -171,15 +171,14 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
-                <div className="relative flex items-center gap-3 mb-3">
+              <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-lg animate-[float_6s_ease-in-out_infinite]">
                     ⚡
                   </span>
                   <h3 className="text-lg font-semibold text-white">24/7 smart dispatch</h3>
                 </div>
-                <p className="relative text-sm text-gray-300">
+                <p className="text-sm text-gray-300 leading-relaxed">
                   Centralized dispatch that routes issues based on trade, location, and priority, then
                   follows through until closeout and invoice.
                 </p>
@@ -187,15 +186,14 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
-                <div className="relative flex items-center gap-3 mb-3">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 text-lg animate-[pulse-glow_2.6s_ease-in-out_infinite]">
+              <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-lg animate-[pulse-glow_2.6s_ease-in-out_infinite]">
                     📊
                   </span>
                   <h3 className="text-lg font-semibold text-white">Live portfolio insight</h3>
                 </div>
-                <p className="relative text-sm text-gray-300">
+                <p className="text-sm text-gray-300 leading-relaxed">
                   Track maintenance spend, work order volume, and vendor performance across brands,
                   countries, and regions from the HDS Console.
                 </p>
@@ -203,15 +201,14 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/5" />
-                <div className="relative flex items-center gap-3 mb-3">
+              <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-500/15 text-sky-300 text-lg">
                     🧩
                   </span>
                   <h3 className="text-lg font-semibold text-white">Vendor network, curated</h3>
                 </div>
-                <p className="relative text-sm text-gray-300">
+                <p className="text-sm text-gray-300">
                   We build and maintain regional vendor networks so you don&apos;t have to— complete with
                   qualification, compliance checks, and performance scoring.
                 </p>
@@ -219,15 +216,14 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-purple-500/15 via-transparent to-neon-green/5" />
-                <div className="relative flex items-center gap-3 mb-3">
+              <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/15 text-purple-200 text-lg">
                     🧾
                   </span>
                   <h3 className="text-lg font-semibold text-white">Clean billing, less noise</h3>
                 </div>
-                <p className="relative text-sm text-gray-300">
+                <p className="text-sm text-gray-300">
                   Consolidated invoicing and standardized documentation that finance teams can actually
                   reconcile—no more chasing down field notes.
                 </p>
@@ -235,15 +231,14 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.06}>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-amber-400/15 via-transparent to-neon-green/10" />
-                <div className="relative flex items-center gap-3 mb-3">
+              <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/15 text-amber-200 text-lg">
                     🧱
                   </span>
                   <h3 className="text-lg font-semibold text-white">Projects &amp; programs</h3>
                 </div>
-                <p className="relative text-sm text-gray-300">
+                <p className="text-sm text-gray-300">
                   From capital projects to rollouts and energy upgrades, we coordinate vendors and
                   schedules while keeping your locations trading.
                 </p>
@@ -251,15 +246,14 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
-                <div className="relative flex items-center gap-3 mb-3">
+              <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+                <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-400/15 text-sky-100 text-lg">
                     🤝
                   </span>
                   <h3 className="text-lg font-semibold text-white">A partner, not a platform</h3>
                 </div>
-                <p className="relative text-sm text-gray-300">
+                <p className="text-sm text-gray-300">
                   We bring the technology and the people—operators get white-glove support while still
                   owning strategy and brand standards.
                 </p>
@@ -293,7 +287,7 @@ export default function AboutPage() {
               'Medical &amp; professional suites',
             ].map((label, index) => (
               <Reveal key={label} delay={index * 0.04}>
-                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 px-4 py-5 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.7)] transition-all flex items-center gap-3">
+                <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/70 backdrop-blur-sm px-4 py-5 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all flex items-center gap-3">
                   <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-neon-green/15 text-neon-green text-base animate-[float_6s_ease-in-out_infinite]">
                     •
                   </span>
@@ -306,7 +300,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA aligned with home page style */}
-      <section className="relative py-16 px-4 bg-dark-bg overflow-hidden">
+      <section className="relative py-16 px-4 overflow-hidden">
         <div className="pointer-events-none absolute inset-0 opacity-30">
           <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-neon-green/20 blur-3xl" />
           <div className="absolute right-1/4 bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />

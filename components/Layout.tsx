@@ -11,8 +11,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {/* Top CTA Bar */}
-      <div className="bg-gradient-to-r from-neon-green via-emerald-400 to-neon-green text-dark-bg py-2.5 px-4 text-center text-sm font-semibold shadow-[0_4px_20px_rgba(52,211,153,0.3)]">
-        <div className="max-w-7xl mx-auto flex justify-center gap-6">
+      <div className="bg-gradient-to-r from-neon-green/90 via-neon-green to-neon-green/90 text-base py-3 px-4 text-center font-semibold shadow-lg">
+        <div className="max-w-7xl mx-auto flex justify-center gap-6 text-sm">
           <a href="tel:14057774156" className="hover:text-white transition-colors flex items-center gap-2">
             <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">📞</span>
             Call Live Agent
@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-dark-bg/95 backdrop-blur-md border-b border-neon-green/20 sticky top-0 z-50 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+      <nav className="bg-surface/95 backdrop-blur-md border-b border-border-subtle sticky top-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -94,7 +94,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </button>
                 
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-dark-card/95 backdrop-blur-md border border-neon-green/40 rounded-xl shadow-[0_18px_48px_rgba(0,0,0,0.8)] py-2">
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-surface/95 backdrop-blur-md border border-border-subtle rounded-xl shadow-xl py-2">
                     <Link 
                       href="/services" 
                       className="block px-4 py-2.5 text-white hover:bg-neon-green/20 hover:text-neon-green transition-colors"
@@ -164,7 +164,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-dark-bg/95 backdrop-blur-md border-t border-neon-green/20 mt-20 shadow-[0_-8px_32px_rgba(0,0,0,0.4)]">
+      <footer className="bg-surface/95 backdrop-blur-md border-t border-border-subtle mt-20 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Contact Info */}

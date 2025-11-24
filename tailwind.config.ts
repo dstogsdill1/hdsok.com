@@ -11,15 +11,33 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'neon-green': '#00ff41',
-        'neon-green-dark': '#00cc33',
-        'dark-bg': '#0a0a0a',
-        'dark-card': '#0a0a0a',
-        'dark-border': '#2a2a2a',
-        'grey-nav': '#0a0a0a',
+        // Softer neon accents (lightened by 10-15%)
+        'neon-green': '#1aff52',
+        'neon-green-dark': '#00e63d',
+        'neon-blue': '#00d4ff',
+        'neon-blue-dark': '#00b8e6',
+        // New dark grey palette
+        'base': '#1E1E26',          // Main background (lighter than pure black)
+        'surface': '#262B35',        // Cards and elevated surfaces
+        'surface-hover': '#2C303A',  // Hover states
+        'border-subtle': '#3A3F4A',  // Subtle borders
+        'border': '#4A4F5A',         // Standard borders
+        // Legacy support (mapped to new palette)
+        'dark-bg': '#1E1E26',
+        'dark-card': '#262B35',
+        'dark-border': '#3A3F4A',
+        'grey-nav': '#1E1E26',
       },
       borderColor: {
-        'neon': '#00ff41',
+        'neon': '#1aff52',
+      },
+      lineHeight: {
+        'relaxed': '1.75',
+        'loose': '2',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
       },
     },
   },

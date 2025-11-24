@@ -7,6 +7,7 @@ import { Reveal } from '@/components/Reveal';
 import { WorkflowTimeline } from '@/components/WorkflowTimeline';
 import StatsCounter from '@/components/StatsCounter';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import ProductShowcase from '@/components/ProductShowcase';
 
 export const metadata: Metadata = {
   title: "Vendor Coordination & Facility Maintenance for Commercial Properties",
@@ -43,47 +44,155 @@ export default function Home() {
     <div>
       <HeroShowcase />
 
-      {/* Your Small Business Facility Partner */}
-      <section className="py-16 px-4">
+      {/* HDS LIVE vs HDS Services Explanation */}
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Your Small Business Facility Partner
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              One Company, Two Solutions
             </h2>
-            <div className="space-y-4 text-gray-300 text-lg">
-              <p>
-                Running a small business leaves little time for maintenance headaches. Homeland
-                Development Services steps in as your trusted partner, keeping your building and
-                equipment in top shape so you can concentrate on customers and growth. From
-                emergency repairs to preventive maintenance, our team handles everything behind the
-                scenes. That means no more vendor juggling, late-night calls or surprise
-                breakdowns—just a smooth, comfortable space for your staff and patrons.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Understanding the HDS ecosystem—our platform and our people
+            </p>
+          </div>
+          </Reveal>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* HDS LIVE Platform */}
+            <Reveal>
+            <div className="rounded-2xl border border-neon-blue/30 bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-blue/20 transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">💻</span>
+                <h3 className="text-2xl font-bold text-neon-blue">HDS LIVE</h3>
+              </div>
+              <p className="text-lg font-semibold text-white mb-4">Our Platform</p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-blue mt-1">•</span>
+                  <span>Cloud-based CMMS & work order system</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-blue mt-1">•</span>
+                  <span>Real-time analytics & energy tracking</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-blue mt-1">•</span>
+                  <span>Multi-property portfolio management</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-blue mt-1">•</span>
+                  <span>Vendor coordination & dispatch</span>
+                </li>
+              </ul>
+            </div>
+            </Reveal>
+
+            {/* HDS Services */}
+            <Reveal delay={0.1}>
+            <div className="rounded-2xl border border-neon-green/30 bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/20 transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">🛠️</span>
+                <h3 className="text-2xl font-bold text-neon-green">HDS Services</h3>
+              </div>
+              <p className="text-lg font-semibold text-white mb-4">Our Team</p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-green mt-1">•</span>
+                  <span>Vendor management & coordination</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-green mt-1">•</span>
+                  <span>24/7 dispatch & emergency response</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-green mt-1">•</span>
+                  <span>Licensed contractor network nationwide</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-neon-green mt-1">•</span>
+                  <span>Project management & consulting</span>
+                </li>
+              </ul>
+            </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.2}>
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 text-lg">
+              <span className="text-neon-blue font-semibold">HDS LIVE</span> powers the technology. <span className="text-neon-green font-semibold">HDS Services</span> delivers the expertise.
+            </p>
+          </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Your Facility Partner - Simplified */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+          <div className="rounded-2xl border border-border-subtle bg-surface/50 backdrop-blur-sm p-10 shadow-xl">
+            <h2 className="text-4xl font-bold text-white mb-8">
+              Your Facility Partner
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="text-xl font-semibold text-neon-green mb-4">What We Do</h3>
+                <ul className="space-y-3 text-gray-300 text-lg leading-relaxed">
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">✓</span>
+                    <span>Coordinate licensed vendors nationwide</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">✓</span>
+                    <span>24/7 emergency dispatch & response</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">✓</span>
+                    <span>Preventive maintenance programs</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">✓</span>
+                    <span>Energy upgrades & sustainability</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-neon-green mb-4">How It Works</h3>
+                <ul className="space-y-3 text-gray-300 text-lg leading-relaxed">
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">1.</span>
+                    <span>Submit request via phone, web, or app</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">2.</span>
+                    <span>We dispatch the right vendor instantly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">3.</span>
+                    <span>Track progress in real-time</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-neon-green mt-1">4.</span>
+                    <span>Receive consolidated invoicing</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center pt-6 border-t border-border-subtle">
+              <p className="text-xl text-gray-300 mb-6">
+                Focus on your business while we handle your facilities
               </p>
-              <p>
-                As a small business owner you wear many hats. HDS helps you take off the
-                facilities cap. We become an extension of your team, ready around the clock to solve
-                issues and plan ahead. Whether you manage a café, boutique, gym or office, we take
-                the stress out of maintenance.
-              </p>
-              <p>
-                Our process starts when you tell us about your property and priorities. We
-                design a tailored plan to match your hours and budget, then provide one point of
-                contact who coordinates all work. When you need a repair, use our phone line, online
-                form or text option to submit a request. You&apos;ll see real‑time updates on each
-                job and receive a single, easy‑to‑read invoice for everything.
-              </p>
-              <p>
-                Beyond day‑to‑day fixes, we offer upgrades and projects that improve your space
-                and reduce operating costs. Our licensed technicians handle HVAC and
-                refrigeration, electrical work, plumbing, remodeling and energy upgrades. We can also
-                advise on design and compliance to keep your business in line with codes and
-                regulations.
-              </p>
-              <p className="font-semibold text-neon-green">
-                Ready to reclaim your time? Talk to us today to learn how HDS can take care of
-                your facilities so you can take care of your customers.
-              </p>
+              <Link 
+                href="/contact"
+                className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+              >
+                Get Started Today
+              </Link>
             </div>
           </div>
           </Reveal>
@@ -93,124 +202,115 @@ export default function Home() {
       <WorkflowTimeline />
 
       {/* HDS Console Platform Features */}
-      <section className="py-16 px-4 bg-dark-bg">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">
-            HDS Console: Global Portfolio Management
+          <h2 className="text-4xl font-bold text-white mb-4 text-center">
+            HDS Console: Portfolio Management
           </h2>
-          <p className="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
-            Powering facility management across Europe, Central Asia, and the Americas with 
-            real-time visibility and control.
+          <p className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+            Real-time visibility and control across all your properties
           </p>
           </Reveal>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* All Sites, One View */}
             <Reveal>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
-              <div className="relative text-3xl mb-3">
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
                 <span className="inline-block animate-[float_6s_ease-in-out_infinite]">🏢</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">All Sites, One View</h3>
-              <p className="relative text-gray-300 text-sm">
-                Multi-tenant, multi-brand portfolio management across all your locations
+              <h3 className="text-xl font-bold text-white mb-3">All Sites, One View</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Multi-tenant portfolio management across locations
               </p>
             </div>
             </Reveal>
 
             {/* Fast Dispatch */}
             <Reveal delay={0.05}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/10 via-transparent to-neon-green/10" />
-              <div className="relative text-3xl mb-3">
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
                 <span className="inline-block animate-[pulse-glow_2.4s_ease-in-out_infinite]">⚡</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Fast Dispatch</h3>
-              <p className="relative text-gray-300 text-sm">
-                Issue to vendor notification in seconds with automated routing
+              <h3 className="text-xl font-bold text-white mb-3">Fast Dispatch</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Issue to vendor in seconds with automated routing
               </p>
             </div>
             </Reveal>
 
             {/* Live Cost Tracking */}
             <Reveal delay={0.1}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-neon-green/10" />
-              <div className="relative text-3xl mb-3">
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
                 <span className="inline-block animate-[float_7s_ease-in-out_infinite]">💰</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Live Cost Tracking</h3>
-              <p className="relative text-gray-300 text-sm">
-                Real-time spend per site, region, and vendor with detailed analytics
+              <h3 className="text-xl font-bold text-white mb-3">Live Cost Tracking</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Real-time spend per site, region, and vendor
               </p>
             </div>
             </Reveal>
 
             {/* Energy Analytics */}
             <Reveal delay={0.15}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-neon-green/5" />
-              <div className="relative text-3xl mb-3">
-                <span className="inline-block animate-[pulse-glow_3s_ease-in-out_infinite]">⚡</span>
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
+                <span className="inline-block animate-[pulse-glow_3s_ease-in-out_infinite]">📊</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Energy Analytics</h3>
-              <p className="relative text-gray-300 text-sm">
-                Track EUI (kWh/ft²) and energy cost per square foot across properties
+              <h3 className="text-xl font-bold text-white mb-3">Energy Analytics</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Track kWh/ft² and energy cost across properties
               </p>
             </div>
             </Reveal>
 
             {/* Maintenance per ft² */}
             <Reveal delay={0.2}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-neon-green/10" />
-              <div className="relative text-3xl mb-3">
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
                 <span className="inline-block animate-[float_5.5s_ease-in-out_infinite]">📐</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Maintenance per ft²</h3>
-              <p className="relative text-gray-300 text-sm">
-                Compare maintenance spend per square foot by site and region
+              <h3 className="text-xl font-bold text-white mb-3">Cost per ft²</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Compare maintenance spend by site and region
               </p>
             </div>
             </Reveal>
 
             {/* Smart Assets */}
             <Reveal delay={0.25}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-teal-400/10 via-transparent to-neon-green/10" />
-              <div className="relative text-3xl mb-3">
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
                 <span className="inline-block animate-[float_6.4s_ease-in-out_infinite]">🔧</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Smart Assets</h3>
-              <p className="relative text-gray-300 text-sm">
-                Auto maintenance triggers with no manual logs required
+              <h3 className="text-xl font-bold text-white mb-3">Smart Assets</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Auto maintenance triggers—no manual logs
               </p>
             </div>
             </Reveal>
 
             {/* Vendor Insights */}
             <Reveal delay={0.3}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
-              <div className="relative text-3xl mb-3">
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">
                 <span className="inline-block animate-[pulse-glow_2.8s_ease-in-out_infinite]">💡</span>
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Vendor Insights</h3>
-              <p className="relative text-gray-300 text-sm">
-                Performance metrics updated automatically for all contractors
+              <h3 className="text-xl font-bold text-white mb-3">Vendor Insights</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Performance metrics updated automatically
               </p>
             </div>
             </Reveal>
 
             {/* Predictive Data */}
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
-              <div className="relative text-3xl mb-3">📈</div>
-              <h3 className="relative text-xl font-bold text-white mb-3">Predictive Data</h3>
-              <p className="relative text-gray-300 text-sm">
-                Spot energy & cost anomalies before they spiral out of control
+            <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <div className="text-3xl mb-3">📈</div>
+              <h3 className="text-xl font-bold text-white mb-3">Predictive Alerts</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Spot anomalies before they escalate
               </p>
             </div>
           </div>
@@ -218,38 +318,57 @@ export default function Home() {
           <div className="text-center">
             <Link 
               href="/hds-console"
-              className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
+              className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
             >
-              Explore HDS Console Platform
+              Explore HDS Console
             </Link>
           </div>
         </div>
       </section>
 
+      {/* Product Showcase with Interactive Demo */}
+      <ProductShowcase />
+
       {/* Your Work Orders—Live and In Detail */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">
-            Your Work Orders—Live and In Detail
+          <h2 className="text-4xl font-bold text-white mb-4 text-center">
+            Work Orders—Live and In Detail
           </h2>
+          <p className="text-lg text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+            Track every request from submission to completion in one centralized dashboard
+          </p>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Reveal>
-            <div className="text-gray-300 space-y-4">
-              <p>
-                Centralize every maintenance request from submission to completion. Property
-                managers, tenants and staff can submit work orders via web, mobile app or 24/7 call
-                centre. Updates from vendors and technicians flow into a single dashboard,
-                giving you real‑time visibility across grocery, retail and multi‑unit properties.
-              </p>
-              <p>
-                Assign tasks, set priorities and track status changes in one place. Built‑in chat
-                and communication tools plus live dispatch support eliminate duplicate calls.
-              </p>
+            <div className="text-gray-300 space-y-6">
+              <div className="space-y-4 leading-relaxed">
+                <p className="text-lg">
+                  Property managers, tenants, and staff can submit work orders via:
+                </p>
+                <ul className="space-y-2 ml-6">
+                  <li className="flex items-start gap-2">
+                    <span className="text-neon-green mt-1">•</span>
+                    <span>Web portal or mobile app</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-neon-green mt-1">•</span>
+                    <span>24/7 call center</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-neon-green mt-1">•</span>
+                    <span>Email or text message</span>
+                  </li>
+                </ul>
+                <p className="text-lg">
+                  Updates from vendors flow into a single dashboard with real-time visibility. 
+                  Built-in communication tools eliminate duplicate calls.
+                </p>
+              </div>
               <Link 
                 href="/hds-console"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors mt-4"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all mt-4"
               >
                 Learn More About HDS Console
               </Link>
@@ -266,77 +385,78 @@ export default function Home() {
       <StatsCounter />
 
       {/* Need Service? Get Help Your Way */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">
-            Need Service? Get Help Your Way
+          <h2 className="text-4xl font-bold text-white mb-4 text-center">
+            Get Help Your Way
           </h2>
-          <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Requesting service is easy. Choose the option that matches the urgency of your 
-            situation—our tools are built for property managers, tenants and staff across 
-            grocery, retail and multi‑unit properties.
+          <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+            Choose the method that matches your urgency—our tools are built for property 
+            managers, tenants, and staff
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
             {/* Call Live Agent */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <h3 className="text-2xl font-bold text-neon-green mb-4">📞 Call Live Agent</h3>
-              <p className="text-gray-300 mb-4">
-                For urgent issues, call our 24/7 dispatch line. Provide the property name, 
-                issue type and callback number—our live dispatcher will follow your triage 
-                rules and send the right vendor.
+            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
+                <span>📞</span> Call Live Agent
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                For urgent issues, call our 24/7 dispatch line. We'll route to the right vendor immediately.
               </p>
               <a 
                 href="tel:14057774156"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
               >
-                Call Us
+                Call (405) 777-4156
               </a>
             </div>
 
             {/* Service Request */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <h3 className="text-2xl font-bold text-neon-green mb-4">📋 Service Request</h3>
-              <p className="text-gray-300 mb-4">
-                For routine or planned work, use our online form or your branded app. Enter the
-                property, equipment and issue details—and attach photos if needed. A work order
-                is created automatically, assigned to the right vendor and updated in real time.
+            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
+                <span>📋</span> Service Request
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                For routine work, use our online form. Work orders are created and assigned automatically.
               </p>
               <a 
                 href="https://www.hds.live/service-request"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
               >
                 Submit Request
               </a>
             </div>
 
             {/* Text HDS Team */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <h3 className="text-2xl font-bold text-neon-green mb-4">💬 Text HDS Team</h3>
-              <p className="text-gray-300 mb-4">
-                Use texting for urgent escalations or follow‑ups after a work order has been 
-                placed. Include your name, property and callback number.
+            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
+                <span>💬</span> Text HDS Team
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Text for urgent escalations or follow-ups. Include your name, property, and callback number.
               </p>
               <a 
                 href="sms:14057774156"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
               >
-                Text Us
+                Text (405) 777-4156
               </a>
             </div>
 
-            {/* Chat or Use Our App */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all">
-              <h3 className="text-2xl font-bold text-neon-green mb-4">💻 Chat or Use Our App</h3>
-              <p className="text-gray-300 mb-4">
-                Use our app or chat for urgent escalations or follow‑ups after a work order 
-                has been placed. Include your name, property and callback number.
+            {/* Console or App */}
+            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+              <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
+                <span>💻</span> Use HDS Console
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Access your dashboard for work orders, analytics, and real-time property updates.
               </p>
               <Link 
                 href="/hds-console"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-colors"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
               >
                 Access Console
               </Link>
@@ -346,56 +466,55 @@ export default function Home() {
       </section>
 
       {/* HDS Service Suite */}
-      <section className="py-16 px-4 bg-dark-bg">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4 text-center">
             HDS Service Suite
           </h2>
-          <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            From blitz repairs to turnkey build‑outs, HDS keeps your refrigeration, HVAC and
-            facilities running—so you stay focused on tenants and customers rather than
-            contractors.
+          <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+            From emergency repairs to turnkey build-outs—we coordinate licensed vendors 
+            so you can focus on your business
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Mechanical & Refrigeration */}
             <Link href="/services/mechanical-refrigeration" className="group">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+              <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Mechanical & Refrigeration
                 </h3>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• 24/7 racks, RTUs & chillers</li>
-                  <li>• HVAC & refrigeration repairs</li>
-                  <li>• Energy‑management projects</li>
-                  <li>• Leak‑rate and EMS fixes</li>
+                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                  <li>• 24/7 HVAC & refrigeration</li>
+                  <li>• Racks, RTUs & chillers</li>
+                  <li>• Energy management projects</li>
+                  <li>• Leak detection & EMS</li>
                 </ul>
               </div>
             </Link>
 
             {/* Facility Maintenance */}
             <Link href="/services/facility-maintenance" className="group">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+              <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Facility Maintenance
                 </h3>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Full‑store upkeep</li>
-                  <li>• Preventive & reactive maintenance</li>
-                  <li>• 24‑hour dispatch</li>
-                  <li>• Groundskeeping and janitorial services</li>
+                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                  <li>• Preventive & reactive service</li>
+                  <li>• 24-hour dispatch</li>
+                  <li>• Multi-trade coordination</li>
+                  <li>• Groundskeeping & janitorial</li>
                 </ul>
               </div>
             </Link>
 
             {/* Construction & Special Projects */}
             <Link href="/services/construction-special-projects" className="group">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+              <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
-                  Construction & Special Projects
+                  Construction & Projects
                 </h3>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Ground‑up builds, remodels and roll‑outs</li>
+                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                  <li>• Ground-up builds & remodels</li>
                   <li>• Equipment upgrades</li>
                   <li>• Tenant improvements</li>
                   <li>• Retrofit projects</li>
@@ -405,46 +524,45 @@ export default function Home() {
 
             {/* Design-Build & Consulting */}
             <Link href="/services/design-build-consulting" className="group">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+              <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
-                  Design‑Build & Consulting
+                  Design-Build & Consulting
                 </h3>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Concept‑to‑ribbon‑cutting</li>
-                  <li>• Energy and code expertise</li>
-                  <li>• Project feasibility & engineering</li>
-                  <li>• Permit & compliance management</li>
+                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                  <li>• Concept to completion</li>
+                  <li>• Energy & code expertise</li>
+                  <li>• Feasibility & engineering</li>
+                  <li>• Permit & compliance</li>
                 </ul>
               </div>
             </Link>
 
             {/* Energy Management & Sustainability */}
             <Link href="/services/energy-management-sustainability" className="group">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 h-full shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:border-neon-green/40 transition-all">
+              <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
-                  Energy Management & Sustainability
+                  Energy & Sustainability
                 </h3>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Optimization & retro‑commissioning</li>
+                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                  <li>• Energy optimization</li>
                   <li>• Utility incentives</li>
-                  <li>• Lighting upgrades</li>
-                  <li>• Water conservation</li>
+                  <li>• Lighting & water upgrades</li>
                   <li>• Sustainability planning</li>
                 </ul>
               </div>
             </Link>
 
             {/* Call to Action Card */}
-            <div className="rounded-2xl border border-neon-green/50 bg-gradient-to-b from-neon-green/10 to-emerald-500/5 p-6 flex flex-col justify-center items-center text-center shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
+            <div className="rounded-xl border border-neon-green/40 bg-gradient-to-br from-neon-green/10 to-neon-green/5 p-8 flex flex-col justify-center items-center text-center shadow-lg hover:shadow-neon-green/20 transition-all">
               <h3 className="text-2xl font-bold mb-4 text-neon-green">
                 Ready to Get Started?
               </h3>
-              <p className="mb-6 text-gray-300">
-                Schedule a 30-minute consultation to discuss your facility needs.
+              <p className="mb-6 text-gray-300 leading-relaxed">
+                Schedule a consultation to discuss your facility needs
               </p>
               <Link 
                 href="/contact"
-                className="bg-neon-green text-dark-bg px-6 py-3 rounded-lg font-semibold hover:bg-neon-green/80 transition-colors"
+                className="bg-neon-green text-base px-6 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
               >
                 Book A Call
               </Link>
