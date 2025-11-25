@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
 import { Reveal } from '@/components/Reveal';
