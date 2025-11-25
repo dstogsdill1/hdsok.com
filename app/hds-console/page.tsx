@@ -272,6 +272,15 @@ export default function HDSConsolePage() {
                 <li>✓ IoT sensor data and smart building platforms</li>
                 <li>✓ Custom API for proprietary systems</li>
               </ul>
+              <div className="relative mt-6 pt-6 border-t border-white/10">
+                <Image
+                  src="/images/Works_with_PM_logo_White.webp"
+                  alt="Works with Energy Star Portfolio Manager"
+                  width={160}
+                  height={50}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
             </div>
 
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 backdrop-blur-md p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">

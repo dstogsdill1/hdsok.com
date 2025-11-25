@@ -294,6 +294,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
               </div>
             </div>
+            
+            {/* Energy Star Portfolio Manager */}
+            <div className="text-center pt-6 border-t border-neon-green/10">
+              <div className="flex justify-center items-center">
+                <Image
+                  src="/images/Works_with_PM_logo_White.webp"
+                  alt="Works with Energy Star Portfolio Manager"
+                  width={180}
+                  height={60}
+                  className="opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="border-t border-neon-green/20 pt-6 text-center text-gray-400 text-sm">
