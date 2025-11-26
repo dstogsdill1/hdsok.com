@@ -8,6 +8,7 @@ import InteractiveFeatureGrid from '@/components/InteractiveFeatureGrid';
 import BeforeAfterComparison from '@/components/BeforeAfterComparison';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ProductShowcase from '@/components/ProductShowcase';
+import QuickActionsGrid from '@/components/QuickActionsGrid';
 
 export default function HDSConsolePage() {
   return (
@@ -73,6 +74,9 @@ export default function HDSConsolePage() {
 
       {/* Stats Counter */}
       <StatsCounter />
+
+      {/* Quick Actions */}
+      <QuickActionsGrid />
 
       {/* Before/After Comparison */}
       <BeforeAfterComparison />
