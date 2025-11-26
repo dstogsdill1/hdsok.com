@@ -34,13 +34,13 @@ const statusData = [
   { name: 'On Hold', value: 12, fill: '#64748b' },
 ];
 
-// Regional spend breakdown - matching 62 total locations
+// Regional spend breakdown - matching 372 total locations
 const regionData = [
-  { region: 'Southwest', spend: 124500, locations: 18 },
-  { region: 'Midwest', spend: 98200, locations: 15 },
-  { region: 'Southeast', spend: 87600, locations: 12 },
-  { region: 'Northeast', spend: 72400, locations: 10 },
-  { region: 'West Coast', spend: 68900, locations: 7 },
+  { region: 'Southwest', spend: 12450000, locations: 112 },
+  { region: 'Midwest', spend: 9820000, locations: 89 },
+  { region: 'Southeast', spend: 8760000, locations: 78 },
+  { region: 'Northeast', spend: 7240000, locations: 54 },
+  { region: 'West Coast', spend: 6890000, locations: 39 },
 ];
 
 // Vendor performance
@@ -74,23 +74,23 @@ export default function DashboardCharts() {
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-neon-green/15 via-transparent to-emerald-500/10" />
             <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Portfolio Locations</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">62</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">372</div>
             <div className="relative text-xs text-neon-green mt-1 flex items-center gap-1">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse"></span>
-              6 brands active
+              All sites active
             </div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-cyan-400/15 via-transparent to-blue-500/10" />
             <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Spend YTD</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">$451K</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">$37.4M</div>
             <div className="relative text-xs text-cyan-400 mt-1">↓ 8% vs last year</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-orange-400/15 via-transparent to-amber-400/10" />
             <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Work Orders YTD</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">7,677</div>
-            <div className="relative text-xs text-orange-400 mt-1">Across all portfolios</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">24,631</div>
+            <div className="relative text-xs text-orange-400 mt-1">14,586 active</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-emerald-400/15 via-transparent to-neon-green/10" />
