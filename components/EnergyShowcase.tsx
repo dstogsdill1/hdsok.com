@@ -35,12 +35,17 @@ export default function EnergyShowcase() {
           <div className="bg-gradient-to-b from-slate-900/90 to-black/95 rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.7)] border border-white/10 p-8 mb-12">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/5">
               <div>
-                <h3 className="text-xl font-bold text-white">Portfolio Energy Analytics</h3>
-                <p className="text-sm text-gray-400">Real-time consumption, cost, and carbon tracking</p>
+                <h3 className="text-xl font-bold text-white">Energy Portfolio View</h3>
+                <p className="text-sm text-gray-400">$32.8M energy spend tracked across 365 sites</p>
               </div>
-              <span className="text-xs px-3 py-1 rounded-full bg-neon-green/10 text-neon-green border border-neon-green/30">
-                Live Data
-              </span>
+              <div className="flex gap-3">
+                <span className="text-xs px-3 py-1 rounded-full bg-neon-green/10 text-neon-green border border-neon-green/30">
+                  Energy Portfolio
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">
+                  Maintenance Hub
+                </span>
+              </div>
             </div>
             <DashboardCharts />
           </div>

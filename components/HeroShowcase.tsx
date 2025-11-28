@@ -153,24 +153,24 @@ export function HeroShowcase() {
               <div className="grid gap-3 text-xs text-gray-300 sm:grid-cols-3">
                 <div className="rounded-xl border border-neon-green/30 bg-neon-green/5 p-3">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-neon-green">
-                    Open work orders
+                    Work Orders
                   </p>
-                  <p className="mt-1 text-2xl font-semibold text-white">327</p>
-                  <p className="mt-1 text-[11px] text-neon-green">↘ 14% vs. last 30 days</p>
+                  <p className="mt-1 text-2xl font-semibold text-white">22,951</p>
+                  <p className="mt-1 text-[11px] text-neon-green">↗ Active portfolio</p>
                 </div>
                 <div className="rounded-xl border border-border-subtle bg-surface/60 p-3">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">
-                    Avg. response
+                    Total Spend
                   </p>
-                  <p className="mt-1 text-2xl font-semibold text-white">26m</p>
-                  <p className="mt-1 text-[11px] text-gray-400">Priority 1–3 calls</p>
+                  <p className="mt-1 text-2xl font-semibold text-white">$68.9M</p>
+                  <p className="mt-1 text-[11px] text-gray-400">Maintenance + Energy</p>
                 </div>
                 <div className="rounded-xl border border-border-subtle bg-surface/60 p-3">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">
-                    Vendor health
+                    Avg per WO
                   </p>
-                  <p className="mt-1 text-2xl font-semibold text-neon-green">A-</p>
-                  <p className="mt-1 text-[11px] text-gray-400">On-time & completion</p>
+                  <p className="mt-1 text-2xl font-semibold text-neon-green">$1,573</p>
+                  <p className="mt-1 text-[11px] text-gray-400">365 sites tracked</p>
                 </div>
               </div>
             </div>

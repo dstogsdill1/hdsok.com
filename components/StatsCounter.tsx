@@ -62,16 +62,17 @@ interface StatsCounterProps {
 }
 
 export default function StatsCounter({ stats }: StatsCounterProps) {
+  // Updated stats to match HDS.live Analytics Hub metrics
   const defaultStats: Array<{
     value: number;
     suffix?: string;
     prefix?: string;
     label: string;
   }> = [
-    { value: 500, suffix: '+', label: 'Properties Managed' },
-    { value: 50000, suffix: '+', label: 'Work Orders Completed' },
-    { value: 99, suffix: '%', label: 'Client Satisfaction' },
-    { value: 24, suffix: '/7', label: 'Emergency Support' },
+    { value: 365, suffix: '+', label: 'Active Sites' },
+    { value: 22951, suffix: '+', label: 'Work Orders Tracked' },
+    { value: 68, prefix: '$', suffix: 'M+', label: 'Portfolio Spend Managed' },
+    { value: 127, suffix: '+', label: 'Verified Vendors' },
   ];
 
   const displayStats = stats || defaultStats;

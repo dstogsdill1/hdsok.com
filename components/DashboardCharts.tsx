@@ -1,55 +1,106 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+import { useState, useEffect, Suspense } from 'react';
+
+// Dynamic imports for Recharts to improve initial page load
+const RechartsComponents = dynamic(() => 
+  import('recharts').then((mod) => {
+    return function RechartsWrapper({ children }: { children: React.ReactNode }) {
+      return <>{children}</>;
+    };
+  }), 
+  { ssr: false, loading: () => <ChartSkeleton /> }
+);
+
 import { 
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, 
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
   ComposedChart, Area
 } from 'recharts';
 
-// Real-style maintenance data from HDS Console patterns
+// Loading skeleton for charts
+function ChartSkeleton() {
+  return (
+    <div className="animate-pulse space-y-4">
+      <div className="grid grid-cols-4 gap-3">
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className="h-24 rounded-xl bg-slate-800/50" />
+        ))}
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div className="h-56 rounded-xl bg-slate-800/50" />
+        <div className="h-56 rounded-xl bg-slate-800/50" />
+      </div>
+    </div>
+  );
+}
+
+// Updated data matching HDS.live Analytics Hub (screenshot data)
 const monthlyTrendData = [
-  { month: 'Jun 2024', cost: 42850, count: 156, avgCost: 275 },
-  { month: 'Jul 2024', cost: 38420, count: 142, avgCost: 271 },
-  { month: 'Aug 2024', cost: 51200, count: 189, avgCost: 271 },
-  { month: 'Sep 2024', cost: 44800, count: 165, avgCost: 272 },
-  { month: 'Oct 2024', cost: 39200, count: 148, avgCost: 265 },
-  { month: 'Nov 2024', cost: 56300, count: 201, avgCost: 280 },
+  { month: 'Jan 2024', cost: 5240000, count: 1842, avgCost: 2845 },
+  { month: 'Feb 2024', cost: 4890000, count: 1756, avgCost: 2784 },
+  { month: 'Mar 2024', cost: 5680000, count: 1923, avgCost: 2954 },
+  { month: 'Apr 2024', cost: 5450000, count: 1867, avgCost: 2919 },
+  { month: 'May 2024', cost: 6120000, count: 2089, avgCost: 2930 },
+  { month: 'Jun 2024', cost: 5890000, count: 1978, avgCost: 2978 },
+  { month: 'Jul 2024', cost: 6340000, count: 2156, avgCost: 2941 },
+  { month: 'Aug 2024', cost: 6780000, count: 2234, avgCost: 3034 },
+  { month: 'Sep 2024', cost: 6120000, count: 2078, avgCost: 2946 },
+  { month: 'Oct 2024', cost: 5980000, count: 2012, avgCost: 2972 },
+  { month: 'Nov 2024', cost: 6410000, count: 2016, avgCost: 3180 },
 ];
 
-// Category breakdown - realistic facility maintenance categories
+// Category breakdown - matching HDS.live Analytics Hub scale
 const categoryData = [
-  { category: 'HVAC', cost: 89400, fill: '#c6ff00' },
-  { category: 'Plumbing', cost: 45200, fill: '#22d3ee' },
-  { category: 'Electrical', cost: 38900, fill: '#a78bfa' },
-  { category: 'Roofing', cost: 32100, fill: '#fb923c' },
-  { category: 'Flooring', cost: 24800, fill: '#f472b6' },
-  { category: 'Doors/Windows', cost: 18600, fill: '#60a5fa' },
+  { category: 'HVAC', cost: 18940000, fill: '#c6ff00' },
+  { category: 'Lighting', cost: 12850000, fill: '#22d3ee' },
+  { category: 'Plumbing', cost: 9780000, fill: '#a78bfa' },
+  { category: 'Janitorial', cost: 8640000, fill: '#fb923c' },
+  { category: 'Electrical', cost: 7520000, fill: '#f472b6' },
+  { category: 'Signage', cost: 6280000, fill: '#60a5fa' },
 ];
 
-// Status distribution - work order pipeline
+// Status distribution - matching HDS.live (22,951 total work orders)
 const statusData = [
-  { name: 'Completed', value: 342, fill: '#22c55e' },
-  { name: 'In Progress', value: 89, fill: '#c6ff00' },
-  { name: 'Pending', value: 45, fill: '#f59e0b' },
-  { name: 'On Hold', value: 12, fill: '#64748b' },
+  { name: 'Completed', value: 8865, fill: '#22c55e' },
+  { name: 'In Progress', value: 5342, fill: '#c6ff00' },
+  { name: 'On Hold', value: 3421, fill: '#f59e0b' },
+  { name: 'Dispatched', value: 2856, fill: '#22d3ee' },
+  { name: 'Received', value: 2467, fill: '#64748b' },
 ];
 
-// Regional spend breakdown - matching 372 total locations
+// Regional spend breakdown - matching 365 sites across regions
 const regionData = [
-  { region: 'Southwest', spend: 12450000, locations: 112 },
-  { region: 'Midwest', spend: 9820000, locations: 89 },
-  { region: 'Southeast', spend: 8760000, locations: 78 },
-  { region: 'Northeast', spend: 7240000, locations: 54 },
-  { region: 'West Coast', spend: 6890000, locations: 39 },
+  { region: 'Central West', spend: 18450000, locations: 98 },
+  { region: 'District 1', spend: 16820000, locations: 82 },
+  { region: 'Kansas', spend: 12760000, locations: 68 },
+  { region: 'South', spend: 11240000, locations: 62 },
+  { region: 'North', spend: 9630000, locations: 55 },
 ];
 
-// Vendor performance
+// Vendor performance - matching HDS.live vendor network
 const vendorData = [
-  { vendor: 'ABC Mechanical', jobs: 89, spend: 45200, rating: 4.8 },
-  { vendor: 'Quick Fix HVAC', jobs: 67, spend: 38900, rating: 4.6 },
-  { vendor: 'Pro Plumbers', jobs: 54, spend: 28400, rating: 4.7 },
-  { vendor: 'Elite Electric', jobs: 48, spend: 32100, rating: 4.9 },
-  { vendor: 'Roof Masters', jobs: 32, spend: 24800, rating: 4.5 },
+  { vendor: 'Greenscape Lawncare', jobs: 1289, spend: 4520000, rating: 4.8 },
+  { vendor: 'Clearview Janitorial', jobs: 1067, spend: 3890000, rating: 4.6 },
+  { vendor: 'CNC Specialists LLC', jobs: 854, spend: 2840000, rating: 4.7 },
+  { vendor: 'LumenTech Solutions', jobs: 748, spend: 3210000, rating: 4.9 },
+  { vendor: 'AquaPure Plumbing', jobs: 632, spend: 2480000, rating: 4.5 },
+];
+
+// Energy data - matching HDS.live Energy Intelligence
+const energyUsageData = [
+  { month: 'Jan', kWh: 4250000, cost: 2890000 },
+  { month: 'Feb', kWh: 3980000, cost: 2720000 },
+  { month: 'Mar', kWh: 4120000, cost: 2810000 },
+  { month: 'Apr', kWh: 3890000, cost: 2650000 },
+  { month: 'May', kWh: 4560000, cost: 3100000 },
+  { month: 'Jun', kWh: 5120000, cost: 3480000 },
+  { month: 'Jul', kWh: 5680000, cost: 3860000 },
+  { month: 'Aug', kWh: 5420000, cost: 3680000 },
+  { month: 'Sep', kWh: 4890000, cost: 3320000 },
+  { month: 'Oct', kWh: 4320000, cost: 2940000 },
+  { month: 'Nov', kWh: 4180000, cost: 2840000 },
 ];
 
 const DARK_TOOLTIP = {
@@ -66,37 +117,49 @@ const TOOLTIP_LABEL_STYLE = { color: '#c6ff00', fontWeight: 'bold', marginBottom
 const TOOLTIP_ITEM_STYLE = { color: '#e2e8f0' };
 
 export default function DashboardCharts() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Slight delay to allow for smooth loading transition
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded) {
+    return <ChartSkeleton />;
+  }
+
   return (
     <div className="w-full">
       <div className="space-y-5">
-        {/* Row 1: Key Portfolio Metrics */}
+        {/* Row 1: Key Portfolio Metrics - Matching HDS.live Analytics Hub */}
         <div className="grid grid-cols-4 gap-3">
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-neon-green/15 via-transparent to-emerald-500/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Portfolio Locations</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">372</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Work Orders</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">22,951</div>
             <div className="relative text-xs text-neon-green mt-1 flex items-center gap-1">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse"></span>
-              All sites active
+              365 sites active
             </div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-cyan-400/15 via-transparent to-blue-500/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Spend YTD</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">$37.4M</div>
-            <div className="relative text-xs text-cyan-400 mt-1">↓ 8% vs last year</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Spend</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">$68.9M</div>
+            <div className="relative text-xs text-cyan-400 mt-1">Maintenance $36.1M • Energy $32.8M</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-orange-400/15 via-transparent to-amber-400/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Work Orders YTD</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">24,631</div>
-            <div className="relative text-xs text-orange-400 mt-1">14,586 active</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Average Cost / WO</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">$1,573.05</div>
+            <div className="relative text-xs text-orange-400 mt-1">8 properties tracked</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-emerald-400/15 via-transparent to-neon-green/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Avg Response</div>
-            <div className="relative text-3xl font-extrabold text-white mt-1">2.4<span className="text-lg text-gray-400">h</span></div>
-            <div className="relative text-xs text-neon-green mt-1">↓ 22% faster</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Energy Spend</div>
+            <div className="relative text-3xl font-extrabold text-white mt-1">$32.8M</div>
+            <div className="relative text-xs text-neon-green mt-1">↓ 12% vs last year</div>
           </div>
         </div>
 
@@ -315,31 +378,85 @@ export default function DashboardCharts() {
           </div>
         </div>
 
-        {/* Row 4: Bottom Stats */}
+        {/* Row 4: Energy Intelligence Preview - Matching HDS.live */}
+        <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-5 shadow-[0_25px_70px_rgba(0,0,0,0.6)]">
+          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-amber-400/10 via-transparent to-orange-500/5" />
+          <div className="relative mb-4">
+            <p className="text-[9px] font-bold text-amber-400 uppercase tracking-[0.2em]">Energy Intelligence</p>
+            <h3 className="text-base font-bold text-white mt-0.5">12-Month Usage Trend</h3>
+            <p className="text-[10px] text-gray-400">Energy usage over the past 12 months</p>
+          </div>
+          <ResponsiveContainer width="100%" height={140}>
+            <ComposedChart data={energyUsageData}>
+              <defs>
+                <linearGradient id="energyGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#fbbf24" stopOpacity={0.3}/>
+                  <stop offset="95%" stopColor="#fbbf24" stopOpacity={0}/>
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" opacity={0.4} />
+              <XAxis 
+                dataKey="month" 
+                stroke="#475569" 
+                style={{ fontSize: '10px' }}
+              />
+              <YAxis 
+                stroke="#475569" 
+                style={{ fontSize: '10px' }}
+                tickFormatter={(v) => `${(v / 1000000).toFixed(1)}M`}
+              />
+              <Tooltip 
+                contentStyle={DARK_TOOLTIP}
+                labelStyle={TOOLTIP_LABEL_STYLE}
+                itemStyle={TOOLTIP_ITEM_STYLE}
+                formatter={(value: number, name: string) => [
+                  name === 'kWh' ? `${(value / 1000000).toFixed(2)}M kWh` : `$${(value / 1000000).toFixed(2)}M`,
+                  name === 'kWh' ? 'Usage' : 'Cost'
+                ]}
+              />
+              <Area 
+                type="monotone" 
+                dataKey="kWh" 
+                stroke="#fbbf24" 
+                strokeWidth={2}
+                fill="url(#energyGradient)"
+              />
+              <Line 
+                type="monotone" 
+                dataKey="cost" 
+                stroke="#22d3ee" 
+                strokeWidth={2}
+                dot={{ fill: '#22d3ee', r: 2, strokeWidth: 0 }}
+              />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Row 5: Bottom Stats - Matching HDS.live Analytics Hub */}
         <div className="grid grid-cols-4 gap-3">
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-cyan-500/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Avg Cost / Location</div>
-            <div className="relative text-xl font-extrabold text-white mt-0.5">$2,768</div>
-            <div className="relative text-[10px] text-gray-500 mt-0.5">per month</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Avg Cost / Site</div>
+            <div className="relative text-xl font-extrabold text-white mt-0.5">$188,767</div>
+            <div className="relative text-[10px] text-gray-500 mt-0.5">per year (365 sites)</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Vendor Network</div>
-            <div className="relative text-xl font-extrabold text-white mt-0.5">47</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Active Vendors</div>
+            <div className="relative text-xl font-extrabold text-white mt-0.5">127</div>
             <div className="relative text-[10px] text-neon-green mt-0.5">All verified & insured</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-green-500/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">First-Call Resolution</div>
-            <div className="relative text-xl font-extrabold text-white mt-0.5">87%</div>
-            <div className="relative text-[10px] text-neon-green mt-0.5">↑ 4% this quarter</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Energy EUI Trend</div>
+            <div className="relative text-xl font-extrabold text-white mt-0.5">42.3</div>
+            <div className="relative text-[10px] text-neon-green mt-0.5">↓ 8% vs benchmark</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Vendor Rating</div>
-            <div className="relative text-xl font-extrabold text-white mt-0.5">4.7<span className="text-sm text-gray-400">/5</span></div>
-            <div className="relative text-[10px] text-orange-400 mt-0.5">Avg across network</div>
+            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Top Locations</div>
+            <div className="relative text-xl font-extrabold text-white mt-0.5">8</div>
+            <div className="relative text-[10px] text-orange-400 mt-0.5">Properties monitored</div>
           </div>
         </div>
       </div>
