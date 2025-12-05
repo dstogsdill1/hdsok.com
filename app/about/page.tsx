@@ -2,21 +2,23 @@ import type { Metadata } from 'next';
 import { Reveal } from '@/components/Reveal';
 
 export const metadata: Metadata = {
-  title: "About HDS - Your Vendor Management & Facility Operations Partner",
+  title: "About HDS - Operations & Analytics Platform for Small Businesses",
   description:
-    "Learn how Homeland Development Services coordinates licensed vendors, manages facility operations, and powers global portfolios through the HDS Console.",
+    "HDS runs operations AND shows analytics. Use our console standalone or with our team managing dispatch and vendor coordination. Built for small businesses and multi-site portfolios.",
   keywords: [
     "about HDS",
+    "operations platform",
+    "analytics platform",
+    "CMMS for small business",
     "vendor management",
     "facility operations partner",
-    "commercial property vendor coordination",
-    "Oklahoma facility management",
-    "commercial maintenance coordination",
+    "retail operations software",
+    "restaurant facility management",
   ],
   openGraph: {
-    title: "About Homeland Development Services - Vendor Management & Facility Operations",
+    title: "About HDS - Operations & Analytics Platform",
     description:
-      "HDS coordinates licensed vendors, dispatch, and portfolio analytics for grocery, retail, and multi-unit properties.",
+      "HDS runs operations AND shows analytics. Unified CMMS for small businesses, retail chains, and property portfolios.",
     url: "https://www.hdsok.com/about",
   },
 };
@@ -39,12 +41,12 @@ export default function AboutPage() {
                 <span className="ml-2 inline-flex h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_2.4s_ease-in-out_infinite]" />
               </p>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Vendor management & facility operations for portfolios that can&apos;t go down.
+                Operations & analytics platform for small businesses and portfolios
               </h1>
               <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-6">
-                Homeland Development Services (HDS) sits between your locations and a curated network of
-                licensed vendors. We coordinate dispatch, track performance, and surface the data you need
-                to run grocery, retail, and multi-unit properties with confidence.
+                HDS runs operations AND shows analytics. Use our console as a standalone tool, or let our team 
+                coordinate dispatch, track vendor performance, and deliver the insights you need to run 
+                retail, restaurant, and property portfolios with confidence.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-xl">
                 <div className="rounded-xl border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-4 py-3">
@@ -81,8 +83,8 @@ export default function AboutPage() {
                 <div className="flex items-start gap-3">
                   <span className="mt-1 text-neon-green">•</span>
                   <p>
-                    Portfolio analytics that show maintenance spend, energy performance, and vendor health
-                    across all regions.
+                    Portfolio analytics showing EUI (kWh/ft²), ENERGY STAR benchmarks, maintenance spend per ft², and vendor 
+                    compliance (COI, W9) across all regions.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

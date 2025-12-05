@@ -164,7 +164,7 @@ export default function ContactPage() {
               Get in touch with HDS
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to discuss your facility management needs? We&apos;re here to help 24/7. Submit a service request or reach out for a consultation.
+              Ready to run operations AND see analytics? We&apos;re here 24/7. Request a demo, submit a service request, or discuss your operational needs.
             </p>
           </Reveal>
         </div>

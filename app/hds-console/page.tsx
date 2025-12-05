@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
 import { Reveal } from '@/components/Reveal';
@@ -9,6 +10,27 @@ import BeforeAfterComparison from '@/components/BeforeAfterComparison';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ProductShowcase from '@/components/ProductShowcase';
 import QuickActionsGrid from '@/components/QuickActionsGrid';
+
+export const metadata: Metadata = {
+  title: "HDS Console - Unified CMMS for Small Businesses",
+  description: "Run operations AND show analytics. Command, maintain, optimize, save. Fast dispatch, vendor compliance, energy tracking (EUI), and real-time cost visibility for retail, restaurant, and property portfolios.",
+  keywords: [
+    "CMMS platform",
+    "small business operations",
+    "retail maintenance software",
+    "restaurant facility management",
+    "vendor dispatch software",
+    "energy use intensity EUI",
+    "vendor compliance tracking",
+    "multi-site CMMS",
+    "property management platform"
+  ],
+  openGraph: {
+    title: "HDS Console - Unified CMMS for Small Businesses",
+    description: "Run operations AND show analytics with HDS Console. Built for small businesses and multi-site organizations.",
+    url: "https://www.hdsok.com/hds-console",
+  },
+};
 
 export default function HDSConsolePage() {
   return (
@@ -26,18 +48,20 @@ export default function HDSConsolePage() {
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 backdrop-blur-md p-8 mb-12 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
             <h2 className="relative text-4xl font-bold text-white mb-6">
-              One Platform. Global Operations.
+              Unified CMMS for Small Businesses
             </h2>
+            <p className="relative text-neon-green text-xl font-semibold mb-4">
+              Command, Maintain, Optimize, Save.
+            </p>
             <div className="relative text-gray-300 text-lg space-y-4">
               <p>
-                HDS Console is the comprehensive facility management platform built for property managers, 
-                facility directors, and operations teams managing grocery stores, retail centers, 
-                multi-unit properties, and commercial portfolios of all sizes.
+                Run a tighter operation with instant filtering, fast vendor dispatch, and built‑in compliance. 
+                Launch a guided demo in seconds or connect your data to see live results.
               </p>
               <p>
-                Whether you&apos;re managing a single location or hundreds of properties, HDS Console 
-                provides the real-time visibility, automated workflows, and predictive insights you need 
-                to keep facilities running smoothly while controlling costs.
+                HDS Console is built for small businesses, retail chains, restaurants, and property managers who need 
+                real-time visibility into maintenance costs, energy intensity (EUI), and vendor performance. 
+                Use it as a standalone console, or let our team handle dispatch and vendor management.
               </p>
             </div>
           </div>
@@ -58,8 +82,8 @@ export default function HDSConsolePage() {
               Real-Time Dashboard Preview
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See your portfolio data come to life with interactive charts, real-time metrics, 
-              and predictive analytics—all in one unified dashboard.
+              See your portfolio data come to life with EUI tracking (kWh/ft²), ENERGY STAR benchmarks, 
+              vendor compliance status, and predictive analytics—all in one unified dashboard.
             </p>
           </div>
           </Reveal>
@@ -105,13 +129,13 @@ export default function HDSConsolePage() {
               <div className="relative text-4xl mb-4 animate-[float_6s_ease-in-out_infinite]">🏢</div>
               <h3 className="relative text-2xl font-bold text-white mb-4">All Sites, One View</h3>
               <p className="relative text-gray-300 mb-4">
-                Multi-tenant, multi-brand portfolio management in a single dashboard. Monitor 
-                all your properties from one unified interface with real-time updates.
+                Multi-tenant, multi-brand portfolio management with unified filters. Monitor 
+                all properties with row-level security (RLS) ensuring data isolation by tenant.
               </p>
               <ul className="relative text-gray-300 space-y-2 text-sm">
                 <li>• Consolidated portfolio view</li>
-                <li>• Custom branding per tenant</li>
-                <li>• Region and market segmentation</li>
+                <li>• Unified filters across all data</li>
+                <li>• Row-level security (RLS)</li>
                 <li>• Role-based access controls</li>
               </ul>
             </div>
@@ -156,14 +180,14 @@ export default function HDSConsolePage() {
               <div className="relative text-4xl mb-4 animate-[pulse-glow_3s_ease-in-out_infinite]">⚡</div>
               <h3 className="relative text-2xl font-bold text-white mb-4">Energy Analytics</h3>
               <p className="relative text-gray-300 mb-4">
-                Track EUI (kWh/ft²) and energy cost per square foot. Identify high-consumption 
-                sites and opportunities for efficiency improvements.
+                Track EUI (kWh/ft²) with ENERGY STAR benchmarks. Compare sites against national 
+                medians, identify high-consumption outliers, and prioritize efficiency improvements.
               </p>
               <ul className="relative text-gray-300 space-y-2 text-sm">
-                <li>• Energy usage intensity (EUI)</li>
-                <li>• Cost per square foot analysis</li>
+                <li>• Energy usage intensity (EUI) tracking</li>
+                <li>• ENERGY STAR Portfolio Manager integration</li>
+                <li>• National median benchmarking</li>
                 <li>• Year-over-year comparisons</li>
-                <li>• Sustainability metrics</li>
               </ul>
             </div>
 
@@ -205,15 +229,15 @@ export default function HDSConsolePage() {
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_55px_rgba(0,0,0,0.7)] transition-all">
               <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/10" />
               <div className="relative text-4xl mb-4 animate-[float_5s_ease-in-out_infinite]">💡</div>
-              <h3 className="relative text-2xl font-bold text-white mb-4">Vendor Insights</h3>
+              <h3 className="relative text-2xl font-bold text-white mb-4">Vendor Compliance</h3>
               <p className="relative text-gray-300 mb-4">
-                Performance metrics updated automatically for all contractors. Response times, 
-                completion rates, customer satisfaction, and spend analysis.
+                Automated COI and W9 tracking with expiration alerts. Monitor vendor performance 
+                metrics, response times, completion rates, and spend analysis in real time.
               </p>
               <ul className="relative text-gray-300 space-y-2 text-sm">
-                <li>• Response time tracking</li>
-                <li>• Completion rate metrics</li>
-                <li>• Quality scoring</li>
+                <li>• COI/W9 expiration tracking</li>
+                <li>• Response time monitoring</li>
+                <li>• Performance scorecards</li>
                 <li>• Vendor spend reporting</li>
               </ul>
             </div>
@@ -342,7 +366,8 @@ export default function HDSConsolePage() {
             Ready to Transform Your Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join property managers who trust HDS Console to streamline their facility management operations.
+            Join facility managers across the EU, Central Asia, and the Americas who trust HDS Console 
+            to command, maintain, optimize, and save on their multi-site portfolios.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <a 
@@ -351,7 +376,7 @@ export default function HDSConsolePage() {
               rel="noopener noreferrer"
               className="bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green-dark transition-colors"
             >
-              Explore HDS Console
+              Launch HDS Console
             </a>
             <Link 
               href="/contact"

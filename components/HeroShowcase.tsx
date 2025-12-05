@@ -45,13 +45,13 @@ export function HeroShowcase() {
             variants={item}
             className="text-xl text-gray-300 sm:text-2xl"
           >
-            Real-time analytics and vendor coordination in one platform
+            Unified CMMS for small businesses—command, maintain, optimize, save
           </motion.p>
           <motion.p
             variants={item}
             className="text-sm text-gray-400 max-w-2xl mx-auto"
           >
-            Use <span className="text-neon-green font-semibold">HDS Console</span> on your own, or let our team handle coordination—you choose
+            Run a tighter operation with instant filtering, fast vendor dispatch, and built‑in compliance. Launch a guided demo in seconds or connect your data to see live results.
           </motion.p>
         </motion.div>
 
@@ -69,21 +69,21 @@ export function HeroShowcase() {
               className="inline-flex items-center gap-2 rounded-full border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-3 py-1 text-xs font-medium text-neon-green shadow-lg"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-neon-green animate-pulse" />
-              Live vendor coordination for commercial portfolios
+              Portfolio visibility across EU • Central Asia • Americas
             </motion.div>
 
             <motion.h2
               variants={item}
               className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight"
             >
-              Live analytics and vendor tracking—built for your team
+              Complete portfolio visibility—one dashboard, global operations
             </motion.h2>
 
             <motion.p
               variants={item}
               className="max-w-xl text-balance text-lg text-gray-300 sm:text-xl leading-relaxed"
             >
-              Track work orders, monitor spend, and manage vendors across your entire portfolio with real-time insights nobody else offers. Run it yourself, or we'll help.
+              Track work orders, energy spend, and vendor performance across your entire portfolio with real-time insights. Launch a guided demo in seconds or connect your data to see live results.
             </motion.p>
 
             <motion.div
@@ -94,13 +94,13 @@ export function HeroShowcase() {
                 href="/contact"
                 className="rounded-lg bg-neon-green px-7 py-3 font-semibold text-base shadow-lg transition hover:bg-neon-green/90"
               >
-                Talk to the HDS team
+                Get a Quote
               </Link>
               <Link
                 href="/hds-console"
                 className="rounded-lg border-2 border-neon-green/70 px-7 py-3 font-semibold text-neon-green transition hover:bg-neon-green/10"
               >
-                Explore HDS Console
+                Request Demo
               </Link>
             </motion.div>
 
@@ -109,16 +109,16 @@ export function HeroShowcase() {
               className="mt-6 flex flex-wrap gap-6 text-sm text-gray-400 leading-relaxed"
             >
               <div>
-                <p className="font-semibold text-neon-green">Self-service ready</p>
-                <p>Full platform access for your team</p>
+                <p className="font-semibold text-neon-green">Unified filters</p>
+                <p>One filter set follows you everywhere</p>
               </div>
               <div>
-                <p className="font-semibold text-neon-green">Real-time analytics</p>
-                <p>Budget tracking & live portfolio insights</p>
+                <p className="font-semibold text-neon-green">Fast dispatch</p>
+                <p>Issue to vendor in seconds</p>
               </div>
               <div>
-                <p className="font-semibold text-neon-green">Optional support</p>
-                <p>We're here if you need coordination help</p>
+                <p className="font-semibold text-neon-green">Vendor compliance</p>
+                <p>COI/W9 tracking built-in</p>
               </div>
             </motion.div>
           </motion.div>
