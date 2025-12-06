@@ -7,8 +7,6 @@ import CookieConsent from './CookieConsent';
 
 import PaymentIcons from './PaymentIcons';
 
-import PaymentIcons from './PaymentIcons';
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
