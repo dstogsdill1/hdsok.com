@@ -366,7 +366,7 @@ export default function HDSConsolePage() {
             Ready to Transform Your Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join facility managers across the EU, Central Asia, and the Americas who trust HDS Console 
+            Join facility managers across Oklahoma and nationwide who trust HDS Console 
             to command, maintain, optimize, and save on their multi-site portfolios.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">

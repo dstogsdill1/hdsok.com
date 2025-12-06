@@ -50,8 +50,8 @@ export default function AboutPage() {
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-xl">
                 <div className="rounded-xl border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-4 py-3">
-                  <p className="text-xs text-gray-400 mb-1">Portfolio Reach</p>
-                  <p className="text-lg font-semibold text-neon-green">EU • Central Asia • Americas</p>
+                  <p className="text-xs text-gray-400 mb-1">Service Coverage</p>
+                  <p className="text-lg font-semibold text-neon-green">Regional • Nationwide Platform</p>
                 </div>
                 <div className="rounded-xl border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-4 py-3">
                   <p className="text-xs text-gray-400 mb-1">Dispatch Coverage</p>
@@ -124,10 +124,10 @@ export default function AboutPage() {
                 single source of truth for every work order.
               </p>
               <p className="border-l-4 border-neon-green/50 pl-4 bg-black/30 p-4 rounded">
-                <span className="block text-sm uppercase tracking-wide text-neon-green mb-1">Global operations</span>
-                Through the HDS Console, we support portfolios across Europe, Central Asia, and the Americas—
-                adapting to local regulations, languages, and vendor ecosystems while maintaining a unified
-                view for your leadership team.
+                <span className="block text-sm uppercase tracking-wide text-neon-green mb-1">Regional expertise, nationwide reach</span>
+                Primarily serving Oklahoma and the surrounding region, HDS Console is built to scale nationwide.
+                Our platform adapts to local regulations and vendor ecosystems while maintaining a unified
+                view for your leadership team—whether you operate 5 locations or 500.
               </p>
             </div>
           </Reveal>

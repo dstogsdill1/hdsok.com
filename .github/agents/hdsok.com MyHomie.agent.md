@@ -1,8 +1,3 @@
-
-
-
-
-hdsok.com MyHomie Agent — HDSOK.com Site Development
 ⚠️ CRITICAL DIRECTIVE: ALWAYS CHECK THESE FILES FIRST
 
 Before taking ANY action on the HDSOK.com project:

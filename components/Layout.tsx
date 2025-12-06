@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useRef } from 'react';
+import CookieConsent from './CookieConsent';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -166,7 +167,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-surface/95 backdrop-blur-md border-t border-border-subtle mt-20 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Contact Info */}
             <div className="space-y-4">
               <h3 className="text-neon-green font-bold text-lg mb-4 flex items-center gap-2">
@@ -269,6 +270,37 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </li>
               </ul>
             </div>
+
+            {/* Legal */}
+            <div className="space-y-4">
+              <h3 className="text-neon-green font-bold text-lg mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/privacy-policy" className="text-gray-300 hover:text-neon-green transition-colors flex items-center gap-2">
+                    <span className="text-neon-green/60">›</span>
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-gray-300 hover:text-neon-green transition-colors flex items-center gap-2">
+                    <span className="text-neon-green/60">›</span>
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cookie-policy" className="text-gray-300 hover:text-neon-green transition-colors flex items-center gap-2">
+                    <span className="text-neon-green/60">›</span>
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/acceptable-use" className="text-gray-300 hover:text-neon-green transition-colors flex items-center gap-2">
+                    <span className="text-neon-green/60">›</span>
+                    Acceptable Use
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Payment Methods */}
@@ -322,6 +354,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+
+      {/* Cookie Consent Banner */}
+      <CookieConsent />
     </>
   );
 }

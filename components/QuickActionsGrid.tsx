@@ -19,8 +19,8 @@ const actions = [
     link: '/services/facility-maintenance',
   },
   {
-    title: 'Energy Portfolio',
-    description: 'ENERGY STAR® benchmarking, EUI tracking, cost analysis, and utility management.',
+    title: 'Energy & Lighting',
+    description: 'ENERGY STAR® benchmarking, EUI tracking, LED retrofits, and utility management.',
     icon: '⚡',
     gradient: 'from-emerald-600 to-teal-700',
     link: '/services/energy-management-sustainability',

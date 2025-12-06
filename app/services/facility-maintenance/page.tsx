@@ -54,7 +54,7 @@ export default function FacilityMaintenancePage() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start">
           <Reveal>
-            <div className="space-y-5 text-gray-300 text-lg">
+            <div className="space-y-5 text-gray-100 text-lg">
               <h2 className="text-3xl md:text-4xl font-bold text-white">Facility maintenance, orchestrated.</h2>
               <p>
                 From routine upkeep to urgent cleanups, facility maintenance is a constant stream of
@@ -78,11 +78,11 @@ export default function FacilityMaintenancePage() {
           <Reveal delay={0.08}>
             <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 space-y-4">
               <h3 className="text-xl font-semibold text-white mb-1">Where this matters most</h3>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-100">
                 High-traffic environments where cleanliness, safety, and uptime directly impact sales and
                 guest experience:
               </p>
-              <ul className="space-y-2 text-sm text-gray-300">
+              <ul className="space-y-2 text-sm text-gray-100">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 text-neon-green">•</span>
                   <span>Grocery stores and supermarkets</span>
@@ -109,7 +109,7 @@ export default function FacilityMaintenancePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Service areas we coordinate
               </h2>
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-100 text-lg">
                 HDS aligns vendors across trades so your teams can route every request through a single,
                 consistent workflow.
               </p>

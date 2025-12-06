@@ -69,14 +69,14 @@ export function HeroShowcase() {
               className="inline-flex items-center gap-2 rounded-full border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-3 py-1 text-xs font-medium text-neon-green shadow-lg"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-neon-green animate-pulse" />
-              Portfolio visibility across EU • Central Asia • Americas
+              Regional service • Nationwide platform capability
             </motion.div>
 
             <motion.h2
               variants={item}
               className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight"
             >
-              Complete portfolio visibility—one dashboard, global operations
+              Complete portfolio visibility—one dashboard for all your locations
             </motion.h2>
 
             <motion.p

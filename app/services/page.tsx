@@ -254,41 +254,40 @@ export default function ServicesPage() {
           </div>
           </Reveal>
 
-          {/* Energy Management & Sustainability */}
+          {/* Energy & Lighting Management */}
           <Reveal delay={0.2}>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-8 transition-all">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-amber-400/15 via-transparent to-neon-green/10" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-neon-green mb-4 flex items-center gap-2">
                 <span className="animate-[pulse-glow_2.8s_ease-in-out_infinite]">⚡</span>
-                Energy Management & Sustainability
+                Energy & Lighting Management
               </h2>
             <p className="text-gray-300 mb-6">
-              Reduce operating costs and environmental impact with our comprehensive energy management 
-              and sustainability services. We help you optimize systems, access utility incentives, 
-              and implement sustainable practices across your property portfolio.
+              Reduce operating costs with our comprehensive energy and lighting management services. 
+              We help you optimize electrical systems, access utility incentives, and implement 
+              energy-efficient lighting solutions across your property portfolio.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
                 <ul className="text-gray-300 space-y-2">
                   <li>• Energy optimization and analysis</li>
-                  <li>• Retro-commissioning services</li>
+                  <li>• Electrical system audits</li>
                   <li>• Utility incentive program management</li>
-                  <li>• LED lighting upgrades</li>
-                  <li>• Water conservation programs</li>
-                  <li>• Solar and renewable energy solutions</li>
-                  <li>• Building automation optimization</li>
-                  <li>• Sustainability planning</li>
+                  <li>• LED lighting retrofits and upgrades</li>
+                  <li>• Lighting controls and automation</li>
+                  <li>• Power quality monitoring</li>
+                  <li>• Energy usage tracking (EUI)</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Benefits:</h3>
                 <ul className="text-gray-300 space-y-2">
-                  <li>• Lower utility bills</li>
-                  <li>• Reduced carbon footprint</li>
+                  <li>• Lower electricity bills</li>
+                  <li>• Reduced energy consumption</li>
                   <li>• Access to rebates and incentives</li>
-                  <li>• Improved equipment efficiency</li>
+                  <li>• Improved lighting quality</li>
                   <li>• Enhanced property value</li>
                   <li>• Regulatory compliance</li>
                   <li>• Real-time energy monitoring</li>

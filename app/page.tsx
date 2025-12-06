@@ -10,30 +10,30 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ProductShowcase from '@/components/ProductShowcase';
 
 export const metadata: Metadata = {
-  title: "HDS Console - Operations & Analytics Platform for Small Businesses",
-  description: "Run operations AND show analytics with HDS Console. Unified CMMS for small businesses, retail chains, and property managers. Fast dispatch, vendor compliance, and real-time energy tracking (EUI).",
+  title: "Vendor Coordination & Facility Maintenance for Commercial Properties",
+  description: "Homeland Development Services provides comprehensive vendor coordination, facility maintenance, HVAC, refrigeration, and CMMS dashboard solutions for grocery stores, retail centers, and multi-unit properties. 24/7 emergency service available.",
   keywords: [
-    "operations platform",
-    "CMMS for small business",
-    "retail maintenance software",
-    "restaurant facilities management",
-    "vendor dispatch",
-    "energy analytics",
-    "EUI tracking",
-    "vendor compliance COI W9",
-    "multi-site management",
-    "property management CMMS"
+    "vendor coordination",
+    "facility maintenance",
+    "commercial property maintenance",
+    "CMMS dashboard",
+    "grocery store maintenance",
+    "retail maintenance",
+    "HVAC services",
+    "refrigeration services",
+    "building maintenance Oklahoma",
+    "property management services"
   ],
   openGraph: {
-    title: "HDS Console - Operations & Analytics Platform",
-    description: "Unified CMMS for small businesses—command, maintain, optimize, save. Run operations AND see analytics in real time.",
+    title: "Homeland Development Services - Vendor Coordination & Facility Maintenance",
+    description: "Complete maintenance solutions for commercial properties. Expert vendor coordination, facility management, and CMMS dashboard.",
     url: "https://www.hdsok.com",
     images: [
       {
         url: "https://www.hdsok.com/images/HDS_Logo_Inverted_HighRes.png",
         width: 1200,
         height: 630,
-        alt: "HDS Console - Operations & Analytics Platform",
+        alt: "HDS - Commercial Property Maintenance Solutions",
       },
     ],
   },
@@ -44,7 +44,7 @@ export default function Home() {
     <div>
       <HeroShowcase />
 
-      {/* HDS Console vs HDS Services Explanation */}
+      {/* HDS LIVE vs HDS Services Explanation */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal>
@@ -59,30 +59,30 @@ export default function Home() {
           </Reveal>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {/* HDS Console Platform */}
+            {/* HDS LIVE Platform */}
             <Reveal>
             <div className="rounded-2xl border border-neon-blue/30 bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-blue/20 transition-all">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-4xl">💻</span>
-                <h3 className="text-2xl font-bold text-neon-blue">HDS Console</h3>
+                <h3 className="text-2xl font-bold text-neon-blue">HDS LIVE</h3>
               </div>
-              <p className="text-lg font-semibold text-white mb-4">Operations & Analytics Platform</p>
+              <p className="text-lg font-semibold text-white mb-4">Our Platform</p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-neon-blue mt-1">•</span>
-                  <span>HDS runs operations AND shows analytics</span>
+                  <span>Cloud-based CMMS & work order system</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-neon-blue mt-1">•</span>
-                  <span>Use as standalone console or with managed services</span>
+                  <span>Real-time analytics & energy tracking</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-neon-blue mt-1">•</span>
-                  <span>Multi-tenant portfolio management</span>
+                  <span>Multi-property portfolio management</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-neon-blue mt-1">•</span>
-                  <span>Fast dispatch & vendor compliance</span>
+                  <span>Vendor coordination & dispatch</span>
                 </li>
               </ul>
             </div>
@@ -99,15 +99,15 @@ export default function Home() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-neon-green mt-1">•</span>
-                  <span>Licensed vendor coordination & dispatch</span>
+                  <span>Vendor management & coordination</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-neon-green mt-1">•</span>
-                  <span>24/7/365 emergency response</span>
+                  <span>24/7 dispatch & emergency response</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-neon-green mt-1">•</span>
-                  <span>Global contractor network (EU, Americas, Central Asia)</span>
+                  <span>Licensed contractor network nationwide</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-neon-green mt-1">•</span>
@@ -121,7 +121,7 @@ export default function Home() {
           <Reveal delay={0.2}>
           <div className="mt-8 text-center">
             <p className="text-gray-400 text-lg">
-              <span className="text-neon-blue font-semibold">HDS Console</span> powers the technology. <span className="text-neon-green font-semibold">HDS Services</span> delivers the expertise.
+              <span className="text-neon-blue font-semibold">HDS LIVE</span> powers the technology. <span className="text-neon-green font-semibold">HDS Services</span> delivers the expertise.
             </p>
           </div>
           </Reveal>
@@ -206,10 +206,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
           <h2 className="text-4xl font-bold text-white mb-4 text-center">
-            What the HDS Console Does
+            HDS Console: Portfolio Management
           </h2>
-          <p className="text-xl text-gray-300 mb-12 text-center max-w-4xl mx-auto">
-            A unified CMMS built for <span className="text-neon-green font-semibold">small businesses and multi-site organizations</span>—retail chains, restaurants, property managers—who need <span className="text-neon-green font-semibold">real-time visibility</span> into maintenance costs, energy intensity (EUI), and vendor performance across their entire portfolio.
+          <p className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+            Real-time visibility and control across all your properties
           </p>
           </Reveal>
           
@@ -222,7 +222,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">All Sites, One View</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Multi-tenant portfolio management—drill from portfolio to region to store in seconds
+                Multi-tenant portfolio management across locations
               </p>
             </div>
             </Reveal>
@@ -235,7 +235,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Fast Dispatch</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                One-click dispatch reduces downtime and speeds vendor response
+                Issue to vendor in seconds with automated routing
               </p>
             </div>
             </Reveal>
@@ -248,7 +248,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Live Cost Tracking</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Spot budget anomalies immediately with real-time spend visibility
+                Real-time spend per site, region, and vendor
               </p>
             </div>
             </Reveal>
@@ -261,7 +261,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Energy Analytics</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Track EUI (kWh/ft²) and energy cost against ENERGY STAR® benchmarks
+                Track kWh/ft² and energy cost across properties
               </p>
             </div>
             </Reveal>
@@ -274,7 +274,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Cost per ft²</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Cross-correlate maintenance spend with energy intensity patterns
+                Compare maintenance spend by site and region
               </p>
             </div>
             </Reveal>
@@ -287,7 +287,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Smart Assets</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Asset records trigger maintenance automatically—no manual logs
+                Auto maintenance triggers—no manual logs
               </p>
             </div>
             </Reveal>
@@ -300,7 +300,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Vendor Insights</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Compare vendors by cost, completion rate, and response speed
+                Performance metrics updated automatically
               </p>
             </div>
             </Reveal>
@@ -310,7 +310,7 @@ export default function Home() {
               <div className="text-3xl mb-3">📈</div>
               <h3 className="text-xl font-bold text-white mb-3">Predictive Alerts</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Proactive maintenance reduces emergency repairs and extends asset life
+                Spot anomalies before they escalate
               </p>
             </div>
           </div>
@@ -499,80 +499,114 @@ export default function Home() {
                   Facility Maintenance
                 </h3>
                 <ul className="text-gray-300 space-y-2 leading-relaxed">
-                  <li>• Preventive & reactive service</li>
-                  <li>• 24-hour dispatch</li>
-                  <li>• Multi-trade coordination</li>
-                  <li>• Groundskeeping & janitorial</li>
+                  <li>• Plumbing & electrical</li>
+                  <li>• Roofing & structural</li>
+                  <li>• Lighting & signage</li>
+                  <li>• Parking lot & grounds</li>
                 </ul>
               </div>
             </Link>
 
-            {/* Construction & Special Projects */}
+            {/* Construction & Projects */}
             <Link href="/services/construction-special-projects" className="group">
               <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Construction & Projects
                 </h3>
                 <ul className="text-gray-300 space-y-2 leading-relaxed">
-                  <li>• Ground-up builds & remodels</li>
-                  <li>• Equipment upgrades</li>
-                  <li>• Tenant improvements</li>
-                  <li>• Retrofit projects</li>
+                  <li>• Store remodels</li>
+                  <li>• New construction</li>
+                  <li>• Multi-site rollouts</li>
+                  <li>• Turnkey project management</li>
                 </ul>
               </div>
             </Link>
 
-            {/* Design-Build & Consulting */}
-            <Link href="/services/design-build-consulting" className="group">
+            {/* Design-Build */}
+            <Link href="/services/design-build" className="group">
               <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
-                  Design-Build & Consulting
+                  Design-Build
                 </h3>
                 <ul className="text-gray-300 space-y-2 leading-relaxed">
-                  <li>• Concept to completion</li>
-                  <li>• Energy & code expertise</li>
-                  <li>• Feasibility & engineering</li>
-                  <li>• Permit & compliance</li>
+                  <li>• Mechanical design</li>
+                  <li>• Energy code compliance</li>
+                  <li>• Engineering consulting</li>
+                  <li>• Permit coordination</li>
                 </ul>
               </div>
             </Link>
 
-            {/* Energy Management & Sustainability */}
+            {/* Energy Management */}
             <Link href="/services/energy-management-sustainability" className="group">
               <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
-                  Energy & Sustainability
+                  Energy Management
                 </h3>
                 <ul className="text-gray-300 space-y-2 leading-relaxed">
-                  <li>• Energy optimization</li>
-                  <li>• Utility incentives</li>
-                  <li>• Lighting & water upgrades</li>
-                  <li>• Sustainability planning</li>
+                  <li>• Energy audits & analysis</li>
+                  <li>• Utility bill monitoring</li>
+                  <li>• LED & HVAC upgrades</li>
+                  <li>• Sustainability programs</li>
                 </ul>
               </div>
             </Link>
 
-            {/* Call to Action Card */}
-            <div className="rounded-xl border border-neon-green/40 bg-gradient-to-br from-neon-green/10 to-neon-green/5 p-8 flex flex-col justify-center items-center text-center shadow-lg hover:shadow-neon-green/20 transition-all">
-              <h3 className="text-2xl font-bold mb-4 text-neon-green">
-                Ready to Get Started?
+            {/* Vendor Management */}
+            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 h-full shadow-lg hover:shadow-neon-green/20 hover:border-neon-green/40 transition-all">
+              <h3 className="text-2xl font-bold text-neon-green mb-4">
+                Vendor Management
               </h3>
-              <p className="mb-6 text-gray-300 leading-relaxed">
-                Schedule a consultation to discuss your facility needs
-              </p>
-              <Link 
-                href="/contact"
-                className="bg-neon-green text-base px-6 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
-              >
-                Book A Call
-              </Link>
+              <ul className="text-gray-300 space-y-2 leading-relaxed">
+                <li>• Nationwide contractor network</li>
+                <li>• Vendor vetting & compliance</li>
+                <li>• Work order dispatch</li>
+                <li>• Quality assurance</li>
+              </ul>
             </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link 
+              href="/services"
+              className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
       <TestimonialCarousel />
+
+      {/* Call to Action */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <Reveal>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Simplify Your Facility Management?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how HDS can support your properties
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Link 
+              href="/contact"
+              className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+            >
+              Contact Us
+            </Link>
+            <a 
+              href="tel:14057774156"
+              className="inline-block border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
+            >
+              Call (405) 777-4156
+            </a>
+          </div>
+          </Reveal>
+        </div>
+      </section>
     </div>
   );
 }
