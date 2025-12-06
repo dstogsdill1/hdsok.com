@@ -116,7 +116,11 @@ const DARK_TOOLTIP = {
 const TOOLTIP_LABEL_STYLE = { color: '#c6ff00', fontWeight: 'bold', marginBottom: '4px' };
 const TOOLTIP_ITEM_STYLE = { color: '#e2e8f0' };
 
-export default function DashboardCharts() {
+interface DashboardChartsProps {
+  variant?: 'full' | 'minimal' | 'work-orders';
+}
+
+export default function DashboardCharts({ variant = 'full' }: DashboardChartsProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
@@ -133,6 +137,7 @@ export default function DashboardCharts() {
     <div className="w-full">
       <div className="space-y-5">
         {/* Row 1: Key Portfolio Metrics - Matching HDS.live Analytics Hub */}
+        {(variant === 'full' || variant === 'minimal') && (
         <div className="grid grid-cols-4 gap-3">
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-neon-green/15 via-transparent to-emerald-500/10" />
@@ -162,6 +167,7 @@ export default function DashboardCharts() {
             <div className="relative text-xs text-neon-green mt-1">↓ 12% vs last year</div>
           </div>
         </div>
+        )}
 
         {/* Row 2: Main Charts */}
         <div className="grid grid-cols-2 gap-4">
@@ -288,6 +294,7 @@ export default function DashboardCharts() {
         </div>
 
         {/* Row 3: Category and Region Analysis */}
+        {variant === 'full' && (
         <div className="grid grid-cols-2 gap-4">
           {/* Category Breakdown Bar Chart */}
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-5 shadow-[0_25px_70px_rgba(0,0,0,0.6)]">
@@ -377,8 +384,10 @@ export default function DashboardCharts() {
             </ResponsiveContainer>
           </div>
         </div>
+        )}
 
         {/* Row 4: Energy Intelligence Preview - Matching HDS.live */}
+        {variant === 'full' && (
         <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-5 shadow-[0_25px_70px_rgba(0,0,0,0.6)]">
           <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-amber-400/10 via-transparent to-orange-500/5" />
           <div className="relative mb-4">
@@ -431,8 +440,10 @@ export default function DashboardCharts() {
             </ComposedChart>
           </ResponsiveContainer>
         </div>
+        )}
 
         {/* Row 5: Bottom Stats - Matching HDS.live Analytics Hub */}
+        {variant === 'full' && (
         <div className="grid grid-cols-4 gap-3">
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-cyan-500/5" />
@@ -459,6 +470,11 @@ export default function DashboardCharts() {
             <div className="relative text-[10px] text-orange-400 mt-0.5">Properties monitored</div>
           </div>
         </div>
+        )}
+      </div>
+    </div>
+  );
+}
       </div>
     </div>
   );

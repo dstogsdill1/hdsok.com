@@ -375,7 +375,7 @@ export default function Home() {
             </div>
             </Reveal>
             <Reveal delay={0.1}>
-            <DashboardCharts />
+            <DashboardCharts variant="work-orders" />
             </Reveal>
           </div>
         </div>

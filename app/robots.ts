@@ -6,9 +6,20 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/thank-you', '/booking-confirmed', '/404'],
+        disallow: ['/api/', '/thank-you', '/booking-confirmed', '/404'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/thank-you', '/booking-confirmed', '/404'],
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: ['/api/', '/thank-you', '/booking-confirmed', '/404'],
       },
     ],
     sitemap: 'https://www.hdsok.com/sitemap.xml',
+    host: 'https://www.hdsok.com',
   }
 }

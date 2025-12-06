@@ -147,7 +147,7 @@ export function HeroShowcase() {
 
             <div className="space-y-4">
               <div className="rounded-xl border border-border-subtle bg-base/60 p-3">
-                <DashboardCharts />
+                <DashboardCharts variant="minimal" />
               </div>
 
               <div className="grid gap-3 text-xs text-gray-300 sm:grid-cols-3">
