@@ -66,11 +66,11 @@ export default function EnergyShowcase() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-neon-green mr-2 flex-shrink-0">•</span>
-                    <span><strong>Peak demand charges:</strong> Identify when and where you're paying premium rates</span>
+                    <span><strong>Peak demand charges:</strong> Identify when and where you&apos;re paying premium rates</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-neon-green mr-2 flex-shrink-0">•</span>
-                    <span><strong>Equipment inefficiencies:</strong> HVAC systems running 24/7 when they shouldn't be</span>
+                    <span><strong>Equipment inefficiencies:</strong> HVAC systems running 24/7 when they shouldn&apos;t be</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-neon-green mr-2 flex-shrink-0">•</span>
@@ -273,7 +273,7 @@ export default function EnergyShowcase() {
               See What Your Energy Data Reveals
             </h3>
             <p className="text-gray-100 mb-6 max-w-2xl mx-auto">
-              Get a free energy assessment. We'll analyze your consumption patterns, identify 
+              Get a free energy assessment. We&apos;ll analyze your consumption patterns, identify 
               savings opportunities, and show you exactly what projects make sense for your portfolio.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">

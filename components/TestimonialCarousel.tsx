@@ -151,7 +151,7 @@ export default function TestimonialCarousel() {
                   
                   <div className="relative">
                     {/* Quote mark */}
-                    <div className="text-neon-green text-6xl mb-4 opacity-50">"</div>
+                    <div className="text-neon-green text-6xl mb-4 opacity-50">&quot;</div>
 
                     {/* Rating */}
                     <div className="flex gap-1 mb-6">

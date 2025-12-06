@@ -37,7 +37,7 @@ export default function ThankYouPage() {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-neon-green mt-1">•</span>
-              <span>You'll receive a follow-up e-mail with your work-order ID and the name of the technician or vendor taking the call.</span>
+              <span>You&apos;ll receive a follow-up e-mail with your work-order ID and the name of the technician or vendor taking the call.</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-neon-green mt-1">•</span>
@@ -81,7 +81,7 @@ export default function ThankYouPage() {
             Read our full <Link href="/privacy-policy" className="text-neon-green hover:underline">Privacy Policy</Link> for details on how data is stored and protected.
           </p>
           <p className="text-gray-100 mt-6 font-semibold">
-            Thank you for trusting HDS to keep your facilities running smoothly — we're already on it.
+            Thank you for trusting HDS to keep your facilities running smoothly — we&apos;re already on it.
           </p>
         </div>
 

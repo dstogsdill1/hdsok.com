@@ -53,7 +53,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-white mb-4">
               One Company, Two Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               Understanding the HDS ecosystem—our platform and our people
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-blue">HDS LIVE</h3>
               </div>
               <p className="text-lg font-semibold text-white mb-4">Our Platform</p>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-gray-100">
                 <li className="flex items-start gap-2">
                   <span className="text-neon-blue mt-1">•</span>
                   <span>Cloud-based CMMS & work order system</span>
@@ -97,7 +97,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-green">HDS Services</h3>
               </div>
               <p className="text-lg font-semibold text-white mb-4">Our Team</p>
-              <ul className="space-y-3 text-gray-300">
+              <ul className="space-y-3 text-gray-100">
                 <li className="flex items-start gap-2">
                   <span className="text-neon-green mt-1">•</span>
                   <span>Vendor management & coordination</span>
@@ -121,7 +121,7 @@ export default function Home() {
 
           <Reveal delay={0.2}>
           <div className="mt-8 text-center">
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-200 text-lg">
               <span className="text-neon-blue font-semibold">HDS LIVE</span> powers the technology. <span className="text-neon-green font-semibold">HDS Services</span> delivers the expertise.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="text-xl font-semibold text-neon-green mb-4">What We Do</h3>
-                <ul className="space-y-3 text-gray-300 text-lg leading-relaxed">
+                <ul className="space-y-3 text-gray-100 text-lg leading-relaxed">
                   <li className="flex items-start gap-3">
                     <span className="text-neon-green mt-1">✓</span>
                     <span>Coordinate licensed vendors nationwide</span>
@@ -163,7 +163,7 @@ export default function Home() {
               
               <div>
                 <h3 className="text-xl font-semibold text-neon-green mb-4">How It Works</h3>
-                <ul className="space-y-3 text-gray-300 text-lg leading-relaxed">
+                <ul className="space-y-3 text-gray-100 text-lg leading-relaxed">
                   <li className="flex items-start gap-3">
                     <span className="text-neon-green mt-1">1.</span>
                     <span>Submit request via phone, web, or app</span>
@@ -185,7 +185,7 @@ export default function Home() {
             </div>
 
             <div className="text-center pt-6 border-t border-border-subtle">
-              <p className="text-xl text-gray-300 mb-6">
+              <p className="text-xl text-gray-100 mb-6">
                 Focus on your business while we handle your facilities
               </p>
               <Link 
@@ -209,7 +209,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white mb-4 text-center">
             HDS Console: Portfolio Management
           </h2>
-          <p className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+          <p className="text-xl text-gray-100 mb-12 text-center max-w-3xl mx-auto">
             Real-time visibility and control across all your properties
           </p>
           </Reveal>
@@ -222,7 +222,7 @@ export default function Home() {
                 <span className="inline-block animate-[float_6s_ease-in-out_infinite]">🏢</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">All Sites, One View</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Multi-tenant portfolio management across locations
               </p>
             </div>
@@ -235,7 +235,7 @@ export default function Home() {
                 <span className="inline-block animate-[pulse-glow_2.4s_ease-in-out_infinite]">⚡</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Fast Dispatch</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Issue to vendor in seconds with automated routing
               </p>
             </div>
@@ -248,7 +248,7 @@ export default function Home() {
                 <span className="inline-block animate-[float_7s_ease-in-out_infinite]">💰</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Live Cost Tracking</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Real-time spend per site, region, and vendor
               </p>
             </div>
@@ -261,7 +261,7 @@ export default function Home() {
                 <span className="inline-block animate-[pulse-glow_3s_ease-in-out_infinite]">📊</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Energy Analytics</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Track kWh/ft² and energy cost across properties
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function Home() {
                 <span className="inline-block animate-[float_5.5s_ease-in-out_infinite]">📐</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Cost per ft²</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Compare maintenance spend by site and region
               </p>
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
                 <span className="inline-block animate-[float_6.4s_ease-in-out_infinite]">🔧</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Smart Assets</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Auto maintenance triggers—no manual logs
               </p>
             </div>
@@ -300,7 +300,7 @@ export default function Home() {
                 <span className="inline-block animate-[pulse-glow_2.8s_ease-in-out_infinite]">💡</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Vendor Insights</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Performance metrics updated automatically
               </p>
             </div>
@@ -310,7 +310,7 @@ export default function Home() {
             <div className="relative overflow-hidden rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
               <div className="text-3xl mb-3">📈</div>
               <h3 className="text-xl font-bold text-white mb-3">Predictive Alerts</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-100 text-sm leading-relaxed">
                 Spot anomalies before they escalate
               </p>
             </div>
@@ -337,13 +337,13 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white mb-4 text-center">
             Work Orders—Live and In Detail
           </h2>
-          <p className="text-lg text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-gray-100 mb-12 text-center max-w-3xl mx-auto">
             Track every request from submission to completion in one centralized dashboard
           </p>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Reveal>
-            <div className="text-gray-300 space-y-6">
+            <div className="text-gray-100 space-y-6">
               <div className="space-y-4 leading-relaxed">
                 <p className="text-lg">
                   Property managers, tenants, and staff can submit work orders via:
@@ -391,7 +391,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white mb-4 text-center">
             Get Help Your Way
           </h2>
-          <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-100 text-center mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
             Choose the method that matches your urgency—our tools are built for property 
             managers, tenants, and staff
           </p>
@@ -402,8 +402,8 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
                 <span>📞</span> Call Live Agent
               </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                For urgent issues, call our 24/7 dispatch line. We'll route to the right vendor immediately.
+              <p className="text-gray-100 mb-6 leading-relaxed">
+                For urgent issues, call our 24/7 dispatch line. We&apos;ll route to the right vendor immediately.
               </p>
               <a 
                 href="tel:14057774156"
@@ -418,7 +418,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
                 <span>📋</span> Service Request
               </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-100 mb-6 leading-relaxed">
                 For routine work, use our online form. Work orders are created and assigned automatically.
               </p>
               <a 
@@ -439,7 +439,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
                 <span>💻</span> Use HDS Console
               </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-100 mb-6 leading-relaxed">
                 Access your dashboard for work orders, analytics, and real-time property updates.
               </p>
               <Link 
@@ -459,7 +459,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white mb-4 text-center">
             HDS Service Suite
           </h2>
-          <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-100 text-center mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
             From emergency repairs to turnkey build-outs—we coordinate licensed vendors 
             so you can focus on your business
           </p>
@@ -471,7 +471,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Mechanical & Refrigeration
                 </h3>
-                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                <ul className="text-gray-100 space-y-2 leading-relaxed">
                   <li>• 24/7 HVAC & refrigeration</li>
                   <li>• Racks, RTUs & chillers</li>
                   <li>• Energy management projects</li>
@@ -486,7 +486,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Facility Maintenance
                 </h3>
-                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                <ul className="text-gray-100 space-y-2 leading-relaxed">
                   <li>• Plumbing & electrical</li>
                   <li>• Roofing & structural</li>
                   <li>• Lighting & signage</li>
@@ -501,7 +501,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Construction & Projects
                 </h3>
-                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                <ul className="text-gray-100 space-y-2 leading-relaxed">
                   <li>• Store remodels</li>
                   <li>• New construction</li>
                   <li>• Multi-site rollouts</li>
@@ -516,7 +516,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Design-Build
                 </h3>
-                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                <ul className="text-gray-100 space-y-2 leading-relaxed">
                   <li>• Mechanical design</li>
                   <li>• Energy code compliance</li>
                   <li>• Engineering consulting</li>
@@ -531,7 +531,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-neon-green mb-4">
                   Energy Management
                 </h3>
-                <ul className="text-gray-300 space-y-2 leading-relaxed">
+                <ul className="text-gray-100 space-y-2 leading-relaxed">
                   <li>• Energy audits & analysis</li>
                   <li>• Utility bill monitoring</li>
                   <li>• LED & HVAC upgrades</li>
@@ -545,7 +545,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-neon-green mb-4">
                 Vendor Management
               </h3>
-              <ul className="text-gray-300 space-y-2 leading-relaxed">
+              <ul className="text-gray-100 space-y-2 leading-relaxed">
                 <li>• Nationwide contractor network</li>
                 <li>• Vendor vetting & compliance</li>
                 <li>• Work order dispatch</li>
@@ -575,8 +575,8 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Simplify Your Facility Management?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how HDS can support your properties
+          <p className="text-xl text-gray-100 mb-8">
+            Let&apos;s discuss how HDS can support your properties
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link 

@@ -25,7 +25,7 @@ export default function TermsPage() {
           <section id="ua" className="space-y-4">
             <h2 className="text-2xl font-semibold text-neon-green">User Agreement</h2>
             <p>
-              Welcome to the HDSOK.com website (the "Site"). This User Agreement is a binding
+              Welcome to the HDSOK.com website (the &quot;Site&quot;). This User Agreement is a binding
               agreement between you (the visitor/user) and Homeland Development Services LLC (HDS),
               an Oklahoma limited liability company with its mailing address at P.O. Box 890325,
               Oklahoma City, OK 73189 (Ph: 405.546.2820). By using the Site, you acknowledge
