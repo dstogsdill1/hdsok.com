@@ -475,7 +475,3 @@ export default function DashboardCharts({ variant = 'full' }: DashboardChartsPro
     </div>
   );
 }
-      </div>
-    </div>
-  );
-}
