@@ -47,7 +47,7 @@ function StatItem({ value, suffix = '', prefix = '', label, duration = 2 }: Stat
         {displayValue.toLocaleString()}
         {suffix}
       </div>
-      <div className="text-white text-sm md:text-base lg:text-lg font-semibold">{label}</div>
+      <div className="text-gray-100 text-sm md:text-base lg:text-lg font-semibold">{label}</div>
     </motion.div>
   );
 }
@@ -78,7 +78,7 @@ export default function StatsCounter({ stats }: StatsCounterProps) {
   const displayStats = stats || defaultStats;
 
   return (
-    <section className="relative py-16 px-4 overflow-hidden">
+    <section className="relative py-16 px-4 overflow-hidden bg-surface/80">
       {/* Background effects */}
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-neon-green/20 blur-3xl" />
