@@ -23,7 +23,7 @@ const config: Config = {
         'border-subtle': '#3A3F4A',  // Subtle borders
         'border': '#4A4F5A',         // Standard borders
         // Legacy support (mapped to new palette)
-        'dark-bg': '#1E1E26',
+        'dark-bg': '#000000',       // Pure black for text on green buttons
         'dark-card': '#262B35',
         'dark-border': '#3A3F4A',
         'grey-nav': '#1E1E26',
