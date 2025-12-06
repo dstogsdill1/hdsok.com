@@ -164,7 +164,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </nav>
 
       {/* Main Content */}
-      <main>{children}</main>
+      <main className="min-h-screen">{children}</main>
 
       {/* Footer */}
       <footer className="bg-surface/95 backdrop-blur-md border-t border-border-subtle mt-20 shadow-lg">
