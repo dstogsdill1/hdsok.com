@@ -122,6 +122,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Any Industry, Any Scale */}
+      <section className="py-16 px-4 bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-white mb-3">
+              Any Industry, Any Scale
+            </h2>
+            <p className="text-lg text-gray-100 max-w-2xl mx-auto">
+              From machine shops to grocery chains—upload your data and start optimizing
+            </p>
+          </div>
+          </Reveal>
+          
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <Reveal>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-blue/10 border border-neon-blue/30 text-neon-blue text-sm font-medium">
+              <span>🏪</span> Retail & Grocery
+            </span>
+            </Reveal>
+            <Reveal delay={0.05}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-green/10 border border-neon-green/30 text-neon-green text-sm font-medium">
+              <span>🏭</span> Manufacturing
+            </span>
+            </Reveal>
+            <Reveal delay={0.1}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-purple/10 border border-neon-purple/30 text-neon-purple text-sm font-medium">
+              <span>🏠</span> Residential
+            </span>
+            </Reveal>
+            <Reveal delay={0.15}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-yellow/10 border border-neon-yellow/30 text-neon-yellow text-sm font-medium">
+              <span>🏛️</span> Municipal
+            </span>
+            </Reveal>
+            <Reveal delay={0.2}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium">
+              <span>🏢</span> Commercial
+            </span>
+            </Reveal>
+            <Reveal delay={0.25}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-green/10 border border-neon-green/30 text-neon-green text-sm font-medium">
+              <span>🏥</span> Healthcare
+            </span>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.3}>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center p-6 rounded-xl border border-border-subtle bg-surface/60">
+              <p className="text-3xl font-bold text-neon-green mb-1">Excel, CSV</p>
+              <p className="text-gray-100">or copy-paste your data</p>
+            </div>
+            <div className="text-center p-6 rounded-xl border border-border-subtle bg-surface/60">
+              <p className="text-3xl font-bold text-neon-green mb-1">Days, Not Months</p>
+              <p className="text-gray-100">to see real analytics</p>
+            </div>
+            <div className="text-center p-6 rounded-xl border border-border-subtle bg-surface/60">
+              <p className="text-3xl font-bold text-neon-green mb-1">8-15% Savings</p>
+              <p className="text-gray-100">found within first quarter</p>
+            </div>
+          </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Your Facility Partner - Simplified */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
