@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
+import TextHdsCard from '@/components/TextHdsCard';
 import { Reveal } from '@/components/Reveal';
 import { WorkflowTimeline } from '@/components/WorkflowTimeline';
 import StatsCounter from '@/components/StatsCounter';
@@ -431,20 +432,7 @@ export default function Home() {
             </div>
 
             {/* Text HDS Team */}
-            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
-              <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
-                <span>💬</span> Text HDS Team
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Text for urgent escalations or follow-ups. Include your name, property, and callback number.
-              </p>
-              <a 
-                href="sms:14057774156"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
-              >
-                Text Now
-              </a>
-            </div>
+            <TextHdsCard />
 
             {/* Console or App */}
             <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
