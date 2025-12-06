@@ -408,7 +408,7 @@ export default function Home() {
                 href="tel:14057774156"
                 className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
               >
-                Call (405) 777-4156
+                Call Now
               </a>
             </div>
 
@@ -442,7 +442,7 @@ export default function Home() {
                 href="sms:14057774156"
                 className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
               >
-                Text (405) 777-4156
+                Text Now
               </a>
             </div>
 
@@ -601,7 +601,7 @@ export default function Home() {
               href="tel:14057774156"
               className="inline-block border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
             >
-              Call (405) 777-4156
+              Call Now
             </a>
           </div>
           </Reveal>

@@ -47,7 +47,7 @@ function StatItem({ value, suffix = '', prefix = '', label, duration = 2 }: Stat
         {displayValue.toLocaleString()}
         {suffix}
       </div>
-      <div className="text-gray-400 text-sm md:text-base lg:text-lg">{label}</div>
+      <div className="text-white text-sm md:text-base lg:text-lg font-semibold">{label}</div>
     </motion.div>
   );
 }

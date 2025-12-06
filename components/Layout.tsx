@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto flex justify-center gap-6 text-sm">
           <a href="tel:14057774156" className="hover:text-white transition-colors flex items-center gap-2">
             <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">📞</span>
-            Call Live Agent
+            Call Now
           </a>
           <a 
             href="https://www.hds.live/service-request" 
