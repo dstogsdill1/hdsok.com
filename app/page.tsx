@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { SITE_METADATA } from '@/config/site-metadata';
 import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
 import TextHdsCard from '@/components/TextHdsCard';
@@ -11,8 +12,8 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ProductShowcase from '@/components/ProductShowcase';
 
 export const metadata: Metadata = {
-  title: "Vendor Coordination & Facility Maintenance for Commercial Properties",
-  description: "Homeland Development Services provides comprehensive vendor coordination, facility maintenance, HVAC, refrigeration, and CMMS dashboard solutions for grocery stores, retail centers, and multi-unit properties. 24/7 emergency service available.",
+  title: SITE_METADATA.pages.home.title,
+  description: SITE_METADATA.pages.home.description,
   keywords: [
     "vendor coordination",
     "facility maintenance",
@@ -26,17 +27,9 @@ export const metadata: Metadata = {
     "property management services"
   ],
   openGraph: {
-    title: "Homeland Development Services - Vendor Coordination & Facility Maintenance",
-    description: "Complete maintenance solutions for commercial properties. Expert vendor coordination, facility management, and CMMS dashboard.",
-    url: "https://www.hdsok.com",
-    images: [
-      {
-        url: "https://www.hdsok.com/images/HDS_Logo_Inverted_HighRes.png",
-        width: 1200,
-        height: 630,
-        alt: "HDS - Commercial Property Maintenance Solutions",
-      },
-    ],
+    title: SITE_METADATA.pages.home.title,
+    description: SITE_METADATA.pages.home.description,
+    url: SITE_METADATA.global.siteUrl,
   },
 };
 
@@ -435,7 +428,7 @@ export default function Home() {
             <TextHdsCard />
 
             {/* Console or App */}
-            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
+            <div className="rounded-xl border border-border-subtle bg-surface/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-neon-green/10 hover:border-neon-green/30 transition-all">
               <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
                 <span>💻</span> Use HDS Console
               </h3>

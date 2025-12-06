@@ -4,8 +4,9 @@ import Layout from "@/components/Layout";
 import Script from "next/script";
 import { SmoothScroller } from "@/components/SmoothScroller";
 import { PageTransition } from "@/components/PageTransition";
+import { SITE_METADATA } from "@/config/site-metadata";
 
-const siteUrl = "https://www.hdsok.com";
+const siteUrl = SITE_METADATA.global.siteUrl;
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -20,10 +21,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Homeland Development Services | Commercial Facility Management & CMMS Platform",
-    template: "%s | HDS"
+    default: SITE_METADATA.global.defaultTitle,
+    template: SITE_METADATA.global.titleTemplate
   },
-  description: "HDS provides vendor coordination, facility maintenance, and CMMS dashboard solutions for grocery stores, retail centers, and multi-unit commercial properties. 24/7 emergency dispatch, energy management, and portfolio-wide analytics.",
+  description: SITE_METADATA.global.defaultDescription,
   keywords: [
     "commercial property maintenance",
     "facility maintenance",
@@ -75,36 +76,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Homeland Development Services",
-    title: "Homeland Development Services | Commercial Facility Management & CMMS",
-    description: "Complete vendor coordination, facility maintenance, and CMMS dashboard solutions for commercial properties. 24/7 dispatch, energy analytics, and portfolio management for 365+ locations.",
-    images: [
-      {
-        url: `${siteUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "Homeland Development Services - Commercial Facility Management Platform",
-        type: 'image/png',
-      },
-      {
-        url: `${siteUrl}/images/HDS_Logo_Inverted_HighRes.png`,
-        width: 512,
-        height: 512,
-        alt: "HDS Logo",
-        type: 'image/png',
-      },
-    ],
+    siteName: SITE_METADATA.global.siteName,
+    title: SITE_METADATA.global.defaultTitle,
+    description: SITE_METADATA.global.defaultDescription,
   },
   twitter: {
     card: "summary_large_image",
-    site: "@HDSLive",
-    creator: "@HDSLive",
-    title: "Homeland Development Services | Commercial Facility Management",
-    description: "Complete vendor coordination, facility maintenance, and CMMS dashboard for commercial properties. 24/7 dispatch, energy analytics, portfolio management.",
-    images: {
-      url: `${siteUrl}/og-image.png`,
-      alt: "Homeland Development Services - Commercial Facility Management Platform",
-    },
+    site: SITE_METADATA.global.twitterHandle,
+    creator: SITE_METADATA.global.twitterHandle,
+    title: SITE_METADATA.global.defaultTitle,
+    description: SITE_METADATA.global.defaultDescription,
   },
   alternates: {
     canonical: siteUrl,
