@@ -150,19 +150,19 @@ export default function DashboardCharts({ variant = 'full' }: DashboardChartsPro
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-cyan-400/15 via-transparent to-blue-500/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Spend</div>
+            <div className="relative text-[10px] text-white font-bold uppercase tracking-widest">Total Spend</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">$68.9M</div>
             <div className="relative text-xs text-cyan-400 mt-1">Maintenance $36.1M • Energy $32.8M</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-orange-400/15 via-transparent to-amber-400/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Average Cost / WO</div>
+            <div className="relative text-[10px] text-white font-bold uppercase tracking-widest">Average Cost / WO</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">$1,573.05</div>
             <div className="relative text-xs text-orange-400 mt-1">8 properties tracked</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-emerald-400/15 via-transparent to-neon-green/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Energy Spend</div>
+            <div className="relative text-[10px] text-white font-bold uppercase tracking-widest">Energy Spend</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">$32.8M</div>
             <div className="relative text-xs text-neon-green mt-1">↓ 12% vs last year</div>
           </div>

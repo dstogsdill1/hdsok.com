@@ -10,6 +10,7 @@ import BeforeAfterComparison from '@/components/BeforeAfterComparison';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ProductShowcase from '@/components/ProductShowcase';
 import QuickActionsGrid from '@/components/QuickActionsGrid';
+import PaymentIcons from '@/components/PaymentIcons';
 
 export const metadata: Metadata = {
   title: "HDS Console - Unified CMMS for Small Businesses",
@@ -331,23 +332,8 @@ export default function HDSConsolePage() {
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 mb-4">Accepting payments via Stripe. We accept:</p>
-          <div className="flex justify-center items-center gap-6 flex-wrap text-gray-400">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💳</span>
-              <span>VISA</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💳</span>
-              <span>Mastercard</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💳</span>
-              <span>AMEX</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💳</span>
-              <span>DISCOVER</span>
-            </div>
+          <div className="flex justify-center">
+            <PaymentIcons />
           </div>
         </div>
       </section>

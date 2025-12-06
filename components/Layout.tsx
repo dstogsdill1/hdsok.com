@@ -5,6 +5,10 @@ import Image from 'next/image';
 import { useState, useRef } from 'react';
 import CookieConsent from './CookieConsent';
 
+import PaymentIcons from './PaymentIcons';
+
+import PaymentIcons from './PaymentIcons';
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -307,23 +311,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="border-t border-neon-green/20 mt-8 pt-8">
             <div className="text-center mb-6">
               <p className="text-gray-400 mb-3">Accepting payments via Stripe. We accept:</p>
-              <div className="flex justify-center items-center gap-6 flex-wrap text-gray-400 text-sm">
-                <div className="flex items-center gap-2 hover:text-neon-green transition-colors">
-                  <span className="text-xl">💳</span>
-                  <span>VISA</span>
-                </div>
-                <div className="flex items-center gap-2 hover:text-neon-green transition-colors">
-                  <span className="text-xl">💳</span>
-                  <span>Mastercard</span>
-                </div>
-                <div className="flex items-center gap-2 hover:text-neon-green transition-colors">
-                  <span className="text-xl">💳</span>
-                  <span>AMEX</span>
-                </div>
-                <div className="flex items-center gap-2 hover:text-neon-green transition-colors">
-                  <span className="text-xl">💳</span>
-                  <span>DISCOVER</span>
-                </div>
+              <div className="flex justify-center">
+                <PaymentIcons />
               </div>
             </div>
             
