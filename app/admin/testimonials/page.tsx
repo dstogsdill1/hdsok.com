@@ -214,7 +214,7 @@ export default function AdminTestimonialsPage() {
                   </span>
                 ))}
               </div>
-              <p className="text-gray-300 text-sm mb-4 italic">"{testimonial.quote}"</p>
+              <p className="text-gray-300 text-sm mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
               <div>
                 <p className="text-white font-semibold">{testimonial.name}</p>
                 <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
@@ -232,7 +232,7 @@ export default function AdminTestimonialsPage() {
             <h3 className="text-lg font-semibold text-white mb-2">Testimonial Guidelines</h3>
             <p className="text-gray-300 text-sm">
               Keep testimonials authentic and specific. Include measurable results when possible 
-              (e.g., "40% improvement" or "200+ locations"). Always get permission before using 
+              (e.g., &ldquo;40% improvement&rdquo; or &ldquo;200+ locations&rdquo;). Always get permission before using 
               client names and companies.
               Note: This is a demo interface. Full CMS integration requires backend setup.
             </p>
