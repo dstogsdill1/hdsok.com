@@ -1,8 +1,8 @@
 "use client";
 
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
-import { motion, type Variants } from "framer-motion";
-import DashboardCharts from "@/components/DashboardCharts";
+import DashboardCharts from "./DashboardCharts";
 
 const container: Variants = {
   hidden: { opacity: 0, y: 12 },
@@ -47,12 +47,6 @@ export function HeroShowcase() {
           >
             Unified CMMS for small businesses—command, maintain, optimize, save
           </motion.p>
-          <motion.p
-            variants={item}
-            className="text-sm text-gray-400 max-w-2xl mx-auto"
-          >
-            Run a tighter operation with instant filtering, fast vendor dispatch, and built‑in compliance. Launch a guided demo in seconds or connect your data to see live results.
-          </motion.p>
         </motion.div>
 
         {/* Two Column Layout */}
@@ -69,21 +63,21 @@ export function HeroShowcase() {
               className="inline-flex items-center gap-2 rounded-full border border-neon-green/40 bg-surface/60 backdrop-blur-sm px-3 py-1 text-xs font-medium text-neon-green shadow-lg"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-neon-green animate-pulse" />
-              Regional service • Nationwide platform capability
+              Any industry • Any scale • Your data, your way
             </motion.div>
 
             <motion.h2
               variants={item}
               className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight"
             >
-              Complete portfolio visibility—one dashboard for all your locations
+              Save money. See everything. Make better decisions.
             </motion.h2>
 
             <motion.p
               variants={item}
               className="max-w-xl text-balance text-lg text-gray-100 sm:text-xl leading-relaxed"
             >
-              Track work orders, energy spend, and vendor performance across your entire portfolio with real-time insights. Launch a guided demo in seconds or connect your data to see live results.
+              Upload your data—any spreadsheet format—and start seeing analytics in days, not months. Find where you&apos;re overspending. Discover rebates. Track everything.
             </motion.p>
 
             <motion.div
@@ -94,13 +88,13 @@ export function HeroShowcase() {
                 href="/contact"
                 className="rounded-lg bg-neon-green px-7 py-3 font-semibold text-dark-bg shadow-lg transition hover:bg-neon-green/90"
               >
-                Get a Quote
+                Get Started Free
               </Link>
               <Link
                 href="/hds-console"
                 className="rounded-lg border-2 border-neon-green/70 px-7 py-3 font-semibold text-neon-green transition hover:bg-neon-green/10"
               >
-                Request Demo
+                Explore Demo
               </Link>
             </motion.div>
 
@@ -109,16 +103,16 @@ export function HeroShowcase() {
               className="mt-6 flex flex-wrap gap-6 text-sm text-gray-400 leading-relaxed"
             >
               <div>
-                <p className="font-semibold text-neon-green">Unified filters</p>
-                <p>One filter set follows you everywhere</p>
+                <p className="font-semibold text-neon-green">Easy data upload</p>
+                <p>Excel, CSV, or copy-paste</p>
               </div>
               <div>
-                <p className="font-semibold text-neon-green">Fast dispatch</p>
-                <p>Issue to vendor in seconds</p>
+                <p className="font-semibold text-neon-green">8-15% savings</p>
+                <p>Most clients find within Q1</p>
               </div>
               <div>
-                <p className="font-semibold text-neon-green">Vendor compliance</p>
-                <p>COI/W9 tracking built-in</p>
+                <p className="font-semibold text-neon-green">No lock-in</p>
+                <p>Platform-first, services optional</p>
               </div>
             </motion.div>
           </motion.div>
@@ -136,9 +130,6 @@ export function HeroShowcase() {
                 <span className="h-2 w-2 rounded-full bg-red-500" />
                 <span className="h-2 w-2 rounded-full bg-yellow-500" />
                 <span className="h-2 w-2 rounded-full bg-neon-green" />
-                <span className="ml-3 text-[10px] uppercase tracking-[0.18em] text-gray-500">
-                  HDS Console
-                </span>
               </div>
               <span className="rounded-full bg-neon-green/10 px-2 py-0.5 text-[10px] font-medium text-neon-green">
                 Live portfolio
@@ -151,26 +142,17 @@ export function HeroShowcase() {
               </div>
 
               <div className="grid gap-3 text-xs text-gray-100 sm:grid-cols-3">
-                <div className="rounded-xl border border-neon-green/30 bg-neon-green/5 p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-neon-green">
-                    Work Orders
-                  </p>
-                  <p className="mt-1 text-2xl font-semibold text-white">22,951</p>
-                  <p className="mt-1 text-[11px] text-neon-green">↗ Active portfolio</p>
+                <div className="rounded-lg border border-border-subtle bg-base/40 p-3 text-center">
+                  <p className="text-lg font-semibold text-neon-green">372</p>
+                  <p className="text-gray-400">Active Sites</p>
                 </div>
-                <div className="rounded-xl border border-border-subtle bg-surface/60 p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">
-                    Total Spend
-                  </p>
-                  <p className="mt-1 text-2xl font-semibold text-white">$68.9M</p>
-                  <p className="mt-1 text-[11px] text-gray-400">Maintenance + Energy</p>
+                <div className="rounded-lg border border-border-subtle bg-base/40 p-3 text-center">
+                  <p className="text-lg font-semibold text-neon-green">$37.4M</p>
+                  <p className="text-gray-400">YTD Spend</p>
                 </div>
-                <div className="rounded-xl border border-border-subtle bg-surface/60 p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">
-                    Avg per WO
-                  </p>
-                  <p className="mt-1 text-2xl font-semibold text-neon-green">$1,573</p>
-                  <p className="mt-1 text-[11px] text-gray-400">365 sites tracked</p>
+                <div className="rounded-lg border border-border-subtle bg-base/40 p-3 text-center">
+                  <p className="text-lg font-semibold text-neon-green">24,631</p>
+                  <p className="text-gray-400">Work Orders</p>
                 </div>
               </div>
             </div>

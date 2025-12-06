@@ -16,6 +16,8 @@ const config: Config = {
         'neon-green-dark': '#00e63d',
         'neon-blue': '#00d4ff',
         'neon-blue-dark': '#00b8e6',
+        'neon-purple': '#a855f7',
+        'neon-yellow': '#facc15',
         // New dark grey palette
         'base': '#1E1E26',          // Main background (lighter than pure black)
         'surface': '#262B35',        // Cards and elevated surfaces
