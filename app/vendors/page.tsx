@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { SITE_METADATA } from '@/config/site-metadata';
 import { Reveal } from '@/components/Reveal';
 
 export const metadata: Metadata = {
-  title: "Join HDS Vendor Network - Partner with Commercial Property Maintenance Leader",
-  description: "Join the HDS Vendor Network and access consistent work opportunities, streamlined processes, and reliable payment terms. Partner with a leading commercial property maintenance company.",
+  title: SITE_METADATA.pages.vendors.title,
+  description: SITE_METADATA.pages.vendors.description,
   keywords: [
     "vendor network",
     "commercial maintenance vendors",
@@ -14,9 +15,9 @@ export const metadata: Metadata = {
     "commercial property contractors"
   ],
   openGraph: {
-    title: "Join the HDS Vendor Network - Consistent Work & Reliable Payments",
-    description: "Partner with HDS for consistent commercial maintenance work opportunities. Streamlined processes and reliable payment terms.",
-    url: "https://www.hdsok.com/vendors",
+    title: SITE_METADATA.pages.vendors.title,
+    description: SITE_METADATA.pages.vendors.description,
+    url: `${SITE_METADATA.global.siteUrl}/vendors`,
   },
 };
 

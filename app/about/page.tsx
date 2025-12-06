@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import { SITE_METADATA } from '@/config/site-metadata';
 import { Reveal } from '@/components/Reveal';
 
 export const metadata: Metadata = {
-  title: "About HDS - Operations & Analytics Platform for Small Businesses",
-  description:
-    "HDS runs operations AND shows analytics. Use our console standalone or with our team managing dispatch and vendor coordination. Built for small businesses and multi-site portfolios.",
+  title: SITE_METADATA.pages.about.title,
+  description: SITE_METADATA.pages.about.description,
   keywords: [
     "about HDS",
     "operations platform",
@@ -16,10 +16,9 @@ export const metadata: Metadata = {
     "restaurant facility management",
   ],
   openGraph: {
-    title: "About HDS - Operations & Analytics Platform",
-    description:
-      "HDS runs operations AND shows analytics. Unified CMMS for small businesses, retail chains, and property portfolios.",
-    url: "https://www.hdsok.com/about",
+    title: SITE_METADATA.pages.about.title,
+    description: SITE_METADATA.pages.about.description,
+    url: `${SITE_METADATA.global.siteUrl}/about`,
   },
 };
 

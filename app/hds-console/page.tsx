@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { SITE_METADATA } from '@/config/site-metadata';
 import DashboardCharts from '@/components/DashboardCharts';
 import { HeroShowcase } from '@/components/HeroShowcase';
 import { Reveal } from '@/components/Reveal';
@@ -13,8 +14,8 @@ import QuickActionsGrid from '@/components/QuickActionsGrid';
 import PaymentIcons from '@/components/PaymentIcons';
 
 export const metadata: Metadata = {
-  title: "HDS Console - Unified CMMS for Small Businesses",
-  description: "Run operations AND show analytics. Command, maintain, optimize, save. Fast dispatch, vendor compliance, energy tracking (EUI), and real-time cost visibility for retail, restaurant, and property portfolios.",
+  title: SITE_METADATA.pages.console.title,
+  description: SITE_METADATA.pages.console.description,
   keywords: [
     "CMMS platform",
     "small business operations",
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
     "property management platform"
   ],
   openGraph: {
-    title: "HDS Console - Unified CMMS for Small Businesses",
-    description: "Run operations AND show analytics with HDS Console. Built for small businesses and multi-site organizations.",
-    url: "https://www.hdsok.com/hds-console",
+    title: SITE_METADATA.pages.console.title,
+    description: SITE_METADATA.pages.console.description,
+    url: `${SITE_METADATA.global.siteUrl}/hds-console`,
   },
 };
 
