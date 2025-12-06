@@ -92,7 +92,7 @@ export function HeroShowcase() {
             >
               <Link
                 href="/contact"
-                className="rounded-lg bg-neon-green px-7 py-3 font-semibold text-base shadow-lg transition hover:bg-neon-green/90"
+                className="rounded-lg bg-neon-green px-7 py-3 font-semibold text-dark-bg shadow-lg transition hover:bg-neon-green/90"
               >
                 Get a Quote
               </Link>

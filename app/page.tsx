@@ -183,7 +183,7 @@ export default function Home() {
               </p>
               <Link 
                 href="/contact"
-                className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+                className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
               >
                 Get Started Today
               </Link>
@@ -312,7 +312,7 @@ export default function Home() {
           <div className="text-center">
             <Link 
               href="/hds-console"
-              className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+              className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
             >
               Explore HDS Console
             </Link>
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
               <Link 
                 href="/hds-console"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all mt-4"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-all mt-4"
               >
                 Learn More About HDS Console
               </Link>
@@ -400,7 +400,7 @@ export default function Home() {
               </p>
               <a 
                 href="tel:14057774156"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-all"
               >
                 Call Now
               </a>
@@ -418,7 +418,7 @@ export default function Home() {
                 href="https://www.hds.live/service-request"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-all"
               >
                 Submit Request
               </a>
@@ -437,7 +437,7 @@ export default function Home() {
               </p>
               <Link 
                 href="/hds-console"
-                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
+                className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-all"
               >
                 Access Console
               </Link>
@@ -550,7 +550,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link 
               href="/services"
-              className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+              className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
             >
               View All Services
             </Link>
@@ -574,13 +574,13 @@ export default function Home() {
           <div className="flex justify-center gap-4 flex-wrap">
             <Link 
               href="/contact"
-              className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+              className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
             >
               Contact Us
             </Link>
             <a 
               href="tel:14057774156"
-              className="inline-block border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-base transition-all"
+              className="inline-block border-2 border-neon-green text-neon-green px-8 py-3 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-all"
             >
               Call Now
             </a>

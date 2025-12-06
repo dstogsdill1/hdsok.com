@@ -84,7 +84,7 @@ export default function BookingConfirmedPage() {
           <p className="text-gray-400 text-sm mb-8">FROM REPAIRS TO REMODELS — WE&apos;VE GOT YOU COVERED</p>
           <Link
             href="/"
-            className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+            className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
           >
             Return to Home
           </Link>

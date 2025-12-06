@@ -179,7 +179,7 @@ export default function TermsPage() {
         <div className="mt-10 text-center">
           <Link
             href="/"
-            className="inline-block bg-neon-green text-base px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
+            className="inline-block bg-neon-green text-dark-bg px-8 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all shadow-lg"
           >
             Return to Home
           </Link>

@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {/* Top CTA Bar */}
-      <div className="bg-gradient-to-r from-neon-green/90 via-neon-green to-neon-green/90 text-base py-3 px-4 text-center font-semibold shadow-lg">
+      <div className="bg-gradient-to-r from-neon-green/90 via-neon-green to-neon-green/90 text-dark-bg py-3 px-4 text-center font-semibold shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-center gap-6 text-sm">
           <a href="tel:14057774156" className="hover:text-white transition-colors flex items-center gap-2">
             <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">📞</span>

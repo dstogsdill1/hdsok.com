@@ -54,7 +54,7 @@ export default function TextHdsCard() {
         </p>
         <button
           onClick={() => setIsOpen(true)}
-          className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-black transition-all"
+          className="inline-block border-2 border-neon-green text-neon-green px-6 py-2.5 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-bg transition-all"
         >
           Text Now
         </button>
