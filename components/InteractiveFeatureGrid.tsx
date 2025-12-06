@@ -109,7 +109,7 @@ export default function InteractiveFeatureGrid() {
           <h2 className="text-4xl font-bold text-white mb-4">
             Powerful Features for Modern Operations
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
             Click any feature to learn more about how HDS Console transforms facility management
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function InteractiveFeatureGrid() {
                 </motion.div>
                 
                 <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <p className="text-gray-100 mb-4">{feature.description}</p>
 
                 <AnimatePresence>
                   {selectedFeature === feature.id && (

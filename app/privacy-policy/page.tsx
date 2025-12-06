@@ -16,8 +16,8 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
 
-        <div className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-xl p-8 space-y-8 text-gray-300 leading-relaxed">
-          <div className="text-sm text-gray-400 mb-6">
+        <div className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-xl p-8 space-y-8 text-gray-100 leading-relaxed">
+          <div className="text-sm text-gray-200 mb-6">
             <p className="font-semibold text-white">Effective Date: {today}</p>
             <p className="mt-2">
               Homeland Development Services LLC (&quot;HDS,&quot; &quot;we,&quot; &quot;our,&quot; &quot;us&quot;) is an Oklahoma limited liability company providing 24/7 HVAC-R, plumbing, electrical, mechanical, refrigeration, facilities maintenance, construction, special projects, design-build, consulting, energy-management and vendor-governance services.

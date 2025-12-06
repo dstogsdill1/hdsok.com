@@ -42,7 +42,7 @@ export default function ServicesPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               HDS Service Suite
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
               From blitz repairs to turnkey build‑outs, HDS keeps your refrigeration, HVAC and
               facilities running—so you stay focused on tenants and customers rather than
               contractors.
@@ -64,7 +64,7 @@ export default function ServicesPage() {
                 <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">❄️</span>
                 Mechanical & Refrigeration
               </h2>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-100 mb-6">
                 Keep your HVAC and refrigeration systems running at peak efficiency with our 24/7 
                 mechanical services. Our certified technicians handle everything from routine 
                 maintenance to emergency repairs across racks, RTUs, chillers, and walk-in coolers.
@@ -72,7 +72,7 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• 24/7 emergency repairs for racks, RTUs & chillers</li>
                   <li>• Preventive maintenance programs</li>
                   <li>• Energy management projects</li>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Benefits:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Reduced energy costs</li>
                   <li>• Extended equipment lifespan</li>
                   <li>• Minimized downtime</li>
@@ -111,7 +111,7 @@ export default function ServicesPage() {
                 <span className="animate-[float_6s_ease-in-out_infinite]">🏢</span>
                 Facility Maintenance
               </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-100 mb-6">
               Comprehensive facility maintenance solutions that keep your properties in top condition. 
               From daily upkeep to specialized services, we handle all aspects of building maintenance 
               so you can focus on your business operations.
@@ -119,7 +119,7 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Full-store upkeep and maintenance</li>
                   <li>• Preventive maintenance programs</li>
                   <li>• Reactive maintenance and repairs</li>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Property Types:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Grocery stores</li>
                   <li>• Retail centers</li>
                   <li>• Multi-unit properties</li>
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                 <span className="animate-[pulse-glow_2.6s_ease-in-out_infinite]">🏗️</span>
                 Construction & Special Projects
               </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-100 mb-6">
               From ground-up construction to major renovations, our project management team delivers 
               turnkey solutions for your commercial property needs. We handle every phase from planning 
               to completion, ensuring quality workmanship and on-time delivery.
@@ -169,7 +169,7 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Ground-up builds and new construction</li>
                   <li>• Store remodels and renovations</li>
                   <li>• Multi-location roll-outs</li>
@@ -182,7 +182,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Our Approach:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Detailed project planning</li>
                   <li>• Budget management</li>
                   <li>• Schedule coordination</li>
@@ -212,7 +212,7 @@ export default function ServicesPage() {
                 <span className="animate-[float_5.5s_ease-in-out_infinite]">📐</span>
                 Design‑Build & Consulting
               </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-100 mb-6">
               Expert consulting and design-build services that take your project from initial concept 
               to grand opening. Our team provides comprehensive guidance on design, engineering, 
               compliance, and implementation to ensure your project&apos;s success.
@@ -220,7 +220,7 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Concept-to-ribbon-cutting project delivery</li>
                   <li>• Energy code expertise and compliance</li>
                   <li>• Project feasibility studies</li>
@@ -233,7 +233,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Expertise Areas:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• HVAC and mechanical systems</li>
                   <li>• Refrigeration design</li>
                   <li>• Energy management</li>
@@ -263,7 +263,7 @@ export default function ServicesPage() {
                 <span className="animate-[pulse-glow_2.8s_ease-in-out_infinite]">⚡</span>
                 Energy & Lighting Management
               </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-100 mb-6">
               Reduce operating costs with our comprehensive energy and lighting management services. 
               We help you optimize electrical systems, access utility incentives, and implement 
               energy-efficient lighting solutions across your property portfolio.
@@ -271,7 +271,7 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Services Include:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Energy optimization and analysis</li>
                   <li>• Electrical system audits</li>
                   <li>• Utility incentive program management</li>
@@ -283,7 +283,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">Benefits:</h3>
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-100 space-y-2">
                   <li>• Lower electricity bills</li>
                   <li>• Reduced energy consumption</li>
                   <li>• Access to rebates and incentives</li>
@@ -314,7 +314,7 @@ export default function ServicesPage() {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Experience the HDS Difference?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-100 mb-8">
               Let&apos;s discuss how our comprehensive service suite can support your business.
             </p>
           </Reveal>

@@ -141,7 +141,7 @@ export default function DashboardCharts({ variant = 'full' }: DashboardChartsPro
         <div className="grid grid-cols-4 gap-3">
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-neon-green/15 via-transparent to-emerald-500/10" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Work Orders</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Total Work Orders</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">22,951</div>
             <div className="relative text-xs text-neon-green mt-1 flex items-center gap-1">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse"></span>
@@ -150,19 +150,19 @@ export default function DashboardCharts({ variant = 'full' }: DashboardChartsPro
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-cyan-400/15 via-transparent to-blue-500/10" />
-            <div className="relative text-[10px] text-white font-bold uppercase tracking-widest">Total Spend</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Total Spend</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">$68.9M</div>
             <div className="relative text-xs text-cyan-400 mt-1">Maintenance $36.1M • Energy $32.8M</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-orange-400/15 via-transparent to-amber-400/10" />
-            <div className="relative text-[10px] text-white font-bold uppercase tracking-widest">Average Cost / WO</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Average Cost / WO</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">$1,573.05</div>
             <div className="relative text-xs text-orange-400 mt-1">8 properties tracked</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute inset-0 opacity-25 bg-gradient-to-br from-emerald-400/15 via-transparent to-neon-green/10" />
-            <div className="relative text-[10px] text-white font-bold uppercase tracking-widest">Energy Spend</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Energy Spend</div>
             <div className="relative text-3xl font-extrabold text-white mt-1">$32.8M</div>
             <div className="relative text-xs text-neon-green mt-1">↓ 12% vs last year</div>
           </div>
@@ -283,7 +283,7 @@ export default function DashboardCharts({ variant = 'full' }: DashboardChartsPro
                   <div key={item.name} className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.fill }}></div>
-                      <span className="text-xs text-gray-300">{item.name}</span>
+                      <span className="text-xs text-gray-100">{item.name}</span>
                     </div>
                     <span className="text-xs font-bold text-white">{item.value}</span>
                   </div>
@@ -447,25 +447,25 @@ export default function DashboardCharts({ variant = 'full' }: DashboardChartsPro
         <div className="grid grid-cols-4 gap-3">
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-sky-400/10 via-transparent to-cyan-500/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Avg Cost / Site</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Avg Cost / Site</div>
             <div className="relative text-xl font-extrabold text-white mt-0.5">$188,767</div>
             <div className="relative text-[10px] text-gray-500 mt-0.5">per year (365 sites)</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Active Vendors</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Active Vendors</div>
             <div className="relative text-xl font-extrabold text-white mt-0.5">127</div>
             <div className="relative text-[10px] text-neon-green mt-0.5">All verified & insured</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-emerald-400/10 via-transparent to-green-500/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Energy EUI Trend</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Energy EUI Trend</div>
             <div className="relative text-xl font-extrabold text-white mt-0.5">42.3</div>
             <div className="relative text-[10px] text-neon-green mt-0.5">↓ 8% vs benchmark</div>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-black/95 p-3 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-400/10 via-transparent to-amber-400/5" />
-            <div className="relative text-[10px] text-gray-400 font-bold uppercase tracking-widest">Top Locations</div>
+            <div className="relative text-[10px] text-gray-200 font-bold uppercase tracking-widest">Top Locations</div>
             <div className="relative text-xl font-extrabold text-white mt-0.5">8</div>
             <div className="relative text-[10px] text-orange-400 mt-0.5">Properties monitored</div>
           </div>

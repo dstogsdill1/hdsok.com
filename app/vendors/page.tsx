@@ -39,7 +39,7 @@ export default function VendorsPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Join the HDS Vendor Network
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
               Partner with HDS to access consistent work opportunities across our growing portfolio 
               of commercial properties.
             </p>
@@ -52,7 +52,7 @@ export default function VendorsPage() {
         <div className="max-w-6xl mx-auto space-y-12">
           
           <Reveal>
-          <div className="text-gray-300 space-y-6 text-lg">
+          <div className="text-gray-100 space-y-6 text-lg">
             <h2 className="text-3xl font-bold text-white">Why Partner with HDS?</h2>
             <p>
               Homeland Development Services works with a network of trusted contractors and vendors 
@@ -72,7 +72,7 @@ export default function VendorsPage() {
                   <span className="animate-[pulse-glow_2.4s_ease-in-out_infinite]">⚡</span>
                   Consistent Work Flow
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-100">
                   Access regular work orders from our extensive portfolio of grocery stores, retail 
                   centers, and multi-unit properties across the region.
                 </p>
@@ -88,7 +88,7 @@ export default function VendorsPage() {
                   <span className="animate-[float_6s_ease-in-out_infinite]">📋</span>
                   Streamlined Dispatch
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-100">
                   Receive work orders through our centralized dispatch system with clear job details, 
                   property information, and priority levels.
                 </p>
@@ -104,7 +104,7 @@ export default function VendorsPage() {
                   <span className="animate-[pulse-glow_2.6s_ease-in-out_infinite]">💰</span>
                   Prompt Payment
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-100">
                   Enjoy reliable payment terms and straightforward invoicing processes. We value 
                   our vendors and ensure timely compensation for completed work.
                 </p>
@@ -120,7 +120,7 @@ export default function VendorsPage() {
                   <span className="animate-[float_5.5s_ease-in-out_infinite]">💻</span>
                   Technology Integration
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-100">
                   Utilize our HDS Console for work order management, real-time updates, and 
                   communication with dispatch and clients.
                 </p>
@@ -136,7 +136,7 @@ export default function VendorsPage() {
                   <span className="animate-[float_6.4s_ease-in-out_infinite]">🏆</span>
                   Quality Standards
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-100">
                   Work with a company that values quality craftsmanship and professional service. 
                   We support our vendors in maintaining high standards.
                 </p>
@@ -150,7 +150,7 @@ export default function VendorsPage() {
                   <span className="animate-[pulse-glow_2.8s_ease-in-out_infinite]">📈</span>
                   Growth Opportunities
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-100">
                   As HDS expands, so do opportunities for our vendor partners. Grow your business 
                   alongside our expanding service footprint.
                 </p>
@@ -165,12 +165,12 @@ export default function VendorsPage() {
             <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-neon-green/10 via-transparent to-emerald-500/10" />
             <div className="relative">
               <h2 className="text-3xl font-bold text-white mb-6">Vendor Requirements</h2>
-              <p className="text-gray-300 mb-6 text-lg">
+              <p className="text-gray-100 mb-6 text-lg">
                 To ensure the highest quality of service for our clients, we maintain specific 
                 standards for all vendor partners:
               </p>
               <div className="grid md:grid-cols-2 gap-6">
-                <ul className="text-gray-300 space-y-3">
+                <ul className="text-gray-100 space-y-3">
                   <li className="flex items-start">
                     <span className="text-neon-green mr-3 text-xl">✓</span>
                     <span>Current business licenses and permits</span>
@@ -188,7 +188,7 @@ export default function VendorsPage() {
                     <span>24/7 emergency response capability (for applicable trades)</span>
                   </li>
                 </ul>
-                <ul className="text-gray-300 space-y-3">
+                <ul className="text-gray-100 space-y-3">
                   <li className="flex items-start">
                     <span className="text-neon-green mr-3 text-xl">✓</span>
                     <span>Professional communication and customer service</span>
@@ -212,7 +212,7 @@ export default function VendorsPage() {
           </Reveal>
 
           {/* Service Categories */}
-          <div className="text-gray-300 space-y-6">
+          <div className="text-gray-100 space-y-6">
             <h2 className="text-3xl font-bold text-white">Service Categories</h2>
             <p className="text-lg">
               We&apos;re always looking for qualified vendors in the following trades and specialties:
@@ -335,7 +335,7 @@ export default function VendorsPage() {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Join Our Vendor Network?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-100 mb-8">
               Contact us today to start the application process and grow your business with HDS.
             </p>
           </Reveal>

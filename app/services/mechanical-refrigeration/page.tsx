@@ -41,7 +41,7 @@ export default function MechanicalRefrigerationPage() {
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
                 Keep cold chains and comfort systems online—without chasing every call.
               </h1>
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto">
                 HDS routes HVAC and refrigeration issues to licensed vendors, monitors progress through the
                 HDS Console, and surfaces the data you need for energy and asset decisions.
               </p>
@@ -54,7 +54,7 @@ export default function MechanicalRefrigerationPage() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start">
           <Reveal>
-            <div className="space-y-5 text-gray-300 text-lg">
+            <div className="space-y-5 text-gray-100 text-lg">
               <h2 className="text-3xl md:text-4xl font-bold text-white">Dispatch that understands the cold side.</h2>
               <p>
                 Refrigeration and HVAC issues don&apos;t wait for office hours. HDS provides a 24/7 dispatch
@@ -76,7 +76,7 @@ export default function MechanicalRefrigerationPage() {
           <Reveal delay={0.08}>
             <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-900/80 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] p-6 space-y-4">
               <h3 className="text-xl font-semibold text-white mb-1">What operators see</h3>
-              <ul className="space-y-2 text-sm text-gray-300">
+              <ul className="space-y-2 text-sm text-gray-100">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 text-neon-green">•</span>
                   <span>Single place to submit and track cold and comfort issues</span>
@@ -103,7 +103,7 @@ export default function MechanicalRefrigerationPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Mechanical &amp; refrigeration work we coordinate
               </h2>
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-100 text-lg">
                 From emergency rack alarms to planned PMs, HDS routes the right vendors and tracks every
                 step in the HDS Console.
               </p>
@@ -120,7 +120,7 @@ export default function MechanicalRefrigerationPage() {
                   </span>
                   <h3 className="text-lg font-semibold text-white">Refrigeration &amp; rack systems</h3>
                 </div>
-                <ul className="relative text-sm text-gray-300 space-y-2">
+                <ul className="relative text-sm text-gray-100 space-y-2">
                   <li>24/7 emergency calls and leak response</li>
                   <li>Rack monitoring, alarms, and service coordination</li>
                   <li>Walk-in coolers, freezers, and display cases</li>
@@ -137,7 +137,7 @@ export default function MechanicalRefrigerationPage() {
                   </span>
                   <h3 className="text-lg font-semibold text-white">HVAC &amp; comfort systems</h3>
                 </div>
-                <ul className="relative text-sm text-gray-300 space-y-2">
+                <ul className="relative text-sm text-gray-100 space-y-2">
                   <li>RTUs, split systems, and chillers</li>
                   <li>Emergency comfort calls and no-cool/no-heat events</li>
                   <li>Filter changes and programmatic PMs</li>
@@ -156,7 +156,7 @@ export default function MechanicalRefrigerationPage() {
                   </span>
                   <h3 className="text-lg font-semibold text-white">Energy &amp; EMS focus</h3>
                 </div>
-                <ul className="relative text-sm text-gray-300 space-y-2">
+                <ul className="relative text-sm text-gray-100 space-y-2">
                   <li>Coordination with EMS and controls vendors</li>
                   <li>Targeted repairs and setpoint strategies to reduce waste</li>
                   <li>Data to prioritize capital replacements</li>
@@ -173,7 +173,7 @@ export default function MechanicalRefrigerationPage() {
                   </span>
                   <h3 className="text-lg font-semibold text-white">Portfolio-level insight</h3>
                 </div>
-                <ul className="relative text-sm text-gray-300 space-y-2">
+                <ul className="relative text-sm text-gray-100 space-y-2">
                   <li>Performance and spend by site, vendor, and region</li>
                   <li>Patterns that inform capital plans and energy programs</li>
                   <li>Exportable data for finance and engineering teams</li>
@@ -190,7 +190,7 @@ export default function MechanicalRefrigerationPage() {
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Need a calmer way to run the cold side?</h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-8">
+            <p className="text-lg md:text-xl text-gray-100 mb-8">
               Tell us about your rack setups, HVAC mix, and vendor footprint—we&apos;ll show how HDS can
               coordinate mechanical and refrigeration work without adding more noise for your teams.
             </p>

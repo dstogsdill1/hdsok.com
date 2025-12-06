@@ -49,7 +49,7 @@ export default function TextHdsCard() {
         <h3 className="text-2xl font-bold text-neon-green mb-4 flex items-center gap-3">
           <MessageSquare className="w-6 h-6" /> Text HDS Team
         </h3>
-        <p className="text-gray-300 mb-6 leading-relaxed">
+        <p className="text-gray-100 mb-6 leading-relaxed">
           Text for urgent escalations or follow-ups. Include your name, property, and callback number.
         </p>
         <button
@@ -101,14 +101,14 @@ export default function TextHdsCard() {
                       <CheckCircle className="w-8 h-8 text-[#c6ff00]" />
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
-                    <p className="text-gray-400">
+                    <p className="text-gray-200">
                       Our team has received your text request and will respond shortly to the number provided.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Your Name</label>
+                      <label className="block text-sm font-medium text-gray-100 mb-1.5">Your Name</label>
                       <input
                         type="text"
                         required
@@ -120,7 +120,7 @@ export default function TextHdsCard() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Callback Number</label>
+                      <label className="block text-sm font-medium text-gray-100 mb-1.5">Callback Number</label>
                       <input
                         type="tel"
                         required
@@ -132,7 +132,7 @@ export default function TextHdsCard() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Message</label>
+                      <label className="block text-sm font-medium text-gray-100 mb-1.5">Message</label>
                       <textarea
                         required
                         rows={4}

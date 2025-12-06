@@ -132,7 +132,7 @@ export default function ContactPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Contact <span className="text-[#c6ff00]">Us</span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Get in touch with our team for general inquiries, partnership opportunities, 
               or to learn more about how HDS can manage your facility maintenance needs.
             </p>
@@ -154,7 +154,7 @@ export default function ContactPage() {
             >
               <div>
                 <h2 className="text-2xl font-bold text-white mb-2">Get In Touch</h2>
-                <p className="text-gray-400">
+                <p className="text-gray-200">
                   Reach out directly or fill out the form and we&apos;ll respond within 24 hours.
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-[#c6ff00] mb-1">24/7 Emergency Line</h3>
-                      <p className="text-gray-400 text-sm mb-3">For urgent maintenance emergencies</p>
+                      <p className="text-gray-200 text-sm mb-3">For urgent maintenance emergencies</p>
                       <a 
                         href="tel:14057774156" 
                         className="inline-flex items-center gap-2 px-4 py-2 bg-[#c6ff00] text-black font-semibold rounded-lg hover:bg-[#d4ff33] transition-colors"
@@ -190,15 +190,15 @@ export default function ContactPage() {
                     <div className="space-y-3">
                       <h3 className="text-lg font-semibold text-white">Office Contact</h3>
                       <div className="space-y-2">
-                        <a href="tel:14057774156" className="flex items-center gap-2 text-gray-400 hover:text-[#c6ff00] transition-colors">
+                        <a href="tel:14057774156" className="flex items-center gap-2 text-gray-200 hover:text-[#c6ff00] transition-colors">
                           <Phone className="w-4 h-4" />
                           <span>Call Office</span>
                         </a>
-                        <a href="mailto:info@hdsok.com" className="flex items-center gap-2 text-gray-400 hover:text-[#c6ff00] transition-colors">
+                        <a href="mailto:info@hdsok.com" className="flex items-center gap-2 text-gray-200 hover:text-[#c6ff00] transition-colors">
                           <Mail className="w-4 h-4" />
                           <span>info@hdsok.com</span>
                         </a>
-                        <div className="flex items-start gap-2 text-gray-400">
+                        <div className="flex items-start gap-2 text-gray-200">
                           <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                           <span>201 Robert S. Kerr Ave<br />Suite 210<br />Oklahoma City, OK 73102</span>
                         </div>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Business Hours</h3>
-                      <div className="space-y-1 text-gray-400 text-sm">
+                      <div className="space-y-1 text-gray-200 text-sm">
                         <p><span className="text-white">Dispatch Center:</span> 24/7/365</p>
                         <p><span className="text-white">Office Hours:</span> Mon-Fri 8AM-6PM CST</p>
                         <p className="text-[#c6ff00] text-xs mt-2">Emergency services available around the clock</p>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                   <div className="flex flex-col items-center justify-center py-12 text-center">
                     <CheckCircle className="w-16 h-16 text-[#c6ff00] mb-4" />
                     <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-                    <p className="text-gray-400">{contactMessage}</p>
+                    <p className="text-gray-200">{contactMessage}</p>
                     <button
                       onClick={() => setContactStatus('idle')}
                       className="mt-6 text-[#c6ff00] hover:underline"
@@ -254,7 +254,7 @@ export default function ContactPage() {
                   <form onSubmit={handleContactSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Full Name *</label>
                         <input
                           type="text"
                           required
@@ -265,7 +265,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Email *</label>
                         <input
                           type="email"
                           required
@@ -279,7 +279,7 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Phone</label>
                         <input
                           type="tel"
                           value={contactFormData.phone}
@@ -289,7 +289,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Company</label>
                         <input
                           type="text"
                           value={contactFormData.company}
@@ -301,7 +301,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Property Type</label>
+                      <label className="block text-sm font-medium text-gray-100 mb-2">Property Type</label>
                       <select
                         value={contactFormData.propertyType}
                         onChange={(e) => setContactFormData({...contactFormData, propertyType: e.target.value})}
@@ -319,7 +319,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+                      <label className="block text-sm font-medium text-gray-100 mb-2">Message *</label>
                       <textarea
                         required
                         rows={4}
@@ -381,7 +381,7 @@ export default function ContactPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Need to Submit a <span className="text-[#c6ff00]">Service Request</span>?
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               For maintenance issues, repairs, or facility service needs, submit a request below 
               and our dispatch team will coordinate the appropriate response.
             </p>
@@ -400,8 +400,8 @@ export default function ContactPage() {
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <CheckCircle className="w-16 h-16 text-[#c6ff00] mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">Request Submitted!</h3>
-                  <p className="text-gray-400 mb-2">{serviceMessage}</p>
-                  <p className="text-sm text-gray-500">Reference number will be sent to your email.</p>
+                  <p className="text-gray-200 mb-2">{serviceMessage}</p>
+                  <p className="text-sm text-gray-400">Reference number will be sent to your email.</p>
                   <button
                     onClick={() => setServiceStatus('idle')}
                     className="mt-6 text-[#c6ff00] hover:underline flex items-center gap-1"
@@ -419,7 +419,7 @@ export default function ContactPage() {
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Full Name *</label>
                         <input
                           type="text"
                           required
@@ -430,7 +430,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Email *</label>
                         <input
                           type="email"
                           required
@@ -441,7 +441,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Phone *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Phone *</label>
                         <input
                           type="tel"
                           required
@@ -462,7 +462,7 @@ export default function ContactPage() {
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Company / Property Name</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Company / Property Name</label>
                         <input
                           type="text"
                           value={serviceFormData.company}
@@ -472,7 +472,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Property Type</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Property Type</label>
                         <select
                           value={serviceFormData.propertyType}
                           onChange={(e) => setServiceFormData({...serviceFormData, propertyType: e.target.value})}
@@ -489,7 +489,7 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div className="sm:col-span-2">
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Service Location / Address *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Service Location / Address *</label>
                         <input
                           type="text"
                           required
@@ -510,7 +510,7 @@ export default function ContactPage() {
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Service Type *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Service Type *</label>
                         <select
                           required
                           value={serviceFormData.serviceType}
@@ -531,7 +531,7 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Priority Level *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Priority Level *</label>
                         <select
                           required
                           value={serviceFormData.priority}
@@ -546,7 +546,7 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div className="sm:col-span-2">
-                        <label className="block text-sm font-medium text-gray-300 mb-2">Description of Issue *</label>
+                        <label className="block text-sm font-medium text-gray-100 mb-2">Description of Issue *</label>
                         <textarea
                           required
                           rows={4}

@@ -16,7 +16,7 @@ export default function TermsPage() {
           User Agreement & Terms of Service
         </h1>
 
-        <div className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-xl p-8 space-y-8 text-gray-300 leading-relaxed">
+        <div className="bg-surface/80 backdrop-blur-sm border border-border-subtle rounded-xl p-8 space-y-8 text-gray-100 leading-relaxed">
           <div className="text-sm text-gray-400 mb-6">
             <p className="font-semibold text-white">Last updated: {today}</p>
           </div>

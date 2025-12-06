@@ -50,7 +50,7 @@ export default function BeforeAfterComparison() {
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Operations
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               See how HDS Console revolutionizes facility management workflows
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function BeforeAfterComparison() {
                         Before
                       </span>
                     </div>
-                    <p className="text-gray-300">{item.before}</p>
+                    <p className="text-gray-100">{item.before}</p>
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@ export default function BeforeAfterComparison() {
                         With HDS Console
                       </span>
                     </div>
-                    <p className="text-gray-300">{item.after}</p>
+                    <p className="text-gray-100">{item.after}</p>
                   </div>
                 </div>
               </motion.div>

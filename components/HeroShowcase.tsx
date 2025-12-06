@@ -43,7 +43,7 @@ export function HeroShowcase() {
           </motion.h1>
           <motion.p
             variants={item}
-            className="text-xl text-gray-300 sm:text-2xl"
+            className="text-xl text-gray-100 sm:text-2xl"
           >
             Unified CMMS for small businesses—command, maintain, optimize, save
           </motion.p>
@@ -81,7 +81,7 @@ export function HeroShowcase() {
 
             <motion.p
               variants={item}
-              className="max-w-xl text-balance text-lg text-gray-300 sm:text-xl leading-relaxed"
+              className="max-w-xl text-balance text-lg text-gray-100 sm:text-xl leading-relaxed"
             >
               Track work orders, energy spend, and vendor performance across your entire portfolio with real-time insights. Launch a guided demo in seconds or connect your data to see live results.
             </motion.p>
@@ -150,7 +150,7 @@ export function HeroShowcase() {
                 <DashboardCharts variant="minimal" />
               </div>
 
-              <div className="grid gap-3 text-xs text-gray-300 sm:grid-cols-3">
+              <div className="grid gap-3 text-xs text-gray-100 sm:grid-cols-3">
                 <div className="rounded-xl border border-neon-green/30 bg-neon-green/5 p-3">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-neon-green">
                     Work Orders

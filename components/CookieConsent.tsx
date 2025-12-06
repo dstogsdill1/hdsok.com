@@ -40,7 +40,7 @@ export default function CookieConsent() {
               <span className="text-2xl">🍪</span>
               Cookie Notice
             </h3>
-            <p className="text-gray-300 text-sm leading-relaxed max-w-3xl">
+            <p className="text-gray-100 text-sm leading-relaxed max-w-3xl">
               We use cookies to enhance your browsing experience, analyze site traffic, and understand where our visitors are coming from. 
               By clicking &quot;Accept All&quot;, you consent to our use of cookies. You can manage your preferences or learn more in our{' '}
               <Link href="/cookie-policy" className="text-neon-green hover:underline font-semibold">
@@ -56,7 +56,7 @@ export default function CookieConsent() {
           <div className="flex gap-3 flex-shrink-0">
             <button
               onClick={handleDecline}
-              className="px-6 py-2.5 rounded-lg border-2 border-gray-500 text-gray-300 font-semibold hover:bg-gray-500/20 transition-all"
+              className="px-6 py-2.5 rounded-lg border-2 border-gray-500 text-gray-100 font-semibold hover:bg-gray-500/20 transition-all"
             >
               Decline
             </button>

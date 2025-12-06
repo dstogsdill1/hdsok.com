@@ -176,7 +176,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Contact Us
                 <span className="inline-flex h-1.5 w-1.5 rounded-full bg-neon-green animate-[pulse-glow_2.4s_ease-in-out_infinite]" />
               </h3>
-              <div className="space-y-2 text-gray-300">
+              <div className="space-y-2 text-gray-100">
                 <p className="flex items-center gap-2 hover:text-neon-green transition-colors">
                   <span className="text-sm">📍</span>
                   <span>P.O. Box 890325</span>

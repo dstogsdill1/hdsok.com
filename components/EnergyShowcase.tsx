@@ -23,7 +23,7 @@ export default function EnergyShowcase() {
             <h2 className="text-4xl font-bold text-white mb-4">
               Turn Energy Data Into Action
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               HDS Console transforms raw energy consumption data into actionable insights, 
               identifying cost-saving opportunities and sustainability projects across your portfolio.
             </p>
@@ -59,7 +59,7 @@ export default function EnergyShowcase() {
               <div className="relative">
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4">What We Discover</h3>
-                <ul className="space-y-3 text-gray-300">
+                <ul className="space-y-3 text-gray-100">
                   <li className="flex items-start">
                     <span className="text-neon-green mr-2 flex-shrink-0">•</span>
                     <span><strong>Energy waste hotspots:</strong> Sites consuming 20-30% more than portfolio average</span>
@@ -91,7 +91,7 @@ export default function EnergyShowcase() {
               <div className="relative">
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Projects We Recommend</h3>
-                <ul className="space-y-3 text-gray-300">
+                <ul className="space-y-3 text-gray-100">
                   <li className="flex items-start">
                     <span className="text-neon-green mr-2 flex-shrink-0">•</span>
                     <span><strong>LED retrofits:</strong> Reduce lighting costs by 60-75% with 2-3 year payback</span>
@@ -214,7 +214,7 @@ export default function EnergyShowcase() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-neon-green/5 to-emerald-500/5 rounded-2xl border border-neon-green/30 p-8">
               <h3 className="text-xl font-bold text-white mb-4">Why Our Analytics Matter</h3>
-              <ul className="space-y-3 text-gray-300 text-sm">
+              <ul className="space-y-3 text-gray-100 text-sm">
                 <li className="flex items-start">
                   <span className="text-neon-green mr-2">✓</span>
                   <span><strong>Continuous monitoring</strong> catches problems before they become expensive</span>
@@ -240,7 +240,7 @@ export default function EnergyShowcase() {
 
             <div className="bg-gradient-to-br from-amber-400/5 to-orange-500/5 rounded-2xl border border-amber-400/30 p-8">
               <h3 className="text-xl font-bold text-white mb-4">What You Get</h3>
-              <ul className="space-y-3 text-gray-300 text-sm">
+              <ul className="space-y-3 text-gray-100 text-sm">
                 <li className="flex items-start">
                   <span className="text-amber-400 mr-2">→</span>
                   <span><strong>Monthly energy reports</strong> with recommendations and alerts</span>
@@ -272,7 +272,7 @@ export default function EnergyShowcase() {
             <h3 className="text-2xl font-bold text-white mb-4">
               See What Your Energy Data Reveals
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-100 mb-6 max-w-2xl mx-auto">
               Get a free energy assessment. We'll analyze your consumption patterns, identify 
               savings opportunities, and show you exactly what projects make sense for your portfolio.
             </p>
